@@ -1,0 +1,147 @@
+Welcome back.
+欢迎回来。
+
+ In the previous module, you were introduced to how design fits into the software development process and how to complete a conceptual design using CRC cards.
+在前面的模块中，介绍了如何将设计融入软件开发过程，以及如何使用CRC卡完成概念设计。
+
+ In this module, we are going to dive deeper into Object-Oriented Modeling.
+在本模块中，我们将深入研究面向对象建模。
+
+ We will start off by talking about modeling problems and how programming languages evolve toward object orientation.
+我们将首先讨论建模问题以及编程语言如何朝着面向对象的方向发展。
+
+ Then, we're going to explore four major design principles used in Object-Oriented Modeling.
+然后，我们将探讨面向对象建模中使用的四个主要设计原则。
+
+ These principles help in problem solving and lead to software that is flexible, reusable and maintainable.
+这些原则有助于解决问题，并使软件具有灵活性、可重用性和可维护性。
+
+ These principles are key to having a good design for your software.
+这些原则是为您的软件进行良好设计的关键。
+
+ We'll also show you how to express these design principles using both UML Class Diagrams and Java Code.
+我们还将向您展示如何使用UML类图和Java代码来表达这些设计原则。
+
+ In this module, you will have your first capstone assignment.
+在这个模块中，你将有你的第一个顶石任务。
+
+ The rest of the work for the capstone projects will be completed in the fourth module of each course.
+顶石项目的其余工作将在每门课程的第四模块完成。
+
+ However, you will occasionally have capstone assignments in the earlier modules once you've learned the content required to complete that assignment.
+然而，一旦你学习了完成任务所需要的内容，你会在之前的模块中偶尔遇到顶点分配。
+
+ Ready?
+准备好了吗?
+
+ Let's get started.
+让我们开始吧。
+
+ If you wanted to make a house, you wouldn't start nailing without a design and just figure out the details later.
+如果你想建造一所房子，你不会在没有设计的情况下就开始钉钉子，只是在以后才确定细节。
+
+ Similarly, for a complex software problem, you don't dive right into solving it in code.
+类似地，对于一个复杂的软件问题，您不会直接在代码中解决它。
+
+ There's a design step in between that iteratively deals with both the problem space and the solution space.
+在这两者之间有一个设计步骤，迭代地处理问题空间和解决方案空间。
+
+ You need conceptual design to break down the problem further and further into manageable pieces.
+您需要概念设计来将问题进一步分解为可管理的部分。
+
+ You also need technical design to describe and refine the solution, so that it is clear enough for developers to implement as working software.
+您还需要技术设计来描述和改进解决方案，以便开发人员能够清楚地将其实现为工作软件。
+
+ Over the years, people have tried many approaches to make the design activity easier.
+多年来，人们尝试了许多方法来简化设计活动。
+
+ For example, there are design strategies in programming languages suited for solving certain kinds of problems.
+例如，在编程语言中有适合解决某些类型问题的设计策略。
+
+ If you had a data processing problem, you may have used Top Down Programming.
+如果遇到数据处理问题，则可能使用了自顶向下编程。
+
+ This strategy map the processes in the problem to routines to be called.
+此策略将问题中的流程映射到要调用的例程。
+
+ As you broke down the processing needs top down, you made a tree of routines for the eventual solution.
+当您自上而下分解处理需求时，您为最终解决方案创建了一个例程树。
+
+ These routines would be implemented in a programming language that supported subroutines.
+这些例程将在支持子例程的编程语言中实现。
+
+ To make design easier, you don't want a big mental jump during design work between a concept in the problem space and how to deal with it in the solution space.
+为了使设计更简单，您不希望在设计工作期间在问题空间中的概念和如何在解决方案空间中处理它之间有很大的思想跳跃。
+
+ If these concepts could be described in a design that made sense to both users and developers, that would be great.
+如果这些概念可以用一种对用户和开发人员都有意义的设计来描述，那就太好了。
+
+ This would help ensure the two groups can discuss their understanding and common terms.
+这将有助于确保两个小组能够讨论他们的理解和共同的术语。
+
+ For many kinds of complex problems, it makes sense to think about the concepts using objects.
+对于许多复杂的问题，使用对象来考虑概念是有意义的。
+
+ For example, any noun in a problem description could be an important object.
+例如，问题描述中的任何名词都可能是重要的对象。
+
+ The real world, where problems arise, is just full of objects.
+现实世界中，当问题出现时，到处都是对象。
+
+ This has led to the popularity of Object-Oriented Programming with object-oriented languages.
+这导致了面向对象编程和面向对象语言的流行。
+
+ But even here, you still don't go straight from the problem to writing the code.
+但是即使在这里，您仍然不能直接从问题转到编写代码。
+
+ There's a conceptual design involving object-oriented analysis to identify the key objects in the problem.
+有一个涉及面向对象分析的概念设计来识别问题中的关键对象。
+
+ There's also technical design involving object-oriented design to further refine the details of the objects, including their attributes and behaviors.
+还有涉及面向对象设计的技术设计，以进一步细化对象的细节，包括它们的属性和行为。
+
+ The design activities happen iteratively and continuously.
+设计活动是迭代的、连续的。
+
+ The goal during software design is to construct and refine models of all the objects.
+软件设计的目标是构建和细化所有对象的模型。
+
+ These models are useful throughout the design process.
+这些模型在整个设计过程中都很有用。
+
+ Initially, the focus will be on the entity objects from the problem space.
+最初，重点将放在来自问题空间的实体对象上。
+
+ As a solution in software arises, you introduced control objects that receive events and coordinate actions.
+随着软件解决方案的出现，您引入了接收事件和协调操作的控制对象。
+
+ You also introduce boundary objects that connect to services outside your system.
+您还引入了连接到系统外部服务的边界对象。
+
+ The models are often expressed in a visual notation called Unified Modeling Language or UML.
+模型通常用一种称为统一建模语言或UML的可视化符号表示。
+
+ In Object-Oriented Modeling, you have different sorts of models or UML diagrams to focus on different software issues, like a structural model, to describe what the objects do and how they relate.
+在面向对象建模中，您有不同种类的模型或UML图来关注不同的软件问题，比如结构模型，来描述对象做什么以及它们之间的关系。
+
+ It's like having a scale model of a building to understand the spatial relationships.
+这就像有一个建筑的比例模型来理解空间关系。
+
+ To deal with complexity, you can apply design principles and guidelines to simplify objects.
+为了处理复杂性，您可以应用设计原则和指南来简化对象。
+
+ Break them down into smaller parts and look for commonalities that can be handled consistently.
+将它们分解成更小的部分，并寻找可以一致处理的共性。
+
+ There's a continual need to critique and evaluate the models to ensure the design addresses the original problem and satisfies quality goals.
+需要不断地对模型进行评审和评估，以确保设计能够解决最初的问题并满足质量目标。
+
+ Qualities are expected to be reusable, flexible and maintainable.
+质量应该是可重用的、灵活的和可维护的。
+
+ The models also serve as design documentation for your software and can be easily mapped to skeletal source code, particularly for an object-oriented language like Java.
+这些模型还可以作为软件的设计文档，可以很容易地映射到框架源代码，特别是对于Java这样的面向对象语言。
+
+ That can give a good start for the developers implementing the software.
+这可以为实现软件的开发人员提供一个良好的开端。
+

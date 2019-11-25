@@ -1,0 +1,185 @@
+[MUSIC] Now that you've learned about different
+techniques to design your system, how do you make sure that the system
+you've created is correct? There are many ways that you can verify
+that your system is working the way you intended. For example, you can run tests and see if the actual behavior
+matches what you expect. One technique you'll learn about
+here is called model checking. Model checking is a systematic
+check of your system's state model in all its possible states. Basically, you check all the various
+states of your software and find that there are any errors by
+simulating different events that would change the states and
+variables of your software. So you check if the state model of
+your software contains some flaw. These checks are done using
+model checking software. Let's ask an expert about the different
+types of model checking software that is used today in the software industry. >> Before we talk about model checking,
+it's probably a good idea to talk about the whole process
+of specifying and testing, and reasoning about systems
+because that's what we all do. When we build something for you,
+we're doing some very, very complicated mental reasoning that the sentences that
+we're writing in some programming language are actually going to deliver the product
+that you want to make for your business. The sheer amount of complex
+reasoning that we do, we do it so automatically,
+we don't realise how complicated it is. But anyone who's ever taught
+introductory programming to students who the first time they see a for-loop,
+they simply can't understand what it does. They don't understand how to make
+the four loop do what they want it to do because they haven't built the internal
+structures for reasoning about a for-loop. Now, what we try and talk about is what varies every
+time you go through the for-loop, what is it you're trying to change,
+what's the kind of progress you're making? These are all English language
+attempts to sort of say, yes, a for-loop's an iterative
+solution to a particular problem. And then you wonder, five years later, why you ever thought
+a for-loop was mysterious. Because you now internalized all
+the reasoning that you need to do to write a for-loop. In a complicated system, you're also
+doing this internalized reasoning. But it's now becoming less certain. As an experienced programmer, I can
+look at a for-loop and quickly say, yep, I think I know what it's doing. But now if I've got five
+different applications, they're all talking to
+a bunch of web services and the web services are talking among
+themselves and I've got a data base updates going and this whole flurry
+of things acting concurrently. It's not so obvious anymore
+whether simple properties for the system are holding, such as a piece
+of data is actually consistent or not. How do you reason about
+a system like that? We build them. We rely on things like the database
+to ensure transaction atomicity. But how did the database guys
+convince themselves that, yes, their database,
+it does preserve atomic transactions. How do you reason about
+this complicated systems? Well, this has been a problem again,
+identified in the 70s, of what's the best way to reason about your programs
+and there's been two scrolls of thought. Not competing. The complimentary schools of thought. One school of thought says that, well, we can look at our program
+as a mathematical artifact. And we can prove properties
+about what the program does. Assuming that we have a good enough
+understanding of the behavior of the programming language just so
+called semantics. And that's a very successful approach for a whole range of systems and
+in fact I've proven programs correct using this technique
+that are deep down inside production systems where a failure wouldn't be
+at all obvious until much later. And that works,
+it's a perfectly good technique and it's actually important
+part of your tool kit. But there's other kinds of problems
+such as concurrent activities of programs communicating to each
+other and updating shared data. Where a handwritten proof type approach doesn't work because you're not
+dealing with generalized things. You're dealing with a large
+number of really special cases. What if you do this, then I do this,
+then you do that, and I do that? And it's very hard to by hand
+anticipate all these special cases. And in fact there are famous papers
+in the literature where they prove a certain protocols correct that turns out
+that the proof is got a settle bugging in. So there's another line of
+approach which says, for this things that have all
+these weird special cases, what we should do is mechanically
+enumerate all the special cases. What does that mean? Well, I have a system it's called
+some state when it does things, it changes from one
+state to another state. I can express the behaviors that system as
+state changes and I can say things like, it'll never be the case
+that the total debits and total credits in this
+account don't balance. Because statements about the total debits
+that have occurred, the total credits and the current balance,
+those are all statements about state. I can then try and
+express things, like saying, it's never the case that
+I will sell two tickets. No, it's never the case that I will
+sell the same ticket to two different customers. Important airline
+reservation specification. So that's a statement again about a state. You're saying that before this ticket was
+sold, the world was in a certain state. After this ticket was sold,
+the world was in another state. And this other state doesn't have
+two people holding the same ticket. If you can express your problem that way, then you can do what's
+called model checking. And model checking is a technique
+that does state exploration, it says, given that you
+start in this current state, explore all the possible ways
+you can go into the future and reason about what all those possible
+future states can look like. Going back to the ticket thing, I might
+make a statement that says along the lines of, if at some point in time, ticket A is
+sold, then at all future states in time, ticket A is only held
+by exactly one owner. The model checker can then look
+at the way the system evolves. How does it know that? Well, the model checker has a little bit
+of an idea of how your program runs. That's a different issue,
+we'll get to that. But the model checker explores the future
+and then it comes back with an answer. And the answer's either, yep, it's never
+the case that two people have purchased the same ticket or
+it says that's wrong and here's the counter example, here's all the
+weird steps that the system went through, in order to make it so that customer one
+and two both hold onto the same ticket. The model checker then actually,
+it doesn't only tell you that you're wrong, it says
+and here's one example were you're wrong. The problem with model checking is the so
+called stage space explosion. If I've got one bit, i have two states. If I got I've got ten bits,
+I've got two to the tenth states. If I've got 1 million bits,
+I've 2 to the 1 million states. There's no way to explore
+to the 1 million. Current model checkers last time
+I knew anything about them, were about 2 to the 40th states,
+was about the most you could explore. That means if your problem can't be
+described in a small number of bits, you're in trouble because
+the model checker won't help you. So what model checking
+relies on is the ability for you to take your piece of code and
+extract from your piece of code just those parts of the problem
+that you need to model. So you might not be ale to model, for
+example, in a purchases sync system, you might not be able to model
+the totals on the purchase orders, because that's a lot of bets. You might not be able to model a lot
+of items on a purchase orders, but you might be able to model that there's
+one or two items on the purchase order, because that's all you care about. Because what you're trying to
+prove is that, if you ever make a request of the fulfillment system
+to actually get the order paid, then all of the orders on the order actually
+have made it to the shipping state. So model checking relies on this thing
+that we call the small world assumption. That, if you have a system and things are going to go wrong,
+they're going to go wrong in small cases. And that if you look at the small cases,
+you can convince yourself to a reasonable degree of confidence that it's probably
+going to work in the big cases. That's the program extraction part,
+that's still a big problem, no one knows how to do that well. There's lots of tools that
+are good partial solutions but there's no general solutions to that. Model checking and listening over
+a programs and Azure development and test cases,
+they all fit together very nicely, because if you can specify what your system does,
+you can write test for it. In some sense,
+test are themselves specifications. Because if you pass it, it's doing
+the right thing, if you don't pass it, it's doing the wrong thing. If you can model check your system,
+that's good, because it means that you have some
+specifications that don't need test cases. Because the system is actually correct. Or you can think about
+it slightly differently. If you model check and you get a cuter
+example, that becomes a new test case. You throw that into your test suite and
+then when you fix it and run on the second time,
+that test better fail. So they really all the same thing just with different mathematical
+technologies behind them. It's only a small percentage of all
+the code that's written that can actually benefit from model checking because
+either it's not important enough who and you don't care who do the investment,
+or it's simply too complicated and model checking is not powerful enough yet. >> Think of model checking like
+going through airport security. Security guards in airports know
+the rules of what people should have or shouldn't have to get on an airplane. They don't make any exceptions. Model checking is similar and that it
+checks the behavior in the state model for your system and notifies you of
+any violations to the rules. A rule that your software is required to
+satisfy is it must not produce a deadlock. A deadlock is a situation where
+your system cannot continue because two tasks are waiting for
+the same resource. Your model checker would simulate the
+different states that could occur in your system and if a deadlock is possible,
+it would provide details of the violation. Now, how do you model check your software? Model checkers generate
+a State Model from your code. A state model is an abstract state machine
+that can be in one of various states. The model checker then checks that
+the state model conforms to certain behavioral properties. For example, the model checker
+can examine the state model for flaws like grace conditions, exploring
+all the possible states of your model. There are three different phases
+to performing model checking, the modeling phase, the running phase,
+and the analysis phase. The modeling phase comes first. This is where you enter
+the model description. This will be provided in whatever
+programming language your system uses. You also describe the desired properties. During the modeling phase,
+you can perform some Saturday checks. These are quick checks that should be easy
+to do because they usually come from very clear and simple logic. It's like testing if a light bulb is
+working by flipping a switch on and off. It's clear to see when the light
+bulb is malfunctioning. It's beneficial to get rid of these
+simpler errors before using any model checkers so that you can focus on specifying
+the more complex properties to check. The second phase is the running phase, this is when you run the model checker to
+see how your model conforms to the desired properties that you've wrote
+in the modeling phase. The last phase is the analysis phase. This is where you check if all
+the desired properties are satisfied and if any are violated. Violations are called counterexamples. Your model checker will provide
+descriptions of violations in your system so that you can analyze
+how it got to that state. Using the information from the model
+checker, you advice yourself where to fix any problems,
+then run through the phases again. You do this until you can be sure that
+your software is correct with respect to the desired properties. Model checking is a very
+useful verification technique, there are many ways to test your
+system's behaviour, like unit testing, beta testing, and simulations. But model checking can help find
+errors that these tests can't. If you're looking to use model
+checkers to develop your programs, there are many different free
+model checkers available for developers that use different languages. Model checking is now another technique
+that you can use to make sure that you are not only creating
+well-designed software, but software that meets desired properties and
+behavior. Using model checking after you used the
+designed techniques you've learned in this course, we'll ensure that your software
+is behaving the way you intended. >> Congratulations, you can play all
+the video content for this first course. Next stop are the remaining
+capstone assignments. So far, in the capstone assignments, you've been documenting the software
+in various similar diagrams. Now, we're going to flip things around. You'd like take a change,
+expressed in a diagram, and apply that change to the code for
+real software product. By and of course quiz to attest your
+knowledge from all of the material recovered in this course. See you next time.

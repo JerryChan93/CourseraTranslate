@@ -1,0 +1,363 @@
+[MUSIC] Next on our journey, we will be applying the object-orienteddesign principle decomposition.
+接下来，我们将应用面向对象的设计原则分解。
+
+ Now that we have discussed the basictheory behind decomposition, it is time to expand our knowledge andsee it in action.
+既然我们已经讨论了分解背后的基本理论，现在是时候扩展我们的知识并看到它的实际应用了。
+
+ Let's take a look at howto apply decomposition.
+让我们看看如何应用分解。
+
+ Our definition of decompositionis taking a whole thing and dividing it up into different parts.
+我们对分解的定义是把一个整体分成不同的部分。
+
+ Or, on the flip side, taking a bunchof separate parts with different functionalities andcombining them together to form a whole.
+或者，从另一方面来说，将具有不同功能的不同部分组合在一起形成一个整体。
+
+ What does this look like when programming?
+这在编程时是什么样子的?
+
+ Is there any way we can expand thisdefinition and make it more specific?
+我们有什么方法可以扩展这个定义，使它更具体呢?
+
+ There are three types of relationshipsfound in decomposition, association, aggregation, and composition.
+在分解、关联、聚合和组合中有三种类型的关系。
+
+ They define the interactionbetween the whole and the parts.
+它们定义了整体和部分之间的相互作用。
+
+ Let's explore these interactions ina few different perspectives, Java code, UML class diagram, and definition.
+让我们从几个不同的角度来研究这些交互，Java代码、UML类图和定义。
+
+ The first decompositionrelationship is association.
+第一种分解关系是关联。
+
+ Association is some relationship.
+联想是某种关系。
+
+ This means that there is a looserelationship between two objects.
+这意味着两个对象之间有一种松散的关系。
+
+ These objects may interactwith each other for some time.
+这些物体可能相互作用一段时间。
+
+ For example, an object of a class may useservices/methods provided by object of another class.
+例如，一个类的对象可以使用另一个类的对象提供的服务/方法。
+
+ This is like the relationshipbetween person and airline.
+这就像人和航空公司之间的关系。
+
+ A person does not generally ownan airline, but can interact with one.
+一个人一般不拥有航空公司，但可以与之互动。
+
+ An airline can also interactwith many person objects.
+航空公司还可以与许多人对象交互。
+
+ There are some persons and some airlines,neither is dependent on the other.
+有一些人和一些航空公司，两者都不依赖于对方。
+
+ Let's take a look at what an associationrelationship looks like using UML class diagram notation.
+让我们来看看使用UML类图表示法的associationrelationship是什么样的。
+
+ It is helpful to read UML diagramswhich each box being called an object.
+阅读UML图表是很有帮助的，每个框都被称为一个对象。
+
+ This UML examines the relationship Idescribed between person and airline.
+这个UML分析了人和航空公司之间的关系。
+
+ The straight line between two UML objectsdenotes that the relationship between them is an association.
+两个UML对象之间的直线表示它们之间的关系是一个关联。
+
+ You can see that there is a 0.
+你可以看到这里有一个0。
+
+.
+。
+
+* foundon both sides of the relationship.
+发现双方的关系。
+
+ This means a person object is associatedwith zero or more airline objects.
+这意味着一个person对象与零个或多个airline对象关联。
+
+ And an airline object is associatedwith zero or more person objects.
+airline对象与零个或多个person对象关联。
+
+ The association in this questionis between food and wine, students and sports, and kitten and yarn.
+在这个问题中，食物和酒，学生和运动，小猫和纱线之间存在联系。
+
+ Each of these relationships isbetween completely separate entities.
+每一个关系都是完全独立的实体之间的关系。
+
+ If one object is destroyed, the other cancontinue to exist, unlike human and organ.
+如果一个物体被摧毁，另一个物体可以继续存在，不像人类和器官。
+
+ There can be any number ofeach item in the relationship.
+在关系中可以有任意数量的项。
+
+ One object does not belong to another.
+一个物体不属于另一个物体。
+
+ Now we will look atan association example in code.
+现在我们来看一个代码中的关联例子。
+
+ In this code excerpt, the studentis passed a sport object to play.
+在这段代码摘录中，学生传递了一个要玩的运动对象。
+
+ The student does not possessthe sport beyond playing it.
+这个学生除了玩外，没有别的爱好。
+
+ The relationship is between twocompletely separate objects.
+这种关系存在于两个完全不同的物体之间。
+
+ A student can play any number of sports.
+学生可以进行任何数量的运动。
+
+ And any number of studentscan play a sport.
+任何数量的学生都可以参加体育活动。
+
+ Now it's your turn to come up withsome code displaying an association.
+现在轮到您来编写一些显示关联的代码了。
+
+ As with our student example, the winecan exist independent of the food.
+就像我们学生的例子一样，酒是独立于食物而存在的。
+
+ It does not need food to exist,nor does it always have food.
+它不需要食物来生存，也不总是有食物。
+
+ The two objects interact with eachother without belonging to one another.
+这两个物体相互作用而不属于彼此。
+
+ Overall, association is a loosepartnership between two objects that exist completely independently.
+总的来说，关联是两个完全独立存在的对象之间的松散伙伴关系。
+
+ They have numbers thatare not tied to each other.
+它们的数字彼此不相关。
+
+ The next decomposition relationshipI will talk about is aggregation.
+下一个分解关系是聚合。
+
+ Aggregation is a has-a relationship wherea whole has parts that belong to it.
+聚合是一种关系，其中一个整体拥有属于它的部分。
+
+ There may be sharing of parts amongthe wholes in this relationship.
+在这种关系中，整体之间可能存在部分共享。
+
+ The has-a relationship from the wholeto the parts is considered weak.
+从整体到局部的关系被认为是脆弱的。
+
+ What this means is althoughparts can belong to the wholes, they can also exist independently.
+这意味着虽然部分可以属于整体，但它们也可以独立存在。
+
+ This is like the relationshipbetween an airliner and its crew.
+这就像飞机和机组人员之间的关系。
+
+ An important part ofthe airliner is its crew.
+机组人员是飞机的重要组成部分。
+
+ Without the crew,an airliner would not be able to fly.
+没有机组人员，飞机就不能飞行。
+
+ However, the airliner does not ceaseto exist if there is no crew on board.
+然而，如果飞机上没有机组人员，就不会停火。
+
+ Same goes for the crew, they are partof the operation of the airliner but the crew does not cease to exist or become destroyed if they are noton board their airliner.
+机组人员也一样，他们是客机运行的一部分，但机组人员不会停止存在或被摧毁，如果他们没有登上他们的客机。
+
+ These entities have a relationship,but can exist outside of it.
+这些实体有关系，但可以存在于关系之外。
+
+ Let's take a look at this example ofaggregation using a UML class diagram.
+让我们来看看这个使用UML类图进行聚合的例子。
+
+ This UML class diagram describesthe relationship I explained above between airliner and crew.
+这个UML类图描述了我在上面所解释的客机和机组之间的关系。
+
+ It says that for an airliner object,it has zero or more crew members.
+它说，对于一个客机物体，它有零或更多的机组人员。
+
+ Also, a crew member object can behad by zero or more airline objects.
+此外，一个机组成员对象可以由零个或多个航空公司对象组成。
+
+ The empty diamond denotes whichobject is considered the whole and not the part in the relationship.
+空菱形表示在关系中被视为整体而不是部分的对象。
+
+ This empty diamond is the symbol foraggregation.
+这个空钻石是聚合的象征。
+
+ The aggregation we can see isbetween course section and students, pet stores and pets, andbookshelf and books.
+我们可以看到的聚集在课程区和学生之间，宠物店和宠物之间，书架和书籍之间。
+
+ Each of these are a has-a relationship.
+每一个都是一个has-a关系。
+
+ A course has students,students have courses, and so on.
+一门课有学生，学生有课程，等等。
+
+ But the relationship is weak.
+但这种关系很脆弱。
+
+ If one of the objects inthe relationship is destroyed, it still makes sense thatthe other can continue to exist.
+如果关系中的一个对象被破坏了，那么另一个对象可以继续存在也是有意义的。
+
+ Now I will show a code example foraggregation.
+现在我将展示一个聚合的代码示例。
+
+ In the airliner class,there is a list of crew members.
+在班机上，有一份机组人员名单。
+
+ The list of crew membersis initialized to be empty.
+船员名单初始化为空。
+
+ And a public method allowsnew crew members to be added.
+一种公开的方法允许增加新的船员。
+
+ The airliner has a crew.
+这架班机有机组人员。
+
+ This means that an airliner canhave zero or more crew members.
+这意味着一架飞机可以有零名或更多的机组人员。
+
+ You can try for yourself to createsome code that uses aggregation.
+您可以尝试自己创建一些使用聚合的代码。
+
+ As with our airliner example,a pet store has pets.
+就像我们在客机上的例子一样，宠物店也有宠物。
+
+ These are two objects that havea weak has-a relationship.
+这两个对象有一个弱的has-a关系。
+
+ The pet store has a list of petsthat can contain zero or more pets.
+宠物商店有一个宠物列表，其中可以包含零个或多个宠物。
+
+ It has the ability toadd pets at any time.
+它可以在任何时候添加宠物。
+
+ Both pets stores andpets can exist without each other.
+宠物商店和宠物都可以独立存在。
+
+ Aggregation is a weak has-arelationship between classes.
+聚合是类之间的一种弱关系。
+
+ One object has the other, butthe objects are not heavily linked.
+一个对象有另一个对象，但是对象之间没有紧密的联系。
+
+ They can both exist without the other.
+它们都可以独立存在。
+
+ One of the major decompositionrelationships is composition.
+一个主要的分解关系是合成。
+
+ Composition is an exclusivecontainment of parts, otherwise known as a stronghas-a relationship.
+构图是对各个部分的独家娱乐，也被称为要塞——一种关系。
+
+ What this means is that the wholecannot exist without its parts.
+这意味着，没有它的部分，就不能存在整体。
+
+ If loses any of its parts,the whole ceases to exist.
+如果失去任何一部分，整体就不复存在。
+
+ If the whole is destroyed,then all of its parts are destroyed too.
+如果整体被摧毁，那么它的所有部分也会被摧毁。
+
+ Usually, you can only accessthe parts through its whole.
+通常，您只能通过它的整体访问部分。
+
+ Contained partsare exclusive to the whole.
+被包含的部分是整体所独有的。
+
+ Compare this to the relationshipbetween a house and a room.
+把这个比作房子和房间的关系。
+
+ A house is made up of multiple rooms.
+房子是由多个房间组成的。
+
+ However, if you were to remove the house,its rooms would cease to exist.
+然而，如果你把房子搬走，它的房间就不复存在了。
+
+ You cannot have a room without its house.
+你不能有一个没有房子的房间。
+
+ Let's examine a compositionrelationship using UML.
+让我们使用UML来检查一个组合关系。
+
+ This UML class diagram describes therelationship between a house and a room, that a house object has one ormore room objects.
+这个UML类图描述了一个房子和一个房间之间的关系，一个房子对象有一个或多个房间对象。
+
+ The filled in diamond next to the housemeans that the house is the whole in the relationship.
+在房子旁边的钻石说明房子是关系中的整体。
+
+ If the diamond is filled in, it meansthat has-a relationship is strong.
+如果钻石被填满，那就意味着两人的关系很牢固。
+
+ The two related objects cannotexist without each other.
+这两个相关的物体没有彼此就不可能存在。
+
+ The filled diamond denotesthe relationship is composition.
+填充钻石的名称关系是组成。
+
+ The composition is between the human andbrain pair.
+组成是在人类和大脑之间。
+
+ This relationship is betweencompletely dependent classes.
+这种关系是完全从属类之间的关系。
+
+ If one object is destroyed,then the other is too.
+如果一个物体被摧毁了，那么另一个也会被摧毁。
+
+ Here is an example ofcomposition using Java.
+下面是一个使用Java进行组合的例子。
+
+ In this example, the brain is created atthe same time that the human object is.
+在这个例子中，大脑与人体同时被创造出来。
+
+ The brain does not need to beinstantiated anywhere else, nor does it need to be passed intothe human object on creation.
+大脑不需要在其他任何地方被实例化，也不需要在创建时传递给人类对象。
+
+ The brain is automaticallycreated with the human.
+大脑是由人类自动创造的。
+
+ The two parts, human and brain, are tightly dependent with one notbeing able to exist without the other.
+人类和大脑这两个部分是紧密相连的，一个离不开另一个。
+
+ Now you get to create some codethat illustrates a composition.
+现在您可以创建一些代码来演示组合。
+
+ This example is the same as our human andbrain example.
+这个例子和我们人类和大脑的例子是一样的。
+
+ The employee cannotexist without a salary.
+这个雇员没有工资就不能工作。
+
+ And the salary cannotexist without an employee.
+没有雇员，工资就无法发放。
+
+ On instantiating an employee,the salary part is made.
+在实例化雇员时，将生成薪水部分。
+
+ The salary must always exist as long asthe employee does from that point on.
+从那时起，工资必须一直存在。
+
+ Composition is the most dependentof the decomposition relationships.
+合成是分解关系中最依赖的。
+
+ It forms a relationship that onlyexists as long as each object exists.
+它形成了一种关系，这种关系只存在于每个对象存在的时候。
+
+ Decomposition is simply about wholeobjects containing part objects.
+分解只是关于包含部分对象的整个对象。
+
+ Depending on your design, you can relate wholes to parts indifferent increasingly tighter ways.
+根据你的设计，你可以将各个部分以越来越紧密的方式联系起来。
+
+ You can use association, a very loose interaction betweentwo completely independent objects.
+你可以使用关联，这是两个完全独立的对象之间一种非常松散的交互作用。
+
+ An aggregation, one whole has a part,but both can live independently.
+一个集合，一个整体有一部分，但两者可以独立生活。
+
+ And finally, in composition, the wholecannot exist without its parts and vice versa.
+最后，在构成上，没有部分，整体就不存在，反之亦然。
+
+ All three relationships are useful andversatile for your software designs.
+这三种关系对您的软件设计都是有用和通用的。
+

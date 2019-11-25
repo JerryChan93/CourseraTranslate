@@ -1,0 +1,186 @@
+Now that you have a greater understanding of the major design principles of object-oriented programming, you need to learn how to apply them.
+既然您对面向对象编程的主要设计原则有了更深入的理解，那么您需要学习如何应用它们。
+
+ In order for design theories to be useful, they must be applied.
+为了使设计理论有用，它们必须被应用。
+
+ Let's take a look at how to apply encapsulation.
+让我们看看如何应用封装。
+
+ As you will recall from an earlier lesson on encapsulation, it involves three ideas.
+您将回忆起以前关于封装的一节课，它涉及三个概念。
+
+ First, you bundle data, and functions that manipulate the data, into a self-contained object.
+首先，将数据和操作数据的函数绑定到一个自包含的对象中。
+
+ Second, you can expose certain data and functions of that object, which can be accessed from other objects.
+其次，可以公开该对象的某些数据和函数，这些数据和函数可以从其他对象访问。
+
+ Third, you can restrict access to certain data and functions to only within that object.
+第三，可以将对某些数据和函数的访问限制在该对象内。
+
+ So what does that look like in code?
+这在代码中是什么样子的呢?
+
+ And what does the design look like?
+设计是什么样的?
+
+ Before we get to the written code, let's take a look at some notation in a UML class diagram that expresses encapsulation.
+在我们开始编写代码之前，让我们看一下UML类图中表示封装的一些符号。
+
+ If you are creating a system that models a university student using encapsulation, you would have all of the student's relevant data defined in attributes of a student class.
+如果您正在创建一个使用封装来建模大学生的系统，那么您将在student类的属性中定义该大学生的所有相关数据。
+
+ You would also need specific public methods that access the attributes.
+您还需要访问属性的特定公共方法。
+
+ In this example, our student's relevant data could be their degree program and GPA.
+在这个例子中，我们学生的相关数据可以是他们的学位项目和GPA。
+
+ This would be the UML class diagram for the student class.
+这将是学生类的UML类图。
+
+ The student class has its attributes hidden from public accessibility.
+student类的属性隐藏在公共可访问性之外。
+
+ This is denoted by the minus signs before GPA and degree program.
+这用GPA和degree program前的减号表示。
+
+ These minus signs indicate that a method or attribute is private.
+这些减号表示方法或属性是私有的。
+
+ Private attributes can only be accessed from within the class.
+私有属性只能在类中访问。
+
+ Outside this class, instead of being able to directly manipulate the student's GPA attribute, you must set the GPA through a public method setGPA.
+在这个类之外，您必须通过一个公共方法setGPA来设置GPA，而不是直接操作学生的GPA属性。
+
+ By only allowing an object's data to be manipulated via a public method, you can control how and when that data is accessed.
+通过只允许通过公共方法操作对象的数据，您可以控制访问数据的方式和时间。
+
+ This control of data is like creating a gate.
+这种对数据的控制就像创建一个门。
+
+ You only let access to data you allow.
+您只允许访问您允许的数据。
+
+ If your GPA was on a four point scale, you wouldn't want someone to be able to directly set the value to 10.
+如果你的平均绩点是4分，你不会希望有人能直接把它设为10分。
+
+ Now it's your turn to describe the data and functions in a self-contained object.
+现在轮到您在一个自包含的对象中描述数据和函数了。
+
+ With every piece of essential data, you need to create a protective layer from unapproved manipulation.
+对于每一项基本数据，您都需要为未经批准的操作创建一个保护层。
+
+ This is like changing a country's laws.
+这就像改变一个国家的法律一样。
+
+ Not just anyone can change laws the way they'd like it anytime, there is a proper procedure for changing laws.
+不是每个人都可以随时以自己喜欢的方式改变法律，改变法律是有适当的程序的。
+
+ This procedure provides protection from ill-advised changes.
+这个程序可以防止不明智的更改。
+
+ Getter Methods are methods that retrieve data, and their names typically begin with get and end with the name of the attribute whose value you will be returning.
+Getter方法是检索数据的方法，它们的名称通常以get开头，以您将返回其值的属性的名称结尾。
+
+ In our example, this would be your get license ID method in the driver object.
+在我们的例子中，这是driver对象中的get license ID方法。
+
+ Getters often retrieve a private piece of data.
+getter通常检索一段私有数据。
+
+ Setter Methods change data, and their names typically begin with set and end with the name of the variable you wish to set.
+Setter方法更改数据，它们的名称通常以set开头，以希望设置的变量的名称结尾。
+
+ In the driver example, this would be the set car function.
+在driver示例中，这是set car函数。
+
+ Setters are used to set a private attribute in a safe way.
+setter用于以安全的方式设置私有属性。
+
+ Data integrity is why you have Getter and Setter Methods.
+数据完整性是使用Getter和Setter方法的原因。
+
+ In order to change a piece of data, you need to go through the correct channels.
+为了更改数据块，您需要通过正确的通道。
+
+ Data must be accessed in an approved way.
+必须以经批准的方式访问数据。
+
+ Let's take a look at a class that bundles data and has methods that manipulate the data.
+让我们来看一个绑定数据并具有操作数据的方法的类。
+
+ As you can see in this code, whether or not an attribute or method is private or public influences its accessibility.
+正如您在这段代码中看到的，属性或方法是私有的还是公共的，都会影响其可访问性。
+
+ Attributes that are private cannot be accessed from anywhere other than from inside the class.
+私有属性不能从类内部以外的任何地方访问。
+
+ This hides them from anything outside of the class.
+这让他们在课堂之外的任何事情都看不到。
+
+ The only way you can manipulate the hidden data is by writing public functions that allow access to it.
+操作隐藏数据的惟一方法是编写允许访问它的公共函数。
+
+ Now it's your turn to write some code that restricts data manipulation to certain functions within an object.
+现在轮到您编写一些代码来限制对象中某些函数的数据操作。
+
+ There are many possible data points that are relevant to a person.
+有许多可能的数据点与一个人相关。
+
+ The most basic of those are a person's name.
+其中最基本的是一个人的名字。
+
+ In our code, you should have one private attribute that represents a person's name.
+在我们的代码中，应该有一个表示人名的私有属性。
+
+ This attribute can only be accessed via a public method to hide it from direct access by outside classes.
+此属性只能通过公共方法访问，以避免外部类直接访问。
+
+ Outside classes do not care how your methods are implemented.
+外部类不关心您的方法是如何实现的。
+
+ They only care if the methods are returning the expected output or doing their expected responsibility.
+它们只关心方法是返回预期的输出还是执行预期的职责。
+
+ This means your Getters and Setters do not purely have to return and change private attribute values.
+这意味着getter和setter不必返回和更改私有属性值。
+
+ They can do more.
+他们可以做得更多。
+
+ Let's take a look at our student example.
+让我们来看看我们的学生例子。
+
+ You might have a situation in which there are restrictions on changing the degree program.
+你可能会遇到改变学位课程有限制的情况。
+
+ You can change your code to more accurately display this restriction when it comes to changing the degree program.
+您可以更改代码，以便在更改学位课程时更准确地显示此限制。
+
+ Let's say that you need a GPA greater than two point seven in order to be able to change the degree program.
+假设你的平均绩点需要大于2。7才能改变学位课程。
+
+ this restriction might look like this.
+这个限制可能是这样的。
+
+ The outside observer does not need to know how your public methods are implemented.
+外部观察者不需要知道您的公共方法是如何实现的。
+
+ Just that they perform as expected.
+只是他们表现得和预期一样。
+
+ That means you can add additional code to your Getters and Setters if you need to.
+这意味着如果需要，您可以向getter和setter添加额外的代码。
+
+ Overall encapsulation is meant to protect your class and its objects.
+整体封装意味着保护类及其对象。
+
+ It also allows for an interface of approved methods for other classes to safely use the class.
+它还允许其他类安全使用已批准的方法的接口。
+
+ It allows you to hide implementation details from other classes.
+它允许您对其他类隐藏实现细节。
+

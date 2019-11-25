@@ -1,0 +1,201 @@
+Now, it's time for you to learn about encapsulation.
+现在，是时候学习封装了。
+
+ Encapsulation is a fundamental design principle in object oriented modeling and programming.
+封装是面向对象建模和编程的基本设计原则。
+
+ There are many things that you can represent as objects.
+有许多东西可以表示为对象。
+
+ For example, you could represent a university course as an object.
+例如，可以将大学课程表示为对象。
+
+ The course object can have many attribute values, like the specific number of students enrolled, credit value, and prerequisites, as well as specific behaviors dealing with these values.
+课程对象可以有许多属性值，比如注册学生的具体数量、学分值、先决条件以及处理这些值的具体行为。
+
+ And the course class defines the essential attributes and behaviors of all the course objects.
+课程类定义了所有课程对象的基本属性和行为。
+
+ Encapsulation involves three ideas.
+封装包含三个思想。
+
+ As the name suggests, it's about making a sort of capsule.
+顾名思义，它是关于制造一种胶囊。
+
+ The capsule contains something inside, some of which you can access from the outside, and some of which you cannot.
+太空舱里有一些东西，有些你可以从外面进入，有些则不能。
+
+ First, you bundle attribute values or data, and behaviors or functions, that manipulate those values together into a self-contained object.
+首先，将属性值或数据，以及操作这些值的行为或函数绑定到一个自包含的对象中。
+
+ Second, you can expose certain data and functions of that object, which can be accessed from other objects.
+其次，可以公开该对象的某些数据和函数，这些数据和函数可以从其他对象访问。
+
+ Third, you can restrict access to certain data and functions to only within that object.
+第三，可以将对某些数据和函数的访问限制在该对象内。
+
+ In short, encapsulation forms a self-contained object by bundling the data and functions it requires to work, exposes an interface whereby other objects can access and use it, and restricts access to certain inside details.
+简而言之，封装通过绑定工作所需的数据和函数形成一个自包含的对象，公开其他对象可以访问和使用它的接口，并限制对某些内部细节的访问。
+
+ You naturally bundle when you define a class for a type of object.
+在为对象的类型定义类时，自然要绑定。
+
+ Abstraction helps to determine what attributes and behaviors are relevant about a concept in some context.
+抽象有助于确定在某些上下文中与某个概念相关的属性和行为。
+
+ Encapsulation ensures that these characteristics are bundled together in the same class.
+封装确保将这些特征捆绑在同一个类中。
+
+ The distinct objects thus made from a particular class, will have their own data values for the attributes and exhibit resulting behaviors.
+从特定类中生成的不同对象，将具有自己的属性数据值，并显示结果行为。
+
+ You'll find that programming is easier when the data, and the code that manipulates that data, are located in the same place.
+您会发现，当数据和操作数据的代码位于相同的位置时，编程就更容易了。
+
+ An object's data should only contain what is relevant for that object.
+一个对象的数据应该只包含与该对象相关的内容。
+
+ A student would only contain relevant data for themselves, like the degree program.
+学生只会包含自己的相关数据，比如学位课程。
+
+ This is, as if the student object knows its degree program like a real student would.
+
+
+ A course object would know a list of students taking it.
+一个课程对象将知道一个正在学习它的学生列表。
+
+ The professor object would know a list of courses the professor teaches.
+教授对象将知道教授教授的一系列课程。
+
+ And none of these types of objects would contain a list of other courses offered, because that is not relevant data for them.
+这些类型的对象都不会包含所提供的其他课程的列表，因为这对它们来说不是相关的数据。
+
+ Besides attributes, a class also defines behaviors through methods.
+除了属性之外，类还通过方法定义行为。
+
+ For an object of the class, the methods manipulate the attribute values or data in the object to achieve the actual behaviors.
+对于类的对象，这些方法操作对象中的属性值或数据以实现实际的行为。
+
+ You can expose certain methods to be accessible to objects of other classes, thus, providing an interface to use the class.
+可以将某些方法公开给其他类的对象访问，从而提供使用该类的接口。
+
+ For example, a course can provide a method to allow a student to enroll in the course, or a course that a professor is teaching, can provide a method that allows the professor to see the list of students in that course.
+例如，一个课程可以提供一个允许学生注册该课程的方法，或者一个教授正在教授的课程可以提供一个允许教授查看该课程的学生列表的方法。
+
+ Encapsulation helps with data integrity.
+封装有助于实现数据完整性。
+
+ You can define certain attributes and methods of a class to be restricted from outside to access.
+您可以定义类的某些属性和方法，将其从外部限制为可访问。
+
+ In practice, you often present outside access to all the attributes, except through specific methods.
+在实践中，除了通过特定的方法外，您通常会对所有属性进行外部访问。
+
+ That way, the attribute values of an object cannot be changed directly through variable assignments.
+这样，对象的属性值就不能通过变量赋值直接改变。
+
+ Otherwise, such changes could break some assumption, or dependency for the data within an object.
+否则，此类更改可能会打破某些假设，或破坏对象内数据的依赖性。
+
+ As well, Encapsulation can secure sensitive information.
+同样，封装可以保护敏感信息。
+
+ For example, you may allow a student class to store a degree program and grade point average, GPA.
+例如，您可能允许一个学生班级存储一个学位程序和平均绩点(GPA)。
+
+ The student class itself could support queries involving the GPA, without necessarily revealing the actual value of the GPA.
+学生类本身可以支持涉及GPA的查询，而不必显示GPA的实际值。
+
+ For example, the student class could provide a method that tells whether the student is in good standing for the degree program, which uses the GPA and the calculation, but never reveals its actual value.
+例如，学生类可以提供一种方法来判断学生是否适合攻读学位，该方法使用GPA和计算，但从不显示其实际价值。
+
+ Encapsulation helps with software changes.
+封装有助于软件更改。
+
+ The accessible interface of a class can remain the same, while the implementation of the attributes and methods can change.
+类的可访问接口可以保持不变，而属性和方法的实现可以更改。
+
+ Outsiders using the class, do not need to care how the implementation actually works behind the interface.
+外部人员使用类时，不需要关心接口背后的实现是如何实际工作的。
+
+ To explain this, I'm going to use the university example again.
+为了解释这一点，我将再次使用大学的例子。
+
+ Let's say, a professor wants a student to calculate and declare their GPA before getting admitted into a course.
+比如说，一位教授希望学生在被某门课程录取之前计算并申报自己的GPA。
+
+ This is an action that the student may perform.
+这是一个学生可以执行的动作。
+
+ However, there could be many different ways that this action could be done.
+然而，有许多不同的方法可以完成这个动作。
+
+ A student might fill out a paper form and hand that to the administrator, who would check the paper files, write it a list of courses and grades for that student, from which to calculate the GPA.
+学生可能会填写一份纸质表格，交给管理员，管理员会检查纸质文件，为学生写一份课程和成绩的列表，从中计算GPA。
+
+ Or, this action may have been automated, so that the student would fill out the paper form and hand it into an administrator, who would check the computer database for the GPA.
+或者，这个操作可能是自动化的，这样学生就可以填写纸质表格，然后交给管理员，管理员会检查计算机数据库中的GPA。
+
+ Or the student can go online, and get the GPA themselves using a student information system.
+或者学生可以上网，通过学生信息系统获得GPA。
+
+ All these different ways will still achieve the end goal, reporting the GPA to the professor.
+所有这些不同的方法都会达到最终的目标，向教授汇报GPA。
+
+ As you can see, the professor does not have to care how the student gets their GPA, a student is the only one that really needs to know how to do it.
+正如你所看到的，教授不需要关心学生如何获得他们的GPA，学生是唯一真正需要知道如何去做的人。
+
+ You can apply this notion when you program software.
+您可以在编写软件时应用这个概念。
+
+ For example, suppose a student class has a method to return its major when called.
+例如，假设一个student类在调用时有一个返回其major的方法。
+
+ The actual steps to retrieve the major does not need to be known by any other class.
+检索major的实际步骤不需要任何其他类知道。
+
+ In programming, this sort of thinking is commonly referred to as, Black Box Thinking.
+在编程中，这种思维通常被称为黑箱思维。
+
+ Think of a class like a black box that you cannot see inside for details about, how attributes are represented, or how methods compute the result, but you provide inputs and obtain outputs by calling methods.
+可以将类想象成一个黑盒子，您无法在其中看到关于属性如何表示或方法如何计算结果的详细信息，但是您可以通过调用方法来提供输入和获取输出。
+
+ It doesn't matter what happens in the box to achieve the expected behaviors.
+为了实现预期的行为，框中发生了什么并不重要。
+
+ This distinction between what the outside world sees of a class, and how it works internally is important.
+外部世界对类的看法与内部类的工作方式之间的区别非常重要。
+
+ Encapsulation achieves what is called, the Abstraction Barrier.
+封装实现了所谓的抽象障碍。
+
+ Since the internal workings are not relevant to the outside world, this achieves an abstraction that effectively reduces complexity for the users of a class.
+由于内部工作与外部世界无关，这就实现了一个抽象，有效地降低了类用户的复杂性。
+
+ This increases re-usability, because another class only needs to know the right method to call to get the desired behavior, what arguments to supply as inputs, and what appear as outputs or effects.
+这增加了可重用性，因为另一个类只需要知道调用正确的方法来获得所需的行为、提供哪些参数作为输入、以及哪些参数作为输出或效果。
+
+ In the real world, if I ask you to buy me a soda, you can get the soda in many ways.
+在现实世界中，如果我让你给我买一杯苏打水，你可以通过很多方式得到它。
+
+ You can go to the vending machine and buy one, or you can drive to another city and buy one there.
+你可以去自动售货机买一台，或者你可以开车去另一个城市买一台。
+
+ The input and output is the same.
+输入和输出是一样的。
+
+ I ask you to buy me a soda, and you give me a soda.
+我请你给我买一杯苏打水，你给我一杯苏打水。
+
+ I don't need to know the details of how you got it.
+我不需要知道你是怎么得到它的。
+
+ Encapsulation is a key design principle in achieving a well written program.
+封装是实现编写良好的程序的关键设计原则。
+
+ It keeps your software modular and easier to work with.
+它使您的软件模块化，易于使用。
+
+ It also keeps your classes easy to manage, whose behaviors are accessed like black boxes.
+它还使您的类易于管理，可以像访问黑盒一样访问它们的行为。
+

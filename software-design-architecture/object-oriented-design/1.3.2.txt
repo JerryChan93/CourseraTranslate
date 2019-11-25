@@ -1,0 +1,291 @@
+[MUSIC] One goal of software design principlesis to help us create a system that is flexible, reusable and maintainable.
+软件设计原则的一个目标是帮助我们创建一个灵活、可重用和可维护的系统。
+
+ One of these principles iscalled separation of concerns.
+其中一个原则被称为关注点分离。
+
+ So, what is a concern?
+那么，问题是什么呢?
+
+ A concern is a very general notion, basically it is anything that mattersin providing a solution to a problem.
+关注是一个非常普遍的概念，基本上是指为问题提供解决方案的任何事情。
+
+ Let's think of a supermarket,the concerns in a supermarket could be, how do I butcher meat?
+让我们想想超市，超市里的问题可能是，我怎么屠宰肉?
+
+ How do I bake bread,how do I accept payment?
+我怎么烤面包，怎么收钱?
+
+ And how do I stock the shelves?
+我怎么把货架装上?
+
+ These concerns matter when runningthe business to serve their customers.
+当经营企业为客户服务时，这些问题很重要。
+
+ But, what do you notice in howa supermarket is organized to deal with these concerns?
+但是，你注意到超市是如何组织起来处理这些问题的吗?
+
+ There are separate departmentsthat focus on each concern.
+有单独的部门来关注每一个问题。
+
+ Each concern poses unique sub-problems.
+每个关注点都产生独特的子问题。
+
+ And each department knows what to do andhow to address their specific concerns.
+每个部门都知道该做什么，如何解决他们的具体问题。
+
+ The organization of a supermarketapplies separation of concerns.
+超级市场的组织采用关注点分离。
+
+ A software system solvesa problem in a similar fashion.
+软件系统以类似的方式解决问题。
+
+ The problem might be complexwith a large number of concerns.
+这个问题可能与大量的问题相结合。
+
+ Or it might be simple withthe small number of concerns.
+或者它可能是简单的少量关注。
+
+ There are concepts that can beabstracted from the problem space.
+有些概念可以从问题空间中抽象出来。
+
+ How these abstractions are implemented inthe software can lead to more concerns.
+如何在软件中实现这些抽象会引起更多的关注。
+
+ Some of these concerns may involve whatinformation the implementation represents, what it manipulates, andwhat gets presented at the end.
+其中一些问题可能涉及实现代表的信息、操作的内容以及最后呈现的内容。
+
+ It's easy to get lost and tangled up inall these concerns and their sub-problems.
+人们很容易迷失在所有这些问题和它们的子问题中。
+
+ We need to be organized, sothat we can think about and address these concerns effectively.
+我们需要组织起来，这样我们才能有效地思考和解决这些问题。
+
+ As a software solution is designed andconstructed, we express how we can address the different sub-problems byseparating them into separate sections.
+在设计和构建软件解决方案时，我们表示如何通过将不同的子问题划分为不同的部分来解决它们。
+
+ You might have noticed,that separation of concerns, is a key idea that applies throughoutobject oriented modelling and programming.
+您可能已经注意到，关注点分离是通过面向对象的建模和编程应用的一个关键思想。
+
+ The concerns that matter are addressedseparately when applying the design principles of obstruction, encapsulation,decomposition, and generalization.
+当应用阻塞、封装、分解和一般化的设计原则时，对物质的关注是分开处理的。
+
+ Each concept in the problem space leadsto a separate obstruction with its own relevant attributes and behaviors.
+问题空间中的每个概念都有自己的相关属性和行为，导致不同的障碍。
+
+ These attributes and behaviors are encapsulated into theirown section of code called a class.
+这些属性和行为被封装到称为类的代码中。
+
+ The view of a class bythe rest of the system and its implementation are separated.
+类的视图由系统的其余部分和它的实现分离。
+
+ So that the details ofimplementation can change, while the view throughan interface can stay the same.
+因此，实现的细节可以更改，而通过接口的视图可以保持不变。
+
+ A whole class can also bedecomposed into multiple classes.
+整个类也可以分解为多个类。
+
+ We may recognize commonalities amongclasses, which are then separated and generalized into a super class.
+我们可以识别类之间的共性，然后将其分离并推广到超类中。
+
+ Separation of concerns is an ongoingprocess throughout the design process.
+在整个设计过程中，关注点分离是一个持续的过程。
+
+ Let's look at the behavior of a dog.
+让我们来看看狗的行为。
+
+ Some basic behaviors that a dog can doare walking, running, speaking and eating.
+狗能做的一些基本行为是散步、跑步、说话和吃饭。
+
+ While these behaviorsare easy to identify and abstract, we need to ask ourselves whichbehaviors can the dog do all on its own?
+虽然这些行为很容易识别和抽象，我们需要问自己哪些行为是狗可以独自完成的?
+
+ And which ones need help from something orsomeone else?
+哪些人需要别人的帮助?
+
+ If we examine the eatingbehavior more closely, we might come up with something like this.
+如果我们更仔细地观察进食行为，我们可能会得出这样的结论。
+
+ Our UML tells us that the dog has food,which it knows how to eat.
+我们的UML告诉我们狗有食物，它知道怎么吃。
+
+ We can tell the dog to eatfood by giving it food, but is this the correct way ofmodeling the situation?
+我们可以通过给狗食物来告诉它去吃东西，但这是模拟情境的正确方法吗?
+
+ Who is actually giving the dog the food?
+到底是谁给了狗食物?
+
+ Does the dog always have food to eat, oris the dog given food to eat by an owner?
+狗总是有吃的吗?还是主人给狗吃的?
+
+ In reality,a dog would need an owner to feed it.
+事实上，狗需要主人来喂它。
+
+ The dog knows how to eat food, but it doesn't know anything about the foodsit's eating until its owner feeds it.
+狗知道怎么吃东西，但在主人喂它之前，它对吃的东西一无所知。
+
+ We need to separate two concerns,the action of eating and the action of providing food.
+我们需要区分两个关注点，进食的行为和提供食物的行为。
+
+ This can be done byintroducing a dog owner class.
+这可以通过引入一个dog owner类来实现。
+
+ In our new design,the dog class only knows how to eat food.
+在我们的新设计中，狗类只知道如何吃东西。
+
+ The dog owner class is the one thatknows how to get the dog food and how to give it to the dog.
+狗主人阶层的人知道如何获得狗粮和如何给狗。
+
+ We have removed the concern of howto get food away from the dog and let the dog owner handle that issue.
+我们已经解决了如何从狗狗那里获得食物的问题，让狗狗的主人来处理这个问题。
+
+ In using separation of concerns here, weshould only be encapsulating behaviors and attributes within classes thatare concerned with the said behaviors and attributes.
+在这里使用关注点分离时，我们应该只将行为和属性封装在与所述行为和属性相关的类中。
+
+ This helps us to create a modular systemwhere individual classes can easily be swapped in and out without having torewrite a large portion of our code.
+这有助于我们创建一个模块化的系统，在这个系统中，不必重写大量代码就可以轻松地交换单个类。
+
+ Let's illustrate some operation ofconcerns with the another example.
+让我们用另一个例子来说明关注点的一些操作。
+
+ Think about all the different behaviorsthat a smartphone is capable of.
+想想智能手机能做的所有不同的事情。
+
+ You can use it to take photos,schedule meetings, send and receive e-mail, browse the internet,send SMS or, of course, make phone calls.
+你可以用它来拍照、安排会议、收发电子邮件、上网、发短信，当然，也可以打电话。
+
+ If we were to design a smartphone,what would the classes look like?
+如果我们要设计一款智能手机，课程应该是什么样的?
+
+ Given the complexity of a smartphone,let's just look at the camera and the traditional phone functions.
+考虑到智能手机的复杂性，我们来看看摄像头和传统手机的功能。
+
+ In this snippet of code, the SmartPhoneclass, has attributes called camera and phone along with all ofthe associated behaviors.
+在这段代码中，SmartPhoneclass具有称为camera和phone的属性，以及所有相关的行为。
+
+ However, there is low cohesionin the SmartPhone class, because we have behaviors thatare not related to each other.
+然而，在智能手机课上，我们的凝聚力很低，因为我们的行为彼此之间没有联系。
+
+ The camera behaviors do not need tobe encapsulated with the behaviors of the phone in order forthe camera to do its job.
+摄像头的行为不需要封装在手机的行为中，这样摄像头就可以正常工作了。
+
+ Furthermore our smartphone componentsdo not offer us any modularity.
+此外，我们的智能手机组件不提供任何模块化。
+
+ We cannot access the camera orthe phone separately if we were to build another system that required only one orthe other.
+如果我们要建立另一个只需要一个或另一个的系统，我们就不能分别访问相机或电话。
+
+ We cannot replace our currentcamera with a different camera, or replace it with a completely differentobject, without removing the code for the camera completely in this class.
+我们不能用一个不同的摄像头替换当前的摄像头，或者用一个完全不同的对象替换当前的摄像头，而不删除这个类中摄像头的代码。
+
+ So what changes can we make to ourSmartPhone class in order to make it more cohesive, and give each component of oursmartphone distinctive functionalities.
+因此，我们可以对我们的智能手机类进行哪些更改，以使其更有凝聚力，并赋予我们的智能手机的每个组件独特的功能。
+
+ Well, let's check what our smartphoneclass is concerned about and separate them out.
+那么，让我们检查一下我们的智能手机类关注什么，并将它们分离出来。
+
+ Our SmartPhone class has two concerns.
+我们的智能手机课程有两个问题。
+
+ One, act as a traditional telephone,and two, be able to use the built-incamera to take pictures.
+一是充当传统电话，二是能够使用内置摄像头拍照。
+
+ Now that we have identifiedthese two different concerns, we can separate them out into their ownmore cohesive classes and encapsulate all the details about each into functionallydistinct and independent classes.
+现在我们已经识别出了这两个不同的关注点，我们可以将它们分离到它们自己的更有内聚性的类中，并将每个类的所有细节封装到功能上不同的、独立的类中。
+
+ The SmartPhone class will referenceinstances of our newly created classes, so that the smartphone can act asa coordinator of the camera and the phone.
+智能手机类将引用我们新创建的类的实例，因此智能手机可以充当相机和手机的协调器。
+
+ This will let our smartphone provideaccess to all the behaviors of the camera and the phone without having toknow how each component behaves.
+这将使我们的智能手机能够访问相机和手机的所有行为，而不必知道每个组件的行为。
+
+ Let's now take a look at whatour new smartphone design looks like after we appliedseparation of concerns.
+现在，让我们来看看我们的新智能手机设计是什么样子的，我们应用分离的关注。
+
+ First, we will extract the attributes andbehaviors of both the camera and TraditionalPhone intotwo separate interfaces.
+首先，我们将摄像头和传统手机的属性和行为提取到两个单独的界面中。
+
+ Then, we can implement these interfacescorrespondingly with the FirstGenCamera class and the TraditionalPhone class.
+然后，我们可以相应地用FirstGenCamera类和传声器类实现这些接口。
+
+ Here is what the code looks like.
+下面是代码的样子。
+
+ As you can see, we have separatedthe camera and phone functionalities into different classes, each of whichimplements a certain interface.
+正如您所看到的，我们已经将相机和电话功能分离到不同的类中，每个类都实现了特定的接口。
+
+ Next, let's redesign the code forour SmartPhone class, so that it refers to instances ofthe camera and phone classes.
+接下来，让我们重新设计智能手机类的代码，使其引用camera和phone类的实例。
+
+ This allows our smartphone to providethe functions of both the camera and the phone, while keeping thefunctionalities of either one separate and hidden from each other.
+这使得我们的智能手机既能提供相机的功能，又能提供手机的功能，同时又能将两者的功能分开并相互隐藏。
+
+ The camera andphone know nothing about the other but are still composed bythis SmartPhone class.
+相机和手机对彼此一无所知，但它们仍然由这个智能手机类构成。
+
+ Also, we can have a smartphone constructorwith camera and phone as parameters.
+此外，我们可以有一个智能手机构造与相机和手机作为参数。
+
+ Then we can create a new instance of theSmartPhone class by passing in a instances of classes that implemented the camera andphone interfaces.
+然后，我们可以通过传入实现摄像机和电话接口的类的实例来创建一个新的theSmartPhone类实例。
+
+ Note that we leave it as a separateresponsibility of who will instantiate the appropriate phone and camera objects.
+请注意，我们将它作为一个单独的责任，由谁来实例化适当的phone和camera对象。
+
+ The smartphone class doesnot actually need to know.
+智能手机类实际上不需要知道。
+
+ Finally, the smartphone class has methodsthat forward the responsibilities of using the camera andphone to these objects.
+最后，智能手机类有方法将使用相机和手机的职责转发给这些对象。
+
+ Are you able to see how we now havea more modular design for our phone?
+你能看到我们现在的手机是如何进行模块化设计的吗?
+
+ If we want to swap out our camera orphone classes for something else, we do not need to touchany of the SmartPhone class's code.
+如果我们想用其他东西替换掉我们的摄像头或phone类，我们不需要触摸任何智能手机类的代码。
+
+ We simply just change the code toinstantiate the smartphone and its parts.
+我们只需更改代码来实例化智能手机及其部件。
+
+ The smartphone class is now more cohesive.
+如今，智能手机行业的凝聚力更强了。
+
+ The tradeoff is that we haveincreased coupling in our system.
+权衡是我们增加了系统的耦合。
+
+ Because the smartphone class needs to knowabout the camera and phone interfaces and is indirectly dependent on other classes.
+因为智能手机类需要了解摄像头和电话接口，并且间接地依赖于其他类。
+
+ We use separation of concerns throughoutthis example by separating out the general notions of camera andphone through applying generalization and defining two interfaces.
+在这个例子中，我们通过应用一般化和定义两个接口来分离相机和电话的一般概念，从而实现关注点分离。
+
+ Separating out the functionality for afirst gen camera and traditional phone by applying abstraction and encapsulation,and defining two implementing classes.
+通过应用抽象和封装分离出第一代相机和传统手机的功能，并定义两个实现类。
+
+ And finally, by applyingdecomposition to the smartphone, so the constituent partsare separated from the whole.
+最后，通过将分解应用到智能手机上，将组成部分从整体中分离出来。
+
+ Now that we've talked about separationof concerns and completed an example, let's take a quick quiz to help you gaugeyour understanding of how separation of concerns works to meet our design goals.
+既然我们已经讨论了关注点分离并完成了一个示例，现在让我们做一个快速测试来帮助您了解关注点分离是如何工作以满足我们的设计目标的。
+
+ Our goal is to create flexible reusable,and maintainable code.
+我们的目标是创建灵活的、可重用的和可维护的代码。
+
+ Separation of concerns creates morecohesive classes using abstraction, encapsulation, decomposition,and generalization.
+关注点分离使用抽象、封装、分解和泛化来创建更强的类。
+
+ This creates a system that is easier tomaintain because each class is organized so that it only contains the codethat it needs to do its job.
+这就创建了一个更容易维护的系统，因为每个类都是有组织的，所以它只包含完成其工作所需的代码。
+
+ Modularity is increased in turn,which allows developers to reuse and build up individual classeswithout affecting others.
+模块化依次增加，这使得开发人员可以重用和构建单独的类而不影响其他类。
+
+ In our smartphone example, it is clearwhere the boundaries of each class are.
+在我们的智能手机示例中，每个类的边界是清楚的。
+
+ However, real-world problems may not be soobvious.
+然而，现实世界的问题可能不是那么明显。
+
+ Deciding how to abstract, encapsulate,decompose and generalize to address the many concerns for a given problem isat the core of designing modular software.
+决定如何抽象、封装、分解和泛化以解决给定问题的多个关注点是模块化软件设计的核心。
+

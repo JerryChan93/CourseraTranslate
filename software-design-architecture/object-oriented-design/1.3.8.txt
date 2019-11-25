@@ -1,0 +1,393 @@
+[MUSIC] Now that you've learned about differenttechniques to design your system, how do you make sure that the systemyou've created is correct?
+既然你已经学习了不同的设计系统的技术，你如何确保你创建的系统是正确的呢?
+
+ There are many ways that you can verifythat your system is working the way you intended.
+有很多方法可以让你确认你的系统是否在按照你想要的方式工作。
+
+ For example, you can run tests and see if the actual behaviormatches what you expect.
+例如，您可以运行测试，看看实际的行为是否符合您的期望。
+
+ One technique you'll learn abouthere is called model checking.
+你将在那里学到的一种技术叫做模型检查。
+
+ Model checking is a systematiccheck of your system's state model in all its possible states.
+模型检查是对系统的状态模型在所有可能状态下的系统检查。
+
+ Basically, you check all the variousstates of your software and find that there are any errors bysimulating different events that would change the states andvariables of your software.
+基本上，您检查您的软件的所有不同状态，并发现有任何错误，通过模拟不同的事件，将改变您的软件的状态和变量。
+
+ So you check if the state model ofyour software contains some flaw.
+因此，您要检查软件的状态模型是否包含一些缺陷。
+
+ These checks are done usingmodel checking software.
+这些检查是使用模型检查软件完成的。
+
+ Let's ask an expert about the differenttypes of model checking software that is used today in the software industry.
+让我们向专家咨询一下当今软件行业中使用的不同类型的模型检查软件。
+
+ >> Before we talk about model checking,it's probably a good idea to talk about the whole processof specifying and testing, and reasoning about systemsbecause that's what we all do.
+在我们讨论模型检查之前，讨论一下指定和测试的整个过程，以及关于系统的推理，可能是个好主意，因为那是我们都做的事情。
+
+ When we build something for you,we're doing some very, very complicated mental reasoning that the sentences thatwe're writing in some programming language are actually going to deliver the productthat you want to make for your business.
+当我们为你做东西的时候，我们在做一些非常非常复杂的心理推理，我们用一些编程语言写的句子实际上是要交付你想为你的生意做的产品。
+
+ The sheer amount of complexreasoning that we do, we do it so automatically,we don't realise how complicated it is.
+我们所做的复杂推理的数量是如此之多，我们自动地做，我们没有意识到它有多么复杂。
+
+ But anyone who's ever taughtintroductory programming to students who the first time they see a for-loop,they simply can't understand what it does.
+但是，任何曾经教过第一次看到for循环的学生入门编程的人，都无法理解它的作用。
+
+ They don't understand how to makethe four loop do what they want it to do because they haven't built the internalstructures for reasoning about a for-loop.
+他们不知道如何让4个循环做他们想让它做的事情，因为他们还没有为for循环的推理建立内部结构。
+
+ Now, what we try and talk about is what varies everytime you go through the for-loop, what is it you're trying to change,what's the kind of progress you're making?
+现在，我们尝试和讨论的是，每次你通过for循环时，变化的是什么，你试图改变的是什么，你取得了什么样的进展?
+
+ These are all English languageattempts to sort of say, yes, a for-loop's an iterativesolution to a particular problem.
+这些都是用英语想要表达的意思，对，for循环是对一个特定问题的迭代求解。
+
+ And then you wonder, five years later, why you ever thoughta for-loop was mysterious.
+然后你会想，五年之后，为什么你会觉得for-loop很神秘呢?
+
+ Because you now internalized allthe reasoning that you need to do to write a for-loop.
+因为现在您已经内化了编写for循环所需的所有推理。
+
+ In a complicated system, you're alsodoing this internalized reasoning.
+在一个复杂的系统中，你也在进行这种内化的推理。
+
+ But it's now becoming less certain.
+但现在越来越不确定了。
+
+ As an experienced programmer, I canlook at a for-loop and quickly say, yep, I think I know what it's doing.
+作为一名有经验的程序员，我可以看到for循环并快速地说，是的，我认为我知道它在做什么。
+
+ But now if I've got fivedifferent applications, they're all talking toa bunch of web services and the web services are talking amongthemselves and I've got a data base updates going and this whole flurryof things acting concurrently.
+但现在，如果我有5个不同的应用，它们都在和一堆web服务对话，而web服务在它们之间对话，我有一个数据库更新，所有这些东西都在同时运行。
+
+ It's not so obvious anymorewhether simple properties for the system are holding, such as a pieceof data is actually consistent or not.
+系统的简单属性(例如数据片段)是否一致不再那么明显。
+
+ How do you reason abouta system like that?
+你是如何对这样一个系统进行推理的?
+
+ We build them.
+我们构建它们。
+
+ We rely on things like the databaseto ensure transaction atomicity.
+我们依靠像数据库这样的东西来确保事务原子性。
+
+ But how did the database guysconvince themselves that, yes, their database,it does preserve atomic transactions.
+但是数据库人员如何说服他们自己，是的，他们的数据库，它确实保留了原子事务。
+
+ How do you reason aboutthis complicated systems?
+你如何解释这个复杂的系统?
+
+ Well, this has been a problem again,identified in the 70s, of what's the best way to reason about your programsand there's been two scrolls of thought.
+嗯，这又是一个问题，在70年代被发现，关于你的程序的最佳推理方式是什么。
+
+ Not competing.
+没有竞争。
+
+ The complimentary schools of thought.
+令人称赞的思想流派。
+
+ One school of thought says that, well, we can look at our programas a mathematical artifact.
+一种学派认为，我们可以把我们的程序看作是数学上的产物。
+
+ And we can prove propertiesabout what the program does.
+我们可以证明这个程序的性能。
+
+ Assuming that we have a good enoughunderstanding of the behavior of the programming language just socalled semantics.
+假设我们对所谓的语义编程语言的行为有足够的理解。
+
+ And that's a very successful approach for a whole range of systems andin fact I've proven programs correct using this techniquethat are deep down inside production systems where a failure wouldn't beat all obvious until much later.
+对于整个系统来说，这是一个非常成功的方法，事实上，我已经证明了使用这种技术的程序是正确的，这种技术深入到生产系统中，直到很久以后才会出现明显的故障。
+
+ And that works,it's a perfectly good technique and it's actually importantpart of your tool kit.
+这是很有效的，这是一个很好的技巧，也是你的工具箱中很重要的一部分。
+
+ But there's other kinds of problemssuch as concurrent activities of programs communicating to eachother and updating shared data.
+但是，还有其他类型的问题，如程序的并发活动相互通信和更新共享数据。
+
+ Where a handwritten proof type approach doesn't work because you're notdealing with generalized things.
+手写的证明类型方法不起作用，因为你没有处理一般化的东西。
+
+ You're dealing with a largenumber of really special cases.
+你要处理大量的特殊情况。
+
+ What if you do this, then I do this,then you do that, and I do that?
+如果你做这个，然后我做这个，然后你做那个，然后我做那个呢?
+
+ And it's very hard to by handanticipate all these special cases.
+很难预测所有这些特殊情况。
+
+ And in fact there are famous papersin the literature where they prove a certain protocols correct that turns outthat the proof is got a settle bugging in.
+事实上，在文献中有一些著名的论文他们证明了某个协议是正确的结果证明这个协议是错误的。
+
+ So there's another line ofapproach which says, for this things that have allthese weird special cases, what we should do is mechanicallyenumerate all the special cases.
+还有另一种方法，对于这些特殊情况，我们应该机械地列举所有的特殊情况。
+
+ What does that mean?
+这是什么意思?
+
+ Well, I have a system it's calledsome state when it does things, it changes from onestate to another state.
+我有一个系统，它被称为某个状态当它做事情的时候，它从onestate变成了另一个状态。
+
+ I can express the behaviors that system asstate changes and I can say things like, it'll never be the casethat the total debits and total credits in thisaccount don't balance.
+我可以表达随着状态变化的系统行为，我可以这样说，永远不会有这样的情况，总借方和总贷方不平衡。
+
+ Because statements about the total debitsthat have occurred, the total credits and the current balance,those are all statements about state.
+因为关于已经发生的总负债、总贷方和当前余额的报表都是关于状态的。
+
+ I can then try andexpress things, like saying, it's never the case thatI will sell two tickets.
+然后我可以试着表达一些事情，比如说，我从来不会卖出两张票。
+
+ No, it's never the case that I willsell the same ticket to two different customers.
+不，我绝不会把同样的票卖给两个不同的顾客。
+
+ Important airlinereservation specification.
+重要airlinereservation规范。
+
+ So that's a statement again about a state.
+这又是一个关于状态的表述。
+
+ You're saying that before this ticket wassold, the world was in a certain state.
+你是说，在这张彩票发行之前，世界处于某种状态。
+
+ After this ticket was sold,the world was in another state.
+这张票卖出后，世界进入了另一个状态。
+
+ And this other state doesn't havetwo people holding the same ticket.
+而另一个州没有两个人持有相同的票。
+
+ If you can express your problem that way, then you can do what'scalled model checking.
+如果您可以用这种方式表达您的问题，那么您就可以进行所谓的模型检查。
+
+ And model checking is a techniquethat does state exploration, it says, given that youstart in this current state, explore all the possible waysyou can go into the future and reason about what all those possiblefuture states can look like.
+模型检查是一种进行状态探索的技术，它说，考虑到你从当前状态开始，探索所有可能的方式，你可以进入未来，并思考所有可能的未来状态会是什么样子。
+
+ Going back to the ticket thing, I mightmake a statement that says along the lines of, if at some point in time, ticket A issold, then at all future states in time, ticket A is only heldby exactly one owner.
+回到票的问题，我可能会说，如果在某个时间点，票a卖了，那么在未来所有时间点，票a只由一个所有者持有。
+
+ The model checker can then lookat the way the system evolves.
+然后，模型检查器可以查看系统的发展方式。
+
+ How does it know that?
+它是怎么知道的?
+
+ Well, the model checker has a little bitof an idea of how your program runs.
+嗯，模型检查器对你的程序如何运行有一点了解。
+
+ That's a different issue,we'll get to that.
+那是另一个问题，我们会讲到的。
+
+ But the model checker explores the futureand then it comes back with an answer.
+但是模型检查器会探索未来，然后它会给出一个答案。
+
+ And the answer's either, yep, it's neverthe case that two people have purchased the same ticket orit says that's wrong and here's the counter example, here's all theweird steps that the system went through, in order to make it so that customer oneand two both hold onto the same ticket.
+答案是，是的，永远不会是两个人买了同一张票或者它说那是错的这是反例，这是系统经历的所有奇怪的步骤，为了让顾客1和2都持有相同的票。
+
+ The model checker then actually,it doesn't only tell you that you're wrong, it saysand here's one example were you're wrong.
+模型检查器实际上，它不仅告诉你你错了，它还说，这里有一个例子，你错了。
+
+ The problem with model checking is the socalled stage space explosion.
+模型检验的问题是所谓的阶段空间爆炸。
+
+ If I've got one bit, i have two states.
+如果有一个位元，就有两种状态。
+
+ If I got I've got ten bits,I've got two to the tenth states.
+如果有10位元，就有2 ^ 10个状态。
+
+ If I've got 1 million bits,I've 2 to the 1 million states.
+如果我有1百万个位元，我就有2的1百万个状态。
+
+ There's no way to exploreto the 1 million.
+没有办法去探索那一百万。
+
+ Current model checkers last timeI knew anything about them, were about 2 to the 40th states,was about the most you could explore.
+当前的模型检验器上次我对它们有所了解，大概是2的40次方个州，大概是你能探索的最多的了。
+
+ That means if your problem can't bedescribed in a small number of bits, you're in trouble becausethe model checker won't help you.
+这意味着如果你的问题不能用少量的比特来描述，你就有麻烦了，因为模型检查器不会帮你。
+
+ So what model checkingrelies on is the ability for you to take your piece of code andextract from your piece of code just those parts of the problemthat you need to model.
+所以模型检验所依赖的是你从你的代码中提取出你需要建模的那部分问题的能力。
+
+ So you might not be ale to model, forexample, in a purchases sync system, you might not be able to modelthe totals on the purchase orders, because that's a lot of bets.
+例如，你可能无法在采购同步系统中建模，你可能无法对采购订单的总数建模，因为这是一个很大的赌注。
+
+ You might not be able to model a lotof items on a purchase orders, but you might be able to model that there'sone or two items on the purchase order, because that's all you care about.
+您可能无法对采购订单上的许多项目进行建模，但是您可能能够对采购订单上的一两个项目进行建模，因为您只关心这些。
+
+ Because what you're trying toprove is that, if you ever make a request of the fulfillment systemto actually get the order paid, then all of the orders on the order actuallyhave made it to the shipping state.
+因为你想要证明的是，如果你曾经向履行系统请求实际支付订单，那么订单上的所有订单实际上都已经到达了发货状态。
+
+ So model checking relies on this thingthat we call the small world assumption.
+模型检验依赖于我们所说的小世界假设。
+
+ That, if you have a system and things are going to go wrong,they're going to go wrong in small cases.
+如果你有一个系统，它会出错，它们会在小的情况下出错。
+
+ And that if you look at the small cases,you can convince yourself to a reasonable degree of confidence that it's probablygoing to work in the big cases.
+如果你观察小的情况，你可以说服自己，在一个合理的程度上相信，它可能会在大的情况下工作。
+
+ That's the program extraction part,that's still a big problem, no one knows how to do that well.
+这就是程序提取部分，这仍然是一个大问题，没有人知道如何做得很好。
+
+ There's lots of tools thatare good partial solutions but there's no general solutions to that.
+有很多工具都是很好的部分解决方案但是没有通用的解决方案。
+
+ Model checking and listening overa programs and Azure development and test cases,they all fit together very nicely, because if you can specify what your system does,you can write test for it.
+对a程序和Azure开发以及测试用例进行模型检查和监听，它们都配合得非常好，因为如果您可以指定您的系统要做什么，那么您就可以为它编写测试。
+
+ In some sense,test are themselves specifications.
+在某种意义上，测试本身就是规范。
+
+ Because if you pass it, it's doingthe right thing, if you don't pass it, it's doing the wrong thing.
+因为如果你通过了，那就是在做正确的事，如果你没有通过，那就是在做错误的事。
+
+ If you can model check your system,that's good, because it means that you have somespecifications that don't need test cases.
+如果您可以对您的系统进行模型检查，这是很好的，因为这意味着您有一些不需要测试用例的特殊情况。
+
+ Because the system is actually correct.
+因为这个系统是正确的。
+
+ Or you can think aboutit slightly differently.
+或者你可以稍微换一种思考方式。
+
+ If you model check and you get a cuterexample, that becomes a new test case.
+如果您进行模型检查并得到一个cuterexample，那么它将成为一个新的测试用例。
+
+ You throw that into your test suite andthen when you fix it and run on the second time,that test better fail.
+您将它放入您的测试套件中，然后当您修复它并在第二次运行时，测试最好失败。
+
+ So they really all the same thing just with different mathematicaltechnologies behind them.
+所以它们其实是一样的只是背后有不同的数学技术。
+
+ It's only a small percentage of allthe code that's written that can actually benefit from model checking becauseeither it's not important enough who and you don't care who do the investment,or it's simply too complicated and model checking is not powerful enough yet.
+只有一小部分代码可以从模型检查中受益，因为要么是谁不够重要，你不关心谁做了投资，要么是太复杂，模型检查还不够强大。
+
+ >> Think of model checking likegoing through airport security.
+想想看，模型检查就像通过机场安检一样。
+
+ Security guards in airports knowthe rules of what people should have or shouldn't have to get on an airplane.
+机场的保安知道人们应该或不应该上飞机的规则。
+
+ They don't make any exceptions.
+他们不做任何例外。
+
+ Model checking is similar and that itchecks the behavior in the state model for your system and notifies you ofany violations to the rules.
+模型检查与此类似，它检查系统状态模型中的行为，并通知您任何违反规则的行为。
+
+ A rule that your software is required tosatisfy is it must not produce a deadlock.
+您的软件必须满足的一个规则是它不能产生死锁。
+
+ A deadlock is a situation whereyour system cannot continue because two tasks are waiting forthe same resource.
+死锁是由于两个任务在等待相同的资源而导致系统无法继续的情况。
+
+ Your model checker would simulate thedifferent states that could occur in your system and if a deadlock is possible,it would provide details of the violation.
+您的模型检查器将模拟系统中可能出现的不同状态，如果出现死锁，它将提供冲突的详细信息。
+
+ Now, how do you model check your software?
+现在，如何对软件进行建模检查?
+
+ Model checkers generatea State Model from your code.
+模型检查器从代码生成状态模型。
+
+ A state model is an abstract state machinethat can be in one of various states.
+状态模型是一种抽象的状态机，它可以处于多种状态之一。
+
+ The model checker then checks thatthe state model conforms to certain behavioral properties.
+然后，模型检查器检查状态模型是否符合某些行为属性。
+
+ For example, the model checkercan examine the state model for flaws like grace conditions, exploringall the possible states of your model.
+例如，模型检查器可以检查状态模型的缺陷，比如grace条件，探索模型的所有可能状态。
+
+ There are three different phasesto performing model checking, the modeling phase, the running phase,and the analysis phase.
+执行模型检查有三个不同的阶段，建模阶段、运行阶段和分析阶段。
+
+ The modeling phase comes first.
+首先是建模阶段。
+
+ This is where you enterthe model description.
+这是您进入模型描述的地方。
+
+ This will be provided in whateverprogramming language your system uses.
+这将以您的系统使用的任何编程语言提供。
+
+ You also describe the desired properties.
+还需要描述所需的属性。
+
+ During the modeling phase,you can perform some Saturday checks.
+在建模阶段，您可以执行一些星期六检查。
+
+ These are quick checks that should be easyto do because they usually come from very clear and simple logic.
+这些是应该很容易做到的快速检查，因为它们通常来自非常清晰和简单的逻辑。
+
+ It's like testing if a light bulb isworking by flipping a switch on and off.
+这就像通过开关开关来测试一个灯泡是否工作。
+
+ It's clear to see when the lightbulb is malfunctioning.
+很明显，电灯泡出故障了。
+
+ It's beneficial to get rid of thesesimpler errors before using any model checkers so that you can focus on specifyingthe more complex properties to check.
+在使用任何模型检查器之前消除这些隐含错误是有益的，这样您就可以集中精力指定要检查的更复杂的属性。
+
+ The second phase is the running phase, this is when you run the model checker tosee how your model conforms to the desired properties that you've wrotein the modeling phase.
+第二阶段是运行阶段，这是您运行模型检查器以查看您的模型如何符合您在建模阶段中编写的所需属性的时候。
+
+ The last phase is the analysis phase.
+最后一个阶段是分析阶段。
+
+ This is where you check if allthe desired properties are satisfied and if any are violated.
+在这里可以检查是否满足所有需要的属性，以及是否违反了任何属性。
+
+ Violations are called counterexamples.
+违规行为被称为反例。
+
+ Your model checker will providedescriptions of violations in your system so that you can analyzehow it got to that state.
+您的模型检查器将提供系统中违规行为的描述，以便您可以分析它是如何达到这种状态的。
+
+ Using the information from the modelchecker, you advice yourself where to fix any problems,then run through the phases again.
+使用来自modelchecker的信息，您可以建议自己在何处修复任何问题，然后再次运行这些阶段。
+
+ You do this until you can be sure thatyour software is correct with respect to the desired properties.
+这样做，直到您能够确保您的软件在所需的属性方面是正确的。
+
+ Model checking is a veryuseful verification technique, there are many ways to test yoursystem's behaviour, like unit testing, beta testing, and simulations.
+模型检查是一种非常有用的验证技术，有许多方法可以测试系统的行为，比如单元测试、beta测试和仿真。
+
+ But model checking can help finderrors that these tests can't.
+但是模型检查可以帮助发现错误，而这些测试不能。
+
+ If you're looking to use modelcheckers to develop your programs, there are many different freemodel checkers available for developers that use different languages.
+如果您希望使用modelcheckers来开发您的程序，那么有许多不同的freemodel checkers可供使用不同语言的开发人员使用。
+
+ Model checking is now another techniquethat you can use to make sure that you are not only creatingwell-designed software, but software that meets desired properties andbehavior.
+模型检查现在是另一种技术，您可以使用它来确保您不仅创建了设计良好的软件，而且还创建了满足所需属性和行为的软件。
+
+ Using model checking after you used thedesigned techniques you've learned in this course, we'll ensure that your softwareis behaving the way you intended.
+在你使用了你在这门课上学到的设计技术之后，使用模型检查，我们将确保你的软件按照你想要的方式运行。
+
+ >> Congratulations, you can play allthe video content for this first course.
+恭喜你，你可以播放第一节课的所有视频内容。
+
+ Next stop are the remainingcapstone assignments.
+下一站是剩余的顶石分配。
+
+ So far, in the capstone assignments, you've been documenting the softwarein various similar diagrams.
+到目前为止，在顶石任务中，您已经在各种类似的图表中记录了软件。
+
+ Now, we're going to flip things around.
+现在，我们来翻转一下。
+
+ You'd like take a change,expressed in a diagram, and apply that change to the code forreal software product.
+您需要进行一个用图表表示的更改，并将该更改应用到实际软件产品的代码中。
+
+ By and of course quiz to attest yourknowledge from all of the material recovered in this course.
+通过和当然测试，以证明你的知识，从所有的材料在本课程中恢复。
+
+ See you next time.
+下次见。
+

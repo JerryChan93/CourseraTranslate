@@ -1,0 +1,222 @@
+Hello, again.
+你好,再一次。
+
+ Welcome to the third module.
+欢迎来到第三讲。
+
+ In the previous module, we discussed four design principles useful in object-oriented modeling and programming abstraction, encapsulation, decomposition, and generalization.
+在前面的模块中，我们讨论了在面向对象建模和编程抽象、封装、分解和泛化中有用的四个设计原则。
+
+ You also saw how to express your object oriented model using an UML class diagram and in Java code.
+您还了解了如何使用UML类图和Java代码来表示面向对象的模型。
+
+ The class diagram is great to capture the structure of the problem and the technical design of a software solution.
+类图对于捕获问题的结构和软件解决方案的技术设计非常有用。
+
+ In this module, you'll see general guidelines when evaluating the structure of your software solution so that it's flexible, reusable, and maintainable.
+在本模块中，您将看到在评估软件解决方案结构时的一般指导原则，以使其具有灵活性、可重用性和可维护性。
+
+ As well, we'll talk about modeling behaviors of the objects in your software using the UML state and UML sequence diagrams.
+同样，我们将讨论使用UML状态图和UML序列图对软件中对象的建模行为。
+
+ Let's jump right in.
+让我们跳进去吧。
+
+ Here you're going to learn about evaluating design complexity.
+在这里，您将学习如何评估设计复杂性。
+
+ The average person can only hold seven things in short term memory.
+一般人在短期记忆中只能记住七件事。
+
+ This was observed in a psychology paper by George Miller in which subjects had to recall 1 to 14 random sounds and images.
+这是乔治·米勒在一篇心理学论文中观察到的，在这篇论文中，受试者必须回忆1到14个随机的声音和图像。
+
+ Subjects started to fail at recall when the number reached around 7.
+当这个数字达到7时，受试者开始记不住。
+
+ When you are programming, keeping modules simple is critical.
+在编程时，保持模块的简单性是至关重要的。
+
+ Once you design complexity exceeds what developers can mentally handle, bugs will occur more often.
+一旦设计的复杂性超出了开发人员的思维能力，bug就会更频繁地出现。
+
+ So you must have a way of evaluating your design complexity.
+所以你必须有一种方法来评估你的设计复杂度。
+
+ Since design complexity applies to both classes and the methods within them, we will use the term module to refer to any sort of program unit like these.
+由于设计复杂性既适用于类，也适用于类中的方法，所以我们将使用术语模块来指代任何类似这样的程序单元。
+
+ The metrics you will use to evaluate design complexity are coupling and cohesion.
+您将用于评估设计复杂性的度量是耦合和内聚。
+
+ Coupling focuses on complexity between a module and other modules.
+耦合关注模块和其他模块之间的复杂性。
+
+ Cohesion focuses on complexity within a module.
+内聚关注模块内的复杂性。
+
+ These two ideas will help you to better apply object-oriented design principles and achieve a more manageable system.
+这两个概念将帮助您更好地应用面向对象的设计原则，并实现更易于管理的系统。
+
+ When you design your system, you combine various modules together.
+在设计系统时，要将各种模块组合在一起。
+
+ Think of a bad design like puzzle pieces, where your modules are the pieces.
+设想一个糟糕的设计，比如拼图，你的模块就是拼图。
+
+ You can only connect a puzzle piece to another specific puzzle piece and nothing else.
+您只能将一个拼图连接到另一个特定的拼图，而不能连接其他任何东西。
+
+ On the other hand, let's think of a well-designed system like Lego blocks.
+另一方面，让我们考虑一个精心设计的系统，如乐高积木。
+
+ You can connect any two Lego blocks without much trouble, and all Lego blocks are compatible with one another.
+你可以毫不费力地连接任意两个乐高积木，而且所有的乐高积木彼此兼容。
+
+ When designing your system, you want to make it like Lego.
+在设计您的系统时，您希望它像Lego一样。
+
+ That way, you can easily connect and reuse modules together.
+这样，您可以轻松地将模块连接在一起并重用它们。
+
+ Coupling for a module captures the complexity of connecting the module to other modules.
+模块耦合捕获了将模块连接到其他模块的复杂性。
+
+ If your module is highly reliant on other modules, you would say this module is tightly coupled to others.
+如果您的模块高度依赖于其他模块，您会说这个模块与其他模块是紧密耦合的。
+
+ This is like having puzzle pieces.
+这就像拼图一样。
+
+ On the other hand, if your module finds it easy to connect to other modules, this module is loosely coupled to others.
+另一方面，如果您的模块发现很容易连接到其他模块，则此模块与其他模块是松散耦合的。
+
+ This is like Lego.
+这就像乐高积木。
+
+ You want coupling for your module to be loose or low, not tight.
+您希望模块的耦合是松散的或低的，而不是紧密的。
+
+ When evaluating the coupling of a module, you need to consider degree, ease, and flexibility.
+在评估模块耦合时，需要考虑程度、易用性和灵活性。
+
+ Degree is the number of connections between the module and others.
+度是模块与其他模块之间的连接数。
+
+ With coupling, you want to keep the degree small.
+使用耦合时，您希望保持度较小。
+
+ For instance, if the module needed to connect to other modules through a few parameters or narrow interfaces, then degree would be small and coupling would be loose.
+例如，如果模块需要通过几个参数或狭窄的接口连接到其他模块，那么程度会很小，耦合也会很松散。
+
+ Ease is how obvious are the connections between the module and others.
+容易是指模块和其他模块之间的连接是多么明显。
+
+ With coupling, you want the connections to be easy to make without needing to understand the implementations of the other modules.
+使用耦合，您希望连接易于建立，而不需要了解其他模块的实现。
+
+ Flexibility is how interchangeable the other modules are for this module.
+灵活性是指这个模块的其他模块是如何可互换的。
+
+ With coupling, you want the other modules easily replaceable for something better in the future.
+通过耦合，您希望其他模块可以轻松地替换，以便在将来实现更好的功能。
+
+ Again, like Lego.
+再次,像乐高。
+
+ Coupling only concerns complexity between a module and other modules, but you also need to consider complexity within the module.
+耦合只涉及模块和其他模块之间的复杂性，但是您还需要考虑模块内部的复杂性。
+
+ That's where you would look at cohesion.
+这就是凝聚力。
+
+ Cohesion represents the clarity of the responsibilities of a module.
+内聚性表示模块职责的明确性。
+
+ If your module performs one task and nothing else or has a clear purpose, your module has high cohesion.
+如果您的模块只执行一项任务，没有其他任务，或者有明确的目的，那么您的模块具有高内聚性。
+
+ On the other hand, if your module tries to encapsulate more than one purpose or has an unclear purpose, your module has low cohesion.
+另一方面，如果您的模块试图封装多个目的，或者目的不明确，那么您的模块内聚性就很低。
+
+ You want chi cohesion.
+你需要气的凝聚力。
+
+ If you find your module having more than one responsibility, it is probably time to split your module.
+如果您发现您的模块有多个职责，那么可能是时候拆分模块了。
+
+ Let's now look at a more detailed example of coupling and cohesion.
+现在让我们看一个更详细的耦合和内聚示例。
+
+ Suppose we have a class called sensor that has two purposes, getting humidity and getting temperature sensor readings.
+假设我们有一个名为sensor的类，它有两个用途，获取湿度和获取温度传感器读数。
+
+ Here we have a get method that takes a zero flag if you wanted to return the humidity value, and takes the one flag if you want it to return the temperature value.
+这里我们有一个get方法，如果你想要返回湿度值，它接受一个0标志，如果你想要它返回温度值，它接受一个标志。
+
+ Now, let's evaluate this sensor class based on coupling and cohesion metrics.
+现在，让我们基于耦合和内聚度量来评估这个传感器类。
+
+ Since the sensor class doesn't have a clear single purpose, it suffers from low cohesion.
+因为传感器类没有明确的单一用途，所以它的内聚性很低。
+
+ Look at this get method.
+看看这个get方法。
+
+ Is it easy to determine what is happening?
+很容易确定发生了什么吗?
+
+ Since it is unclear what control flag means, we would have to read inside the method itself in order to know what values to give it.
+由于不清楚控制标志意味着什么，我们必须在方法内部进行读取，以便知道要给它什么值。
+
+ This is not respecting encapsulation which also shows our method is unclear and lacks ease.
+这并不尊重封装，这也表明我们的方法是不清楚的，缺乏易用性。
+
+ This lack of ease makes get method harder to use and in turn makes any color tightly coupled to it.
+这种易用性的缺乏使得get方法更难使用，从而使得任何颜色都与它紧密耦合。
+
+ Let's look at a new design of the same system.
+让我们看看同一个系统的新设计。
+
+ The sensor class is now replaced with a humidity sensor glass and the temperature sensor class.
+传感器类现在被一个湿度传感器玻璃和温度传感器类取代。
+
+ Each of these classes has one clearly defined purpose.
+每个类都有一个明确定义的用途。
+
+ Since each has a clear purpose, you can say that these classes are highly cohesive.
+由于每个类都有明确的用途，所以可以说这些类具有很高的内聚性。
+
+ The get method is now not hiding any information like before.
+get方法现在不像以前那样隐藏任何信息。
+
+ We don't have to break encapsulation to look inside the method.
+我们不必打破封装来查看方法内部。
+
+ You could reasonably assume that humidity sensors get method returns humidity and temperature sensors get method returns temperature.
+您可以合理地假设湿度传感器获取方法返回的湿度和温度传感器获取方法返回的温度。
+
+ This makes another module that uses either be loosely couple.
+这使得另一个使用其中之一的模块是松散耦合的。
+
+ In general, there's a balance to be made between low coupling and high cohesion in your designs.
+通常，在您的设计中需要在低耦合和高内聚之间取得平衡。
+
+ For a complex system, the complexity can be distributed to between the modules or within the modules.
+对于复杂的系统，复杂性可以分布在模块之间或模块内部。
+
+ As modules are simplified to achieve high cohesion, they may need to depend more on other modules thus increasing coupling.
+由于模块被简化以实现高内聚，因此它们可能需要更多地依赖于其他模块，从而增加了耦合。
+
+ As connections between modules are simplified to achieve low coupling, the modules may need to take on more responsibilities thus lowering cohesion.
+由于模块之间的连接被简化以实现低耦合，因此模块可能需要承担更多的责任，从而降低内聚性。
+
+ You now have the skills to evaluate your systems design complexity using coupling and cohesion.
+现在您已经掌握了使用耦合和内聚来评估系统设计复杂性的技能。
+
+ However, being able to evaluate design complexity is just the beginning.
+然而，能够评估设计复杂性仅仅是个开始。
+
+ To really solidify your knowledge of coupling and cohesion, you're going to need to start applying good design to your system so that they have low coupling and high cohesion.
+为了真正巩固您对耦合和内聚的知识，您需要开始将良好的设计应用到您的系统中，使它们具有低耦合和高内聚。
+

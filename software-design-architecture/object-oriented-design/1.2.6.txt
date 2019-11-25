@@ -1,0 +1,177 @@
+[MUSIC] The idea behind object-oriented modelingand programming is to create computer representations of conceptsin the problem space.
+面向对象建模和编程背后的思想是在问题空间中创建概念的计算机表示。
+
+ It lets you model the relativeattributes in behaviors so that a computer can simulate them.
+它允许您在行为中建模相对属性，以便计算机能够模拟它们。
+
+ One design principlecalled generalization, helps us to reduce the amount ofredundancy when solving problems.
+一个被称为泛化的设计原则，帮助我们在解决问题时减少冗余。
+
+ You probably already have experiencewith a form of generalization and don't even know it.
+你可能已经有过泛化的经验，但却不知道。
+
+ Many behaviors and systems in the realworld operate through repetitious actions.
+现实世界中的许多行为和系统都是通过重复的动作来运行的。
+
+ We can model behaviors using methods.
+我们可以使用方法来建模行为。
+
+ It lets us generalize behaviors and it eliminates the need to have identicalcode written throughout a program.
+它使我们能够泛化行为，并消除了在整个程序中编写相同代码的需要。
+
+ Take this array creation andinitialization code for instance.
+以这个数组的创建和初始化代码为例。
+
+ We can generalize repetitious code that wewould need to write by making a separate method and calling it.
+我们可以通过创建一个单独的方法并调用它来泛化需要编写的重复代码。
+
+ This helps us to reduce the amountof near identical looking code throughout our system.
+这有助于减少整个系统中看起来几乎相同的代码的数量。
+
+ Methods are a way of applying the samebehavior to a different set of data.
+方法是将相同行为应用于不同数据集的一种方法。
+
+ Generalization is frequentlyused when designing algorithms, which are meant to be used to performthe same action on different sets of data.
+在设计算法时，泛化是经常使用的，这意味着要在不同的数据集上执行相同的操作。
+
+ We can generalize the actionsinto its own method, and simply pass it through a differentset of data through arguments.
+我们可以将action泛化成它自己的方法，然后通过参数将它传递给另一组数据。
+
+ So where else can we apply generalization?
+我们还可以在哪里应用泛化呢?
+
+ Well, if we can reuse codethat is inside a method and a method is inside a class,then can we reuse code from a class?
+如果我们可以重用方法内部的代码，而方法又在类内部，那么我们可以重用类中的代码吗?
+
+ Can we generalize classes?
+我们能概括类吗?
+
+ Generalization happens to be one of themain design principles of object-oriented modeling and programming.
+泛化恰好是面向对象建模和编程的主要设计原则之一。
+
+ But it's achieved differently thanwhat we've just seen with methods.
+但它的实现方式与我们刚才看到的方法不同。
+
+ So how is this done?
+这是怎么做到的呢?
+
+ Generalization can be achievedby classes through inheritance.
+类可以通过继承来实现泛化。
+
+ In generalization we take repeated,common, or shared characteristics between two or more classes andfactor them out into another class.
+概括地说，我们在两个或多个类之间采用重复的、共同的或共享的特征，并将它们分解成另一个类。
+
+ Specifically, you can have two classes,a parent class and a child class.
+具体来说，您可以有两个类，一个父类和一个子类。
+
+ When a child class inheritsfrom a parent class, the child class will have the attributesand behaviors of the parent class.
+当子类继承自父类时，子类将具有父类的属性和行为。
+
+ You place common attribute andbehaviors in your parent class.
+在父类中放置公共属性和行为。
+
+ There can be multiple child classesthat inherit from a parent class, and they all will receive thesecommon attributes and behaviors.
+可以有多个从父类继承的子类，它们都将接收这些相同的属性和行为。
+
+ The child classes can alsohave additional attributes and behaviors, which allow them to bemore specialized in what they can do.
+子类还可以有额外的属性和行为，这使得它们可以更加专业地完成自己的工作。
+
+ In standard terminology, a parentclass is known as a superclass and a child class is called the subclass.
+在标准术语中，parentclass称为超类，子类称为子类。
+
+ Let's say you want to modelan adorable cat named Mittens.
+假设您想为一只名为Mittens的可爱的猫建模。
+
+ Mittens has four legs, a tail,knows how to walk, run and eat, but these attributes and behaviors canalso be used to describe Doug the dog.
+连指手套有四条腿，一条尾巴，知道如何走路、跑步和吃东西，但这些属性和行为也可以用来描述狗狗道格。
+
+ Doug also has four legs,a tail, can walk, run and eat.
+豆豆也有四条腿，一条尾巴，可以走路、跑步和吃东西。
+
+ If you were to design classes,cat and dog, based on these characteristics,you would have a lot of overlapping code.
+如果要根据这些特征设计cat和dog类，就会有很多重叠的代码。
+
+ What would happen if you want tomodel another similar characteristic?
+如果你想要模仿另一个相似的特征，会发生什么?
+
+ You would need to add the samecode to both of your classes.
+您需要将相同的代码添加到两个类中。
+
+ This doesn't sound too bad becauseyou only have two classes, but what if you have several classesthat share common characteristics?
+这听起来不是很糟糕，因为您只有两个类，但是如果您有几个具有相同特征的类呢?
+
+ It would be time consuming and error-proneto carefully add code to all of them.
+如果小心地将代码添加到所有这些文件中，将会非常耗时且容易出错。
+
+ That leads to a system that is notflexible, maintainable, or reusable.
+这将导致系统变得不灵活、不可维护或不可重用。
+
+ Let's look at Mittens and Doug to see whatcommonalities we can find between them.
+让我们看看拳击手套和道格之间有什么共同点。
+
+ I would say they are both a typeof animal with legs, a tail and have a shared set of behaviors like,walking, running and eating.
+我想说它们都是有腿有尾巴的动物，都有共同的行为，比如走路、跑步和吃饭。
+
+ An animal, then, is a general idea.
+因此，动物是一个普遍的概念。
+
+ This means that an animal is a broad termused to describe a large grouping of more distinct classes.
+这意味着动物是一个广义的术语，用来描述一个由更不同的类组成的大群体。
+
+ The term animal can be used to definea set of common characteristics and behaviors that belong to differentspecific types of animals, like cat and dog.
+动物这个词可以用来定义一组属于不同种类动物的共同特征和行为，比如猫和狗。
+
+ In this example, we can generalizethe common attributes and behaviors of the cat and dog class intoa superclass that we will call animal.
+在这个例子中，我们可以将cat和dog类的公共属性和行为归纳为一个我们称之为animal的超类。
+
+ Keep in mind that we can name theseclasses whatever we want, but since we're creating meaningfulobstructions of things in the real world, our classes should be named afterthe things we are trying to model.
+请记住，我们可以随心所欲地为这些类命名，但是由于我们在现实世界中创建了有意义的事物结构，我们的类应该以我们试图建模的事物命名。
+
+ This makes our code easier to understand.
+这使我们的代码更容易理解。
+
+ The subclasses will inherit attributes andbehaviors from the superclass.
+子类将继承超类的属性和行为。
+
+ Since cats and dogs are both animals,they inherit from the animal superclass.
+因为猫和狗都是动物，所以它们继承自动物超类。
+
+ One of the advantages of doing this isthat any changes to the code that is common to both subclasses,can be made in just a superclass.
+这样做的好处之一是，对两个子类都通用的代码的任何更改都可以在一个超类中完成。
+
+ The second benefit is that we caneasily add more animals to our system, without having to write out all the commonattributes and behaviors for them.
+第二个好处是，我们可以很容易地将更多的动物添加到我们的系统中，而不必为它们写出所有的公共属性和行为。
+
+ Through inheritance, all subclasses ofthe animal class will be endowed with the animal classes attributes andbehaviors.
+通过继承，动物类的所有子类都将被赋予动物类的属性和行为。
+
+ Inheritance and methods exemplifythe generalization design principle.
+继承和方法例证了泛化设计原则。
+
+ There are techniques that left us applya rule called D.
+有一种技术给我们留下了应用规则D。
+
+R.
+R。
+
+Y.
+Y。
+
+, which stands for Don't Repeat Yourself.
+的缩写是Don't Repeat Yourself。
+
+ We can write programs that are capableof performing the same tasks but with less code.
+我们可以编写能够执行相同任务但代码更少的程序。
+
+ It makes code more reusablebecause different classes or methods can share the same blocks of code.
+它使代码更加可重用，因为不同的类或方法可以共享相同的代码块。
+
+ Systems become easier to maintainbecause we do not have repetitious code.
+系统变得更容易维护，因为我们没有重复的代码。
+
+ Generalization will help you buildsoftware that is easier to expand, easier to apply changes to andeasier to maintain.
+泛化将帮助您构建更容易扩展、更容易将更改应用到更容易维护的软件。
+
+ By learning how to identify commonalitiesbetween classes and their behaviors, you can design highlyrobust software solutions.
+通过学习如何识别类及其行为之间的共性，您可以设计高度健壮的软件解决方案。
+

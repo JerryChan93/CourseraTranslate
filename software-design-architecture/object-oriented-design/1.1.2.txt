@@ -1,0 +1,860 @@
+软件设计和架构的职业生涯是什么样的?
+What does a career in software design and architecture look like?
+
+
+
+软件设计和软件架构之间的区别是什么?
+ What is the difference between software design and software architecture?
+
+
+
+这些问题我们将在整个专门化过程中更详细地探讨。
+ These are questions that we will explore in more detail throughout the specialization.
+
+
+
+不过，现在让我们快速浏览一下。
+ However, let's take a quick look at them now.
+
+
+
+与软件行业中的许多角色一样，软件设计人员或软件架构师的角色在不同的公司之间看起来可能非常不同。
+ Like many roles in the software industry, the software designer or a software architect role can look very different from company to company.
+
+
+
+公司规模、项目范围、开发团队的经验、组织结构和公司的年龄等特征都会影响这些角色的外观。
+ Characteristics like company size, the scope of the project, the experience of the development team, the organizational structure and the age of the company can all impact what these roles look like.
+
+
+
+在一些公司中，软件设计师或架构师可能扮演不同的角色。
+ In some companies, there may be a distinct role for a software designer or architect.
+
+
+
+在其他公司，设计可能由一个或多个开发团队成员完成。
+ In other companies, the design may be completed by a member or members of the development team.
+
+
+
+通常，软件设计人员角色将通过设计各个组件及其职责的细节来负责概述特定问题的软件解决方案。
+ Typically, the software designer role would be responsible for outlining a software solution to a specific problem by designing the details of individual components and their responsibilities.
+
+
+
+软件架构师角色将负责查看整个系统，选择适当的框架、数据存储、解决方案，并确定组件之间如何交互。
+ A software architect role would be responsible for looking at the entire system and choosing appropriate frameworks, data storage, solutions and determining how components interact with each other.
+
+
+
+这让我们看到了软件设计和软件架构之间的主要区别。
+ That brings us to the primary difference between software design and software architecture.
+
+
+
+简而言之，软件设计着眼于系统的较低层方面，而软件体系结构则倾向于着眼于系统的较高层方面。
+ In short, software design looks at the lower level aspects of a system, whereas software architecture tends to look at the bigger picture, the higher level aspects of a system.
+
+
+
+这就好比设计一栋建筑。
+ Think of this like designing a building.
+
+
+
+建筑师专注于主要的结构和服务，而室内设计师专注于内部的小空间。
+ An architect focuses on the major structures and services, while an interior designer focuses on the smaller spaces within.
+
+
+
+优秀的软件设计师和架构师都是注重细节的先行者。
+ Great software designers and architects are detail-oriented, forward thinkers.
+
+
+
+他们需要能够同时看到产品的低电平和高电平。
+ They need to be able to see the product at both the low and high levels.
+
+
+
+他们需要创造性地解决问题，以便为手头的问题找到高质量的解决方案。
+ They need to be creative problem solvers in order to come up with a quality solution for the problem at hand.
+
+
+
+他们需要能够与产品经理和开发团队有效地表达这些想法。
+ And they need to be able to express these ideas effectively with the product manager and the development team.
+
+
+
+这听起来像是你擅长的事情吗?
+ Does that sound like something you'd be good at?
+
+
+
+软件设计和体系结构对软件开发过程至关重要。
+ Software design and architecture is essential to the software development process.
+
+
+
+让我们来看看业内人士对这个角色的看法。
+ Let's take a look at what people in the industry feel about this role.
+
+
+
+软件设计是将客户的愿望和需求转化为工作代码的过程，从长期来看，这些代码是稳定的、可维护的，并且可以发展，可以成为更大系统的一部分。
+ Software design is the process of turning the wishes and requirements of a customer into working code that is stable and maintainable in the long run, and can be evolved and can become part of a larger system.
+
+
+
+这是软件设计。
+ That's software design.
+
+
+
+我喜欢或，因为我不区分软件架构和软件设计。
+ I like the or because I don't make a distinction between software architecture and software design.
+
+
+
+我认为它们只是同一个问题，只是规模不同而已。
+ I think they're just the same problem at a different scale.
+
+
+
+我认为体系结构首先要理解客户需要解决的业务问题。
+ Way I like to think of it is that architecture is primarily, begins with understanding what's the business problem that the client needs to solve.
+
+
+
+这里的业务不一定是金融业务，任何业务。
+ Where business doesn't mean necessarily financial business, any business.
+
+
+
+一旦你意识到这是你的首要任务，那就是弄清楚客户想要什么，然后所有的事情就都顺理成章了。
+ Once you've realized that that's your primary task, which is to figure out what the client wants, then everything kind of falls in after that.
+
+
+
+因为如果你理解了这个问题，那么你就可以开始思考，在你之前的经验中，什么是可能的解决方案，然后你就可以开始了解你的整体解决方案是什么样的。
+ Because If you understand the problem, then you can start to think about what, in your previous experience, as possible solutions, and then you start getting a idea of how your overall solution is going to look like.
+
+
+
+这就是我所说的，真正的建筑是对盒子和线条的研究。
+ And that's where I kind of say, really architecture is the study of boxes and lines.
+
+
+
+因为你对你要做的事情的第一个描述是简单的一组盒子，里面有东西，线条表达关系。
+ Because your first description of what it is you're trying to do is simply a set of boxes with things inside them and lines expressing relationships.
+
+
+
+如果你想要一个稳定的、长久的系统，设计和架构是很重要的。
+ Design and architecture is important if you want to have a stable, long- lived system.
+
+
+
+任何人都可以建立一个系统,将最后一个星期或一个月或一年,但如果你想建立的基础是别人的工作和贡献在潜在年或更长时间,在某些情况下,你需要放一些想法在大脑里。
+ Anybody can build a system that'll last a week or a month or a year, but if you want to build something that is the basis of other people's work and contribution over potentially a period of years or longer, in some cases, you need to put some thought into it.
+
+
+
+你需要有一个人，他的工作是着眼于长远，确保你不会做出次优的短期决定。
+ You need to have somebody whose job it is to look out for the long game and make sure that you are not making suboptimal short term decisions.
+
+
+
+架构很重要，因为如果你做错了，你的项目就会失败。
+ Architecture is important because if you get it wrong, your project will fail.
+
+
+
+就是这样。
+ That's it.
+
+
+
+就是这么简单。
+ It's just that simple.
+
+
+
+我们在建筑领域知道它，在软件领域也知道它。
+ We know it in the building world, and we know it in the software world.
+
+
+
+我们使用架构这个术语来理解用户需求和构建交付这些需求的系统的能力之间的关系。
+ Where we're using the term architecture to be this understanding of the relationship between the requirements of the user and the ability to build a system that will deliver those requirements.
+
+
+
+我认为您可以将大多数主要的软件失败追溯到糟糕的架构，在一般意义上，架构是这样使用的。
+ I think you can trace back most major software failures to bad architecture, where architecture is used in this general sense.
+
+
+
+软件架构的关键挑战之一是在速度和质量之间进行权衡的趋势，如果我将其归结为一点，对吗?
+ One of the key challenges in software architecture is the tendency to have to trade off between speed and quality, If I boil it down, right?
+
+
+
+我认为企业中的客户有一种趋势，他们想要他们的软件，想要他们的结果越快越好。
+ I think there's a tendency for the customer in the business to want their, their software, to want their results as soon as possible.
+
+
+
+有一种趋势是工程团队想要构建，最健壮的，彻底设计的，彻底实现的系统。
+ And there's a tendency for the engineering team to want to build, the most robust, thoroughly designed, thoroughly implemented system possible.
+
+
+
+所以我们一直在这些事情之间权衡。
+ And so we trading off between these things all the time.
+
+
+
+我认为，这种平衡的张力就是你得到真正好的软件，你得到好的设计，但这是一个你必须经历的过程。
+ And I think, it's that tension in that trade off is where you get really good software, you get good designs out of that, but it's a process you have to go through to go through that.
+
+
+
+所以我们面临的最大问题是理解客户的问题。
+ So our biggest issue that we face is understanding the client's problem.
+
+
+
+他们真正想做的是什么?
+ What is it they really want to do?
+
+
+
+在很多情况下，客户实际上也不知道他们想做什么。
+ And in many cases the client actually doesn't know what they want to do either.
+
+
+
+他们来的时候只有部分的理解，一种模糊的感觉，他们可以做得更好。
+ They come in with only a partial understanding, a vague kind of sense that they could be doing things better.
+
+
+
+但通常，我们的首要任务之一是帮助他们更准确地理解他们的业务。
+ But often, one of our first task is to actually help them understand, with more precision, what their business is.
+
+
+
+软件架构师的工作是产品与客户和工程团队之间的接口。
+ A software architect's job is to be the interface between the product and the customer and the engineering teams.
+
+
+
+例如,客户表达要求或需要的,软件的架构师的工作,然后与客户和他们的代表合作,产品经理等,提出的技术要求,我们要如何解决这个问题。
+ And so for instance, customers will express a requirement or a need they have of the, of the software and it's the architect's job to then work with the customers and their representatives, product managers and such, to come up with the technical requirements of how we're going to solve the problem.
+
+
+
+然后他们把这些需求带到工程团队和工程师们一起工作如何在满足客户需求的同时与技术最佳实践和非功能性需求保持一致这些都必须在产品中得到遵守。
+ And then they take those requirements to the engineering teams and worked with the engineers on how to realize that in a way that is meeting the customer's requirements and also aligned with the technical best practices and nonfunctional requirements that have to be adhered to in the product.
+
+
+
+软件架构师就像一个建筑架构师。
+ The software architect is like a building architect.
+
+
+
+他们负责项目整体概念的完整性。
+ They're responsible for the overall conceptual integrity of the project.
+
+
+
+他们的主要目标是在客户的预算范围内满足客户的需求。
+ Their main goal is to serve the needs of the customer within the budget that the customer has.
+
+
+
+我会用几种不同的方式来表达软件设计或软件架构。
+ I would express software design or software architecture in a couple of different ways.
+
+
+
+对于小事情，简单的事情，你会和一个工程师坐在一起，你会在白板上写下一些东西，你会想出一个这样的设计，基本上你会让它们开始。
+ For small things, for simple things, you'll sit with an engineer and you'll whiteboard something out and you'll come up with a design that way and you'll basically get them going.
+
+
+
+对于较大的项目,大项目,你通常写作相当可观的设计规范文档,你探索所有可能的不同的用例,所有不同的可能的变化和流动这种东西,除了所有这些关键的功能性和非功能性需求,稳定、可维护性,这些事情。
+ For larger initiatives, larger projects, you're typically writing fairly substantial design specification documents, where you're exploring all the different possible use cases, all the different possible flow variations and things of this kind, in addition to all of those critical functional and nonfunctional requirements, stability, maintainability, these kinds of things.
+
+
+
+总的来说，我想说的是，我们通过书面文字，通过wiki，通过白皮书，这些东西来传达软件架构，除了相当详细的工程设计原理图，类图，如果必要的话，大方框图，如果它只是一个简单的高级架构设计。
+ So, in general, I would say that we communicate software architecture through the written word, through wikis, through white papers, these kinds of things, in addition to fairly detailed engineering design schematics, class diagrams, if necessary, big box diagrams, if it's just a simple high level architecture design.
+
+
+
+我已经编程45年了，我学到的一件事是，唯一真正存在的是代码，你谈论的其他一切都是关于代码的观点。
+ I've been programming for 45 years and one thing I've learned is that the only thing that's really there is the code and everything else that you talk about is views on the code.
+
+
+
+所以，我喜欢用这样的方式来表达建筑或者说描述建筑，我要做的所有的事情，盒子和线条，散文，图表和餐巾纸上的花哨的图表，这些都只是代码的索引。
+ So, I like to express architecture or describe architecture as saying that, all the things that I'm going to do, the boxes and lines, the prose, the fancy diagrams of the diagrams and napkins, there are simply indexes into the code.
+
+
+
+这就是你如何找到你想要的东西的方法。
+ That's how you find your way to the actual artifact that's actually doing what you want to do.
+
+
+
+我倾向于首先将简单性作为我的主要原则，如果我考虑如何处理这个问题的话。
+ I tend to apply simplicity first as my main principle, if I'm looking at how I'm approaching the problem.
+
+
+
+这就是我要用到的滤镜。
+ That's the filter that I try to use on it.
+
+
+
+我经常发现，人们倾向于把事情复杂化，注入复杂性，因为这很有趣。
+ And I often will find myself, there's a tendency in people to complicate things, to inject complexity because it's interesting.
+
+
+
+作为一个工程师，作为一个技术人员，复杂性是有趣和有趣的。
+ As an engineer, as a technical person, complexity is fun and interesting.
+
+
+
+只有当你去掉所有不必要的复杂性时，你才会意识到你已经找到了解决问题的核心。
+ And it's only when you stripped away all the unnecessary complexity that you realize you've got the core of a great solution to a problem.
+
+
+
+所以，我真的尝试这样做，当我和产品团队和工程师一起工作的时候，这个简单的原则真的帮助我解决了很多困惑。
+ And so, I really try to do that and when I'm working with product teams and engineers alike, that simplicity principle really helps to cut through a lot of the confusion.
+
+
+
+最重要的原则是什么?
+ What's the most important principle?
+
+
+
+简单。
+ Simplicity.
+
+
+
+这是事实，保持简单是工程准则。
+ That's true and it's the engineering maxim to keep it simple.
+
+
+
+原因有二。
+ The reason for that is twofold.
+
+
+
+一个是，如果它很简单，你可能有很好的机会把它做对或几乎是对的。
+ One is that if it's simple, you probably have a pretty good chance of getting it right or almost right.
+
+
+
+这是一个部分。
+ That's one part.
+
+
+
+另一件事是，如果它很简单，那么你可以简单地向某人解释，架构的交流是重要的，因为你不会永远存在。
+ The other thing is if it's simple, then you can explain it to someone simply, that communication of architecture is important because you're not going to be around forever.
+
+
+
+你需要把你的知识传授给别人。
+ And you need to transfer your knowledge over to someone else.
+
+
+
+如果不简单，知识转移的成本就会更高，因为解释起来更复杂，误解的几率也会更高。
+ And if it's not simple, the knowledge transfer cost is higher because it's more complicated to explain and the chances of misunderstanding are much higher.
+
+
+
+所以，作为一名工程师，我对软件设计产生了兴趣，并逐渐接触了更大规模的代码库，你知道，这些年来。
+ So, I became interested in software design by working as an engineer and being exposed to larger scale code bases, you know, progressively over the years.
+
+
+
+当然，当我刚开始的时候，我做的大多是非常非常小的事情。
+ When I first started, of course, I worked on mostly very, very small things.
+
+
+
+我很感兴趣的是软件是如何组合在一起的，以及在微观设计层面上的设计。
+ And I was very interested in how software was put together and the design at, a micro design level.
+
+
+
+然后，随着我事业的发展，我开始接触到一些为数以百万计的人提供服务的相当大的软件，我开始对这些东西是如何组合在一起的以及是什么让它们成功的产生了兴趣。
+ And then, as I proceeded in my career and I started to be exposed to some fairly large pieces of software that served millions of people, I got really interested in how those things are put together and what is it that makes that successful.
+
+
+
+你如何确保你不需要一遍又一遍地重新实现这个东西。
+ And how do you make sure that you're not having to re-implement this thing over and over and over again.
+
+
+
+我发现这是这个行业非常有趣的一面，这是我以前从未探索过的。
+ And I found that to be a really interesting side of the business that I really hadn't explored before.
+
+
+
+结果我真的很喜欢。
+ And so it turns out I really enjoyed that.
+
+
+
+我认为，如果你开始写代码来做一些事情，你就会开始问自己这样的问题:为什么这段代码真的很好用，而这段代码却很糟糕?
+ I think, if you start writing code to do things, to play around, you start asking yourself questions about: well, why is it that this code is really nice to work with and this code here is horrible?
+
+
+
+你开始问自己关于设计的问题，在软件行业，设计和架构的区别是，真的没有区别，因为我们的业务都是自相似的。
+ And you start asking yourself questions about design and the difference between design and architecture in the software business is, there really isn't any because our business is all self-similar.
+
+
+
+关于程序的问题与关于大型系统的问题是相同的。
+ Issues that you ask about programs are the same issues you can ask about big systems.
+
+
+
+我认为在我的案例中，我只是对构建软件工件的基本理解产生了兴趣。
+ And I think in my case, I just became interested in this fundamental understanding of the issue of building software artifacts.
+
+
+
+然后它会自然地扩展，在某一时刻，你正在用十万行代码构建系统。
+ And then it just naturally scales up, at some point you're building systems with a hundred thousand lines of code.
+
+
+
+然后，你突然意识到，在你的项目团队中，你没有一百万行代码。
+ And then, you suddenly realize on your project team that you don't have a million lines of code.
+
+
+
+你现在是一个软件架构师，因为你有一百万行代码，而以前你只是一个程序员，你只有一万行代码。
+ And you're now a software architect because you have a million lines of code whereas before you were just a programmer you only had 10,000 lines of code.
+
+
+
+我认识的大多数架构师都是从软件工程师开始的。
+ Most architects that I know started as software engineers.
+
+
+
+通常作为实习生或新毕业生，他们基本上加班。
+ Usually as an intern or a new grad and they work basically overtime.
+
+
+
+他们所负责的软件越来越大。
+ They work on progressively larger and larger pieces of the software that they're responsible for.
+
+
+
+结果是，你开始看到，那些工程师们达到了一种舒适的程度，他们开始超越他们间接负责的代码基础。
+ And what happens is, you start to see those engineers get to a level of comfort where they start to push outside of the code base that they're indirectly responsible for.
+
+
+
+他们开始让自己参与到讨论中来，讨论正在进行的工作对系统的更大影响。
+ And they start involving themselves in discussions around the larger impacts to the system of the work that's being done.
+
+
+
+这通常会一直持续下去，直到他们在一个更高的抽象层次上工作。
+ And that just generally continues until all of a sudden they're actually working at a much higher level of abstraction.
+
+
+
+然后在一个非常不同的层次上做出贡献这就是你如何知道你有一个建筑师在你手上。
+ And then contributing at a very different level and so that's how you know you've got an architect on your hands.
+
+
+
+是的，没有进入软件架构的职业道路。
+ Yeah, there's not a career path into software architecture.
+
+
+
+实际上，如果你认为架构师比程序员有更多的责任，那么你就会认为，在你的职业道路上，你会得到越来越多的责任，你要证明你确实擅长构建东西。
+ What it really is is, if you think of architects as having more responsibility than programmers, what it really is as a career path where you get more and more responsibility, that you do by demonstrating that you're actually good at building things.
+
+
+
+我的经验是，直到我离开这个世界10年，我才认为自己是一个专业的程序员，我认为这与我的许多同事是一致的。
+ My experience has been that I didn't think I was a expert programmer until I had been out in the world for 10 years and I think that's consistent with many of my colleagues.
+
+
+
+在此期间，您开始开发越来越大的系统，最终有人相信您是为比以前更大的系统进行设计的关键人物。
+ Over that period, you start working on bigger and bigger systems and eventually someone trusts you with being the point person to put together a design for a much larger system than you'd ever done before.
+
+
+
+一旦你完成了其中的一项但它并不是完全的灾难，你会得到一个更大的系统。
+ And then once you've done one of those and it hasn't been a total disaster, you get an even bigger system.
+
+
+
+所以我想，是你逐渐建立起的声誉让你成为了一名软件架构师。
+ So I guess, it's gradual building of your reputation is what makes you into a software architect.
+
+
+
+我想说，作为一名软件架构师，最令人兴奋的事情是看到最终的产品被放在一起，并被真正的人使用，产生良好的效果，这种满足感。
+ I would say the most exciting thing about being a software architect is the satisfaction of seeing the final product put together and out there and being used by real people to good effect, right.
+
+
+
+因为你在一个项目的早期就花费了所有的时间你必须为你的非功能性需求而奋斗你必须为如何把这些都放在一起而奋斗。
+ Because you spend all this time early on in a project and you have to fight for your nonfunctional requirements and you have to fight for how this is all going to be put together.
+
+
+
+当一切都准备好了，你已经完成了所有的谈判，一切都在客户手中，这是有价值的，这是一种真正的自豪感。
+ And then when it all comes together and you've done all that negotiation and it's out there in the hands of a customer and it's valuable, there's a real sense of pride with that.
+
+
+
+我认为，另外，您还可以从对代码库和项目的长期生存能力的正确调用中获得极大的满足感和自豪感。
+ I think, additionally, you also get a lot of satisfaction and pride from making the right call in terms of long term viability of a code base and of a project.
+
+
+
+因此，看到有人能够来到你的产品，也许是几年后，并做出一些非常重要的业务贡献，扩展你设计的东西，而不需要重新设计，这是非常令人满意的。
+ And so seeing somebody be able to come to your product, maybe years later, and make some very business critical contribution extension of something that you designed, without having to redesign it, is very satisfying.
+
+
+
+它告诉你你击中了正确的目标。
+ It tells you that you hit it on the right mark.
+
+
+
+什么是令人兴奋的建筑?
+ What's exciting in architecture?
+
+
+
+一般来说，你不会想要太多的刺激，因为那通常与某种迫在眉睫的灾难有关。
+ Well in general, you don't want too much excitement because that's usually associated with some sort of looming disaster.
+
+
+
+但有趣的是，软件架构的有趣之处在于，总是有人遇到的问题与你以前见过的所有问题略有不同，这意味着你以前的解决方案不一定有效，你必须做一些新的东西。
+ But what's interesting about software architecture, and that continues to make it interesting, is that someone always has a problem that's slightly different than all the problems you've seen before, which means that your previous solutions aren't necessarily going to work and you get to do something new.
+
+
+
+所以，正是这种新奇感让建筑变得有趣。
+ So, it's the novelty that makes up architecture interesting.
+
+
+
+一个架构师必须具备一些重要的技能，很明显，深厚的技术专长是至关重要的。
+ An architect has to have a number of important skills, obviously, deep technical expertise is table stakes.
+
+
+
+我认为，在某种程度上，你必须成为技术专家。
+ You have to be a technical guru, I think, at a certain level.
+
+
+
+除此之外，你还需要能够以人们希望交流的方式与他们交流。
+ In addition to that, you need to be able to communicate with people at the level that they want to be communicated with.
+
+
+
+因此，如果您与业务人员交谈，他们不想听到您的代码。
+ So if you're talking to a business person, they don't want to hear about your code.
+
+
+
+他们想要听到他们的商业问题。
+ They want to hear about their business problems.
+
+
+
+他们想知道你是如何解决他们的业务问题的。
+ And they want to hear how you're solving their business problems.
+
+
+
+如果你和工程师交谈，他们想知道业务环境，但他们需要你和他们谈论代码。
+ If you're talking to an engineer, they want to know the business context but they need you to talk to them about code.
+
+
+
+所以，理解你的谈话对象想要交流的方式是非常重要的。
+ And so, it's really important to have that ability to understand how the person you're talking to wants to be communicated with.
+
+
+
+所以移情交流，我认为，是非常重要的。
+ So empathic communication, I would say, is really important.
+
+
+
+此外，一些基本的功能技能，比如一点项目规划和组织技能，能够保持工作积压，这样你就不会忘记事情。
+ Additionally, some basic functional skills like a little bit of project planning and organizational skills, being able to keep a backlog of work so that you don't forget about things.
+
+
+
+能够同时处理许多不同的竞争问题也是一项非常重要的技能。
+ Be able to juggle a lot of different competing concerns at the same time is also a very important skill.
+
+
+
+最重要的是我所说的软技能，你需要它来让人们告诉你他们的需求是什么。
+ The most important ones are what I would call, the soft people skills that you need in order to get people to tell you what their requirements are.
+
+
+
+这是非常困难的，尤其是在不确定的情况下。
+ This is very hard actually, especially in situations of uncertainty.
+
+
+
+客户通常不愿意告诉你他们真正不擅长的事情。
+ Clients are very reluctant typically, to tell you the things that they're really bad at.
+
+
+
+他们喜欢告诉你所有他们知道如何做的事情，但是他们不愿意表达他们对问题的理解是不完整的，或者他们的业务流程是不正确的。
+ They like to tell you all the things that they know how to do but they're reluctant to express where their understanding of a problem is incomplete or where their business processes just don't work right.
+
+
+
+如果你不确定这些区域，你就会在你的项目中遇到很大的风险，因为这些区域就是问题所在。
+ And, if you don't identify those areas, you've actually encountered a big risk in your project, because those are the areas that are the problem.
+
+
+
+客户需求中容易理解的部分不是问题。
+ The well understood parts of a client's needs are not an issue.
+
+
+
+这些部分是模糊的，没有被很好地理解。
+ It's the parts that are fuzzy and not well understood.
+
+
+
+但是在你所有的技术技能中，你需要这个元技能，也就是观察各种技术和想法，然后决定，它对我有用还是对我要解决的问题没用?
+ But of all the technical skills that you've got, you need this meta skill, which is to look at various technologies and ideas and decide, is that going to be useful to me or not in my particular problem I'm trying to solve?
+
+
+
+所以作为一名建筑师，你必须对外面有很多了解。
+ So as an architect, you have to know a lot about what's out there.
+
+
+
+但不会有太多的细节因为外面的很多东西，不会对你有用，至少不会马上有用。
+ But not in a tremendous amount of detail because a lot of the stuff that's out there, isn't going to be useful to you, at least immediately.
+
+
+
+当你需要它的时候，它可能已经发布了10个版本了，不是同一件事。
+ By the time you might need it, it's probably gone through 10 releases anyway and isn't the same thing.
+
+
+
+因此，您必须具备能够快速评估各种技术并将其纳入您对规程的理解的技能。
+ So you have to have the skill of being able to quickly assess various technologies and fit them into your understanding of the discipline.
+
+
+
+所以新的语言出现了，你会说，“哦，是的，这是另一种程序语言，和其他的没什么不同。
+ So new language comes out, you so say, "Oh yeah, this is yet another procedural language with nothing much different than all these other ones.
+
+
+
+或者你可能会看到其他东西，然后说，“哦，那很有趣。”
+" Or you might see something else and says, "Oh, that's interesting.
+
+
+
+我想知道这种处理问题的特殊风格，也许是面向方面的编程，仅仅是为了引出一些东西，是否真的会帮助我以更好的方式解决我的问题或者以更好的方式表达我的问题。
+ I wonder if this particular style of approaching the problem, perhaps, aspect oriented programming, just to pull something of the air, will actually help me solve my problem in a better way or express my problem in a better way.
+
+
+
+“嗯，跟上时代有点难。
+" Well, staying up to date is a bit of a trick.
+
+
+
+你要尽可能多地接触外部世界和公司内部。
+ It's about exposing yourself to as much as you can in the outside world and inside your own company, as well.
+
+
+
+特别是，看看大公司都在做什么。
+ But in particular, you know, look at what the big companies are doing.
+
+
+
+苹果在做什么?
+ What's Apple doing?
+
+
+
+谷歌在做什么?
+ What's Google doing?
+
+
+
+亚马逊在做什么?
+ What's Amazon doing?
+
+
+
+你读他们的博客。
+ And you read their blogs.
+
+
+
+你玩他们的软件。
+ You play with their software.
+
+
+
+你可以用任何你想用的工具注册一个账号，然后你就可以开始使用这些工具了。
+ You get an account on whichever tool you want to use and you start using those things.
+
+
+
+你可以从中获得灵感。
+ And you use that for inspiration.
+
+
+
+看看其他人是如何在他们的系统中处理架构的，对吧?
+ And just to see how others are approaching architecture in their systems, right?
+
+
+
+所以我认为这里有很多层次的灵感。
+ So there's a number of levels of inspiration there, I think.
+
+
+
+另外，多看看一般的科技新闻，了解世界上正在发生的事情。
+ Additionally, read a lot of just the general tech press and find out what's going on out there in the world.
+
+
+
+阅读相关领域的学术期刊，看看未来会发生什么。
+ Read academic journals for the appropriate areas and see what's coming a little farther down the line.
+
+
+
+学者们在想什么?
+ What are the academics thinking about?
+
+
+
+所以有很多事情值得我们去做。
+ So there's lots of those things to go after.
+
+
+
+因此，我给新软件架构师的建议是，尽可能地与人交谈，尽可能地与尽可能多的人见面。
+ So the advice I would give to a new software architect is to get as comfortable talking to people as you can and meet as many people as you as humanly possible.
+
+
+
+尽可能多地接触新思想。
+ Expose yourself to as many ideas as you can.
+
+
+
+也分享你自己的观点。
+ And share your own perspective as well.
+
+
+
+我认为这是通过利用社区,利用你周围的人,你要启发创造性的在您的体系结构,你会得到一个更好的理解的背景你操作的时候,在你的商业以及更广泛的技术格局。
+ And I think it's by by leveraging the community, leveraging those around you, that you're going to be inspired to be creative in your architecture and you're going to get a better understanding of the context in which you're operating, both within your business as well as the broader technology landscape out there.
+
+
+
+它最终会帮助你做出更好的选择。
+ And it'll help you to make better choices, ultimately.
+
+
+
+您给新软件架构师的建议与给音乐家的建议是一样的。
+ The advice you give to new software architect is the same advice you give to a musician.
+
+
+
+试着和比你优秀得多的人一起玩，因为这样你才能成为更好的建筑师。
+ Try and play with people who are much better than you are because that's how you become a better architect.
+
+
+
+这意味着和比你更优秀的人一起工作。
+ And that means working with people who are better than you are.
+
+
+
+如果你有机会，至少，尽量多阅读该领域的基础文献，而没有那么多可读的。
+ If you have the opportunity, at the very least, try to read as much of the foundational literature in the field and there's not that much to read.
+
+
+
+你应该去20个关键的资源。
+ There's a maybe 20 key resources you should go to.
+
+
+
+其中一些可以追溯到70年代关于耦合和内聚的原始论文。
+ Some of them dating back to the original papers in the 70s about coupling and cohesion.
+
+
+
+然后，当然，写代码。
+ And then, of course, writing code.
+
+
+
+所以你需要和比你优秀的人一起工作。
+ So you need to work with people that are better than you are.
+
+
+
+读很多代码，读很多代码，这就是成为软件架构师的方法。
+ Read a lot of code and read a lot of code and that's how you become a software architect.
+
+
+
+当然，从错误中学习也是很有价值的。
+ Oh and of course, learning from your mistakes is also quite valuable.
+
+
+

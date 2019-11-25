@@ -1,0 +1,309 @@
+As you design software to satisfy requirements, you have to make many important decisions.
+当您设计软件来满足需求时，您必须做出许多重要的决定。
+
+ Certain design decisions involve trade-offs in different quality attributes such as performance, convenience and security.
+某些设计决策涉及不同质量属性(如性能、便捷性和安全性)的权衡。
+
+ Think about balancing such qualities when designing a front door to a house.
+在设计房子的前门时，考虑平衡这些品质。
+
+ You want to make your home more secure in the most direct way.
+你想用最直接的方式让你的家更安全。
+
+ So, you decide to add locks.
+因此，您决定添加锁。
+
+ You add a single lock and don't feel very secure.
+你加了一把锁，感觉不太安全。
+
+ It's easy to open and close the door very quickly.
+很容易很快地打开和关闭门。
+
+ So, you continue to add extra security.
+所以，你继续增加额外的安全。
+
+ You keep adding locks until you realize it's very time consuming and inconvenient to unlock your door.
+你不停地加锁，直到你意识到开锁很费时间，而且不方便。
+
+ Instead of mindlessly adding locks, you must come up with a design that balances security with both convenience and performance in mind.
+您必须考虑到安全性与方便性和性能之间的平衡，而不是盲目地添加锁。
+
+ When designing software, it is important to consider how qualities can compete in a proposed solution under different situations and determine a suitable compromise.
+在设计软件时，重要的是要考虑在不同的情况下，质量如何在一个提议的解决方案中竞争，并确定一个适当的折衷方案。
+
+ This is a constant balancing act for a software architect.
+对于软件架构师来说，这是一个持续的平衡行为。
+
+ Let's talk to an expert about how competing qualities constantly influence their implementations.
+让我们与专家讨论一下相互竞争的质量如何不断地影响它们的实现。
+
+ Yeah, there's always a lot of competing concerns with software design and I think, obviously, from a product perspective, you have things like usability and performance.
+是的，软件设计总是有很多相互矛盾的地方，我认为，很明显，从产品的角度来看，你有可用性和性能。
+
+ Obviously, those are are critical.
+显然，这些都是至关重要的。
+
+ Scalability is always important.
+可伸缩性总是很重要。
+
+ Where the trade-offs really seem to be important is when it comes to security, code quality, time to market.
+当涉及到安全性、代码质量和上市时间时，权衡似乎真的很重要。
+
+ These kinds of things where everybody wants and you need to be secure, right?
+这种事情每个人都想要，你需要安全，对吧?
+
+ And you need to have high quality.
+你需要高质量。
+
+ But the pressure that you have from product, to get something out the door, is sometimes at odds with those requirements.
+但是你从产品中获得的压力，要把产品推出市场的压力，有时与这些要求是不一致的。
+
+ And as an architect, its your job to fight for those things and to advocate for them in the context of the business.
+作为一名架构师，你的工作就是为这些事情而奋斗，并在业务环境中提倡它们。
+
+ So, it's not slavishly sticking to a point and to the point that you're damaging your business, but it's about advocating responsibly for the quality of the code base that you're producing.
+所以，这并不是盲目地坚持一个观点，或者你正在破坏你的业务，而是要对你所产生的代码质量负责。
+
+ So, I think if I would summarize, quality is the job of the architect.
+所以，我想总结一下，质量是建筑师的工作。
+
+ You're ensuring the quality of the code base and you're trading that off against lots of things all the time.
+你要确保代码库的质量，而且你要一直与很多东西进行权衡。
+
+ Architecture is about producing a quality product and you have to define what quality is.
+架构是关于生产高质量的产品，你必须定义什么是质量。
+
+ That's what architecture is, right?
+这就是建筑，对吧?
+
+ It is that you're defining what are those quality attributes that you're chasing after.
+而是你在定义你所追求的那些品质属性。
+
+ And you're going to deal with performance, you're going to deal with scalability, you're going to deal with maintainability, security, all that stuff.
+还有性能，可扩展性，可维护性，安全性等等。
+
+ Also, you want your job to advocate for that quality for all of the stakeholders, right?
+同时，你希望你的工作能为所有的利益相关者倡导这种品质，对吗?
+
+ Engineers need quality, customers need quality, the business needs quality.
+工程师需要质量，客户需要质量，企业需要质量。
+
+ So, I think overall, I mean you're always bouncing a lot of things.
+总的来说，我的意思是你总是会遇到很多问题。
+
+ Architecture is all about balancing competing concerns.
+架构是关于平衡相互竞争的关注点的。
+
+ But if I boil it down to the most important, it's you're balancing quality versus time to market.
+但如果我把它归结为最重要的一点，那就是你要在质量和上市时间之间取得平衡。
+
+ Right?
+对吧?
+
+ So, as customers, as businesses, we want to get things into market.
+所以，作为顾客，作为企业，我们想要把产品推向市场。
+
+ We want to start making money off of them or serving our customers or whatever it might be.
+我们想要开始从他们身上赚钱或者服务我们的客户，或者诸如此类的事情。
+
+ And as engineers, we have a tendency to say we want it to be perfect.
+作为工程师，我们倾向于说我们希望它是完美的。
+
+ We want it to be 100% code coverage.
+我们希望它是100%的代码覆盖率。
+
+ We want it to be tested every way possible.
+我们希望对它进行各种可能的测试。
+
+ It's got to support as much load as you could ever possibly throw at it.
+它需要支持尽可能多的负载。
+
+ But the reality is there's always a trade-off there.
+但现实是，总是有权衡的。
+
+ And so, as an architect, you have to be able to establish what is good enough, right?
+所以，作为一个建筑师，你必须能够确定什么是足够好的，对吧?
+
+ What are the non-negotiables?
+什么是不可谈判的?
+
+ What must you do?
+你必须做什么?
+
+ And then, what can you negotiate on?
+然后，你可以协商什么?
+
+ And once you establish that as an architect, you've made a really good job of establishing those guardrails and then the team can execute from there.
+一旦你成为了一名架构师，你就做好了建立这些护栏的工作，然后团队就可以从那里开始执行。
+
+ The business and the engineering team can execute from there.
+业务和工程团队可以从这里执行。
+
+ Context is important to determine what choice of solution is right for the balance of qualities.
+环境对于决定什么样的解决方案是平衡质量的正确选择是很重要的。
+
+ For example, a home located in a low crime area will require different security needs from one located in a high crime area.
+例如，位于低犯罪区域的住宅与位于高犯罪区域的住宅需要不同的安全需求。
+
+ For software, talking to its stakeholders will help you to understand the context.
+对于软件，与它的涉众交谈将帮助您理解上下文。
+
+ Sometimes choices made in your software designs can have unintended consequences.
+有时，软件设计中的选择可能会产生意想不到的结果。
+
+ For example, an idea that seems to work fine for a relatively small amount of data may become impractical if there is a need to deal with a lot more data.
+例如，如果需要处理更多的数据，那么对相对较少的数据有效的想法就可能变得不切实际。
+
+ It's good to get other perspectives on your technical designs for a more rounded implementation.
+对于更全面的实现，从其他角度了解您的技术设计是很好的。
+
+ These perspectives can be in the form of asking other developers for their opinion or having a design review session.
+这些观点可以以询问其他开发人员的意见或召开设计评审会议的形式出现。
+
+ In the home example, you may decide to install bars on the window of a house built in high crime neighborhood.
+以家庭为例，您可能决定在高犯罪率社区的房屋窗户上安装栅栏。
+
+ However, the bars might have the unintended consequence of preventing an escape through the windows in case of fire.
+然而，这些栅栏可能会产生意想不到的后果，在发生火灾时阻止人们从窗户逃生。
+
+ These consequences could have been avoided if a fire marshal's perspective had been considered before implementation.
+如果在实施之前考虑到消防队长的观点，这些后果是可以避免的。
+
+ Besides design reviews, it is worthwhile to slow down while implementing a system and test it carefully.
+除了设计评审之外，在实现系统时放慢速度并仔细测试也是值得的。
+
+ You can prototype alternative ideas and run tests to see what works best.
+您可以对替代思想进行原型化，并运行测试，以查看哪种方法最有效。
+
+ If a design decision has unintended consequences, tests can help to catch them.
+如果设计决策有意外的结果，测试可以帮助捕获它们。
+
+ In the same way for the home example, running an emergency escape drill would detect the bars as impeding a fast escape.
+以家庭为例，运行紧急逃生演习将检测到阻碍快速逃生的栏杆。
+
+ Let's see how various qualities arise which influence your software design.
+让我们看看影响软件设计的各种质量是如何产生的。
+
+ For software, there are functional requirements that describe what the system or application is expected to do.
+对于软件，有描述系统或应用程序期望做什么的功能需求。
+
+ For example, a media app has a functional requirement of being able to download a full length movie.
+例如，一个媒体应用程序需要能够下载完整长度的电影。
+
+ Naturally, a software design needs to outline a solution to meet such requirements correctly.
+当然，软件设计需要概述一个解决方案来正确地满足这些需求。
+
+ So, a key quality to satisfy is simply correctness.
+因此，要满足的一个关键品质就是简单的正确性。
+
+ Besides functional requirements, there are also non-functional requirements that specify how well the system or application does what it does.
+除了功能性需求之外，还有非功能性需求，它们指定了系统或应用程序的功能。
+
+ Such requirements may describe how well the software runs in particular situations.
+这些需求可以描述软件在特定情况下的运行情况。
+
+ For example, the media app can have non-functional requirements to download a full length movie at a specific speed and to play such a movie within a certain memory limit.
+例如，媒体应用可以有非功能性的需求，以特定的速度下载完整的电影，并在一定的内存限制内播放这样的电影。
+
+ Beyond correctness, other qualities to satisfy include performance, resource usage and efficiency, in terms that can be measured from the running software.
+除了正确性之外，其他需要满足的质量还包括性能、资源使用和效率，这些都可以从正在运行的软件中度量出来。
+
+ Both functional and non-functional requirements are important to satisfy.
+功能性和非功能性需求都很重要。
+
+ You'll need to discuss what is acceptable with the stakeholders.
+您需要与涉众讨论哪些内容是可接受的。
+
+ The desired qualities will put constraints on your system's design.
+所需的质量将限制系统的设计。
+
+ Consider an analogy involving categories of cars.
+考虑一个涉及汽车类别的类比。
+
+ Both sports cars and minivans meet the functional requirement of providing transportation.
+跑车和面包车都满足了提供运输的功能要求。
+
+ But each category, indeed each model of car, offers a different balance of achieved non-functional requirements with different factors like acceleration, handling, cargo capacity, weight and fuel economy.
+但是每一类，实际上是每一种车型，都提供了不同的非功能性需求的平衡，这些非功能性需求包括不同的因素，比如加速度、操控性、载货能力、重量和燃油经济性。
+
+ Another kind of non-functional requirement concerns how well the code of the software can evolve.
+另一种非功能性需求关注的是软件代码的发展情况。
+
+ For example, parts of the implementation may have to support use in other similar software products.
+例如，实现的某些部分可能必须支持在其他类似软件产品中使用。
+
+ Also, the implementation may have to allow for future changes.
+此外，实现可能必须考虑到将来的更改。
+
+ So, other qualities to satisfy for the software can include re-usability, flexibility and maintainability.
+因此，软件需要满足的其他特性包括可重用性、灵活性和可维护性。
+
+ As the design gets detailed and the implementation is constructed, the required quality should be verified through techniques like reviews and tests.
+随着设计的详细化和实现的构建，应该通过评审和测试等技术来验证所需的质量。
+
+ As well, certain qualities can be validated with feedback from end users.
+同样，某些质量可以通过来自最终用户的反馈进行验证。
+
+ You need to keep many qualities in mind when designing software.
+在设计软件时，您需要记住许多特性。
+
+ It's not enough to write any code you want if it works to meet the desired functional requirements.
+如果能够满足所需的功能需求，仅仅编写所需的代码是不够的。
+
+ There are multiple perspectives to consider.
+需要考虑多个视角。
+
+ You must satisfy qualities that matter to the users of the software, as well as those for its developers.
+您必须满足对软件用户和开发人员都很重要的质量要求。
+
+ In software design, your starting point is ensuring your software structure suits the balance of qualities desired.
+在软件设计中，您的出发点是确保软件结构符合所需质量的平衡。
+
+ How the structure is organized may affect the performance as seen by the users, as well as the re-usability and maintainability as seen by the developers.
+结构的组织方式可能会影响用户看到的性能，以及开发人员看到的可重用性和可维护性。
+
+ In particular, there is a common trade-off between performance and maintainability.
+特别是，在性能和可维护性之间有一个共同的权衡。
+
+ High performance code may be less clear and less modular making it less maintainable.
+高性能代码可能不太清晰，模块化程度低，使其更难以维护。
+
+ Another trade-off is security and performance.
+另一个折衷是安全性和性能。
+
+ The extra overhead for high security may reduce performance.
+高安全性的额外开销可能会降低性能。
+
+ Extra code for backward compatibility can worsen both performance and maintainability.
+额外的向后兼容性代码会降低性能和可维护性。
+
+ Achieving the extremes in such competing qualities can, in a way, pit users against developers or users against other users.
+在某种程度上，实现这种竞争质量的极端可能会让用户与开发人员或用户与其他用户竞争。
+
+ Generally, you have to strike a balance during design.
+通常，您必须在设计过程中取得平衡。
+
+ You should ask how much performance, maintainability, security or backward compatibility is needed.
+您应该询问需要多少性能、可维护性、安全性或向后兼容性。
+
+ Can you cut back on performance to gain more security?
+可以通过降低性能来获得更多的安全性吗?
+
+ Can you drop some backward compatibility to have better performance?
+你能放弃一些向后兼容性来获得更好的性能吗?
+
+ Finally project realities will impose compromises on your design.
+最后，项目现实将对您的设计进行妥协。
+
+ You must balance the software qualities with the resources you have to develop your product.
+您必须平衡软件质量和开发产品所需的资源。
+
+ Thinking about quality attributes gives a broader view on how you can achieve the desired requirements in your design.
+考虑质量属性可以让您更全面地了解如何在设计中实现所需的需求。
+
+ You now understand these qualities as competing ideals that must be balanced.
+你现在明白这些品质是相互竞争的理想，必须得到平衡。
+
+ When asked to satisfy a quality, you will consider multiple perspectives and look for potential trade-offs.
+当被要求满足一个质量时，您将考虑多个角度并寻找潜在的权衡。
+

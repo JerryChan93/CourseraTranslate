@@ -1,0 +1,216 @@
+Like the other design principles, UML will let you model generalization and inheritance of the classes in your system.
+与其他设计原则一样，UML将允许您对系统中的类进行模型泛化和继承。
+
+ Showing inheritance is very simple in a UML class diagram.
+在UML类图中显示继承非常简单。
+
+ You simply connect two classes with a solid lined arrow.
+您只需用一个实线箭头连接两个类。
+
+ This indicates, that two classes are connected by inheritance.
+这表明，两个类是通过继承连接的。
+
+ The superclass is at the head of the arrow, and the subclass is at the tail.
+超类位于箭头的顶部，子类位于箭头的尾部。
+
+ The standard way to draw inheritance into your UML diagrams, is to have the arrow pointing upward.
+将继承绘制到UML图的标准方法是让箭头向上指向。
+
+ This means that the superclasses are always toward the top, and the subclasses are always toward the bottom.
+这意味着超类总是朝向顶部，而子类总是朝向底部。
+
+ Think of this like a family tree drawn on paper, the younger the generation, the further down they are on the page.
+这就像画在纸上的家谱，越年轻的一代，他们在纸上的位置越低。
+
+ Older generations are typically closer to the top of the page.
+老一代通常更接近页面顶部。
+
+ So a simple inheritance in a UML diagram would have this layout.
+所以UML图中的一个简单继承就会有这样的布局。
+
+ You do not need to put any of the inherited superclasses attributes and behaviors into the subclass.
+您不需要将任何继承的超类属性和行为放到子类中。
+
+ The arrow is used to communicate inheritance, which implies that the subclass will have the superclasses attributes and methods.
+箭头用于表示继承，这意味着子类将具有超类的属性和方法。
+
+ The superclasses are the generalized classes, and the subclasses are the specialized classes.
+超类是泛化类，子类是专门化类。
+
+ Now that you know how to show inheritance in a UML class diagram, let's try to make the connection between UML and code.
+现在您已经知道了如何在UML类图中显示继承，让我们尝试在UML和代码之间建立联系。
+
+ Let's connect the UML class diagram with the actual code.
+让我们将UML类图与实际代码连接起来。
+
+ We can get some help from Doug the dog.
+我们可以从狗狗道格那里得到一些帮助。
+
+ Doug is not just a dog, Doug is also an animal.
+道格不仅是一只狗，也是一种动物。
+
+ Suppose you have a dog class and an Animal class.
+假设您有一个狗类和一个动物类。
+
+ Are you able to see which class is a superclass and which one is the subclass?
+你能看到哪个类是超类，哪个是子类吗?
+
+ Is the dog class the superclass or the subclass?
+dog类是超类还是子类?
+
+ First, we will model the dog and animal classes in a UML diagram to show the relationship between them.
+首先，我们将在UML图中建模狗和动物类，以显示它们之间的关系。
+
+ We also, will include the attributes and behaviors of both classes.
+我们还将包括这两个类的属性和行为。
+
+ This will show how the two classes are related to each other, how the superclass is generalized, and how the subclass is specialized.
+这将展示两个类如何相互关联，超类如何一般化，子类如何专门化。
+
+ A UML class diagram describes a dog class as a subclass, and the Animal class as the superclass.
+UML类图将dog类描述为子类，将Animal类描述为超类。
+
+ This means that the dog class will inherit from the Animal class.
+这意味着dog类将从Animal类继承。
+
+ The hash symbol is used to communicate that the animals attributes are protected.
+散列符号用于表示动物属性受到保护。
+
+ In Java, a protected attribute or method can only be accessed by, the encapsulating class itself, all subclasses, all classes within the same package.
+在Java中，受保护的属性或方法只能由封装类本身、所有子类、同一包中的所有类访问。
+
+ In Java, a package is simply a means in which the classes can be organized into a namespace that represents those classes.
+在Java中，包只是一种将类组织成表示这些类的名称空间的方法。
+
+ We know that a subclass will have all attributes and behaviors of the superclass that it inherits from.
+我们知道子类将拥有它继承自的父类的所有属性和行为。
+
+ So we do not need to put the superclass's attributes and behaviors in the subclass in our UML diagram.
+因此，我们不需要将超类的属性和行为放在UML图的子类中。
+
+ This is because the inheritance notation tells us that the subclass will already have the attributes and behaviors listed in the superclass.
+这是因为继承符号告诉我们子类已经拥有超类中列出的属性和行为。
+
+ Now, let's convert the UML model into code for the animal and dog classes, so that we can create Doug from it.
+现在，让我们将UML模型转换为动物和狗类的代码，这样我们就可以从它创建Doug。
+
+ Since an animal is a generalization of specific species, we do not want to be able to create an animal object on its own.
+由于动物是特定物种的泛化，我们不希望能够单独创建一个动物对象。
+
+ We use the keyword abstract to declare that this class cannot be instantiated.
+我们使用关键字abstract来声明这个类不能被实例化。
+
+ That means that we cannot create an animal object.
+这意味着我们不能创建动物对象。
+
+ The Animal class will be the superclass for our dogs subclass, any class that inherits from the Animal class will have its attributes and behaviors.
+动物类将是我们的dogs子类的超类，继承自动物类的任何类都将有其属性和行为。
+
+ This means that if we were to introduce a cat subclass into our system that inherited from the Animal class, the cat and dog subclasses would both have the same attributes and behaviors as the animal superclass.
+这意味着，如果我们将一个cat子类引入从动物类继承而来的系统，那么cat和dog子类将具有与动物超类相同的属性和行为。
+
+ As you would expect, we do not need to declare any of the attributes and behaviors that the dog class inherits from the Animal class.
+正如您所期望的，我们不需要声明dog类从Animal类继承的任何属性和行为。
+
+ Notice that our code and UML diagram are similar in terms of what attributes and methods are declared in the superclass and subclass.
+注意，我们的代码和UML图在超类和子类中声明的属性和方法方面是相似的。
+
+ The UML class diagram represents our design.
+UML类图代表了我们的设计。
+
+ If we do not need to restate the inherited attributes and behaviors in the code, then we also do not need to do it in our UML diagram.
+如果我们不需要在代码中重新声明继承的属性和行为，那么我们也不需要在UML图中这样做。
+
+ We declare inheritance in Java using the keyword "extends".
+我们使用关键字“extends”在Java中声明继承。
+
+ You instantiate objects from a class by using constructors.
+通过使用构造函数实例化类中的对象。
+
+ With inheritance, if you want an instance of a subclass, you need to give the superclass a chance to prepare the attributes for the object appropriately.
+使用继承，如果您想要子类的实例，您需要给超类一个机会来适当地准备对象的属性。
+
+ Classes can have implicit constructors or explicit constructors.
+类可以有隐式构造函数，也可以有显式构造函数。
+
+ In this implementation of the Animal class, we have an implicit constructor, since we have not written our own constructor.
+在这个Animal类的实现中，我们有一个隐式构造函数，因为我们没有编写自己的构造函数。
+
+ All attributes are assigned zero or null, when using the default constructor.
+使用默认构造函数时，所有属性都被赋值为0或null。
+
+ The Animal class in this implementation, has an explicit constructor that will let us instantiate an animal with however many legs we want.
+这个实现中的动物类有一个显式的构造函数，它允许我们实例化一个动物，让它拥有我们想要的任意多条腿。
+
+ Explicit constructors, are use of that we can assign values to attributes during instantiation.
+显式构造函数，我们可以使用它在实例化期间为属性赋值。
+
+ A subclass's constructor must call its superclass's constructor, if the superclass has an explicit constructor.
+如果超类有显式构造函数，则子类的构造函数必须调用超类的构造函数。
+
+ This is because explicit constructors of the superclass must be referenced by the subclass.
+这是因为子类必须引用超类的显式构造函数。
+
+ Otherwise the superclass attributes would not be appropriately initialized.
+否则，超类属性将不会得到适当的初始化。
+
+ In order to access the superclass's attributes, methods and constructors, the subclass uses the keyword called Super.
+为了访问超类的属性、方法和构造函数，子类使用了关键字Super。
+
+ Subclasses can override the methods of its superclass, meaning that a subclass can provide its own implementation for an inherited superclass's method.
+子类可以覆盖其超类的方法，这意味着子类可以为继承的超类的方法提供自己的实现。
+
+ The dog class has overwritten the animal class's walk method.
+dog类覆盖了动物类的walk方法。
+
+ If we were to ask the dog to walk, it would tell us that it would rather lay on the couch instead of performing the behavior implemented in the Animal class.
+如果我们让狗走路，它会告诉我们，它宁愿躺在沙发上，也不愿表现出在动物课上的行为。
+
+ Now that we've seen how to represent generalization and inheritance in UML and how to translate UML class diagrams to code and the similarities between the two, let's shift gears and explore the different types of inheritance.
+既然我们已经了解了如何在UML中表示泛化和继承，以及如何将UML类图转换为代码，以及两者之间的相似性，那么让我们转换一下，研究一下不同类型的继承。
+
+ The inheritance that we have been looking at is called implementation inheritance.
+我们一直在研究的继承称为实现继承。
+
+ For Java, only single implementation inheritance is allowed.
+对于Java，只允许单个实现继承。
+
+ Well a superclass can have multiple subclasses.
+一个超类可以有多个子类。
+
+ A subclass can only inherit from one superclass.
+子类只能从一个超类继承。
+
+ For example, the dog and cat subclasses can each only have implementation inheritance with one superclass, which is animal.
+例如，dog和cat子类只能通过一个超类(即animal)实现继承。
+
+ The animal superclass however, can have any number of subclasses, two in this example.
+然而，动物超类可以有任意数量的子类，在本例中有两个。
+
+ To implement this in code, we simply have the cat and dog classes extend the Animal class.
+为了在代码中实现这一点，我们只需让cat和dog类扩展Animal类。
+
+ Now we have a cat and a dog that behave like an animal without having to explicitly write code for them.
+现在我们有了一只猫和一只狗，它们的行为就像动物一样，而不需要显式地为它们编写代码。
+
+ They also have their own behaviors.
+他们也有自己的行为。
+
+ Doug would know how to play fetch, but would not know how to play with yarn like Mittens would.
+道格会玩接球，但不会像手套那样玩线。
+
+ In this way, we can create specialized classes, like the dog and cat subclasses, with customized or special behaviors.
+通过这种方式，我们可以用定制的或特殊的行为来创建特殊的类，比如dog和cat子类。
+
+ Note, that a subclass itself can be a superclass to another class.
+注意，子类本身可以是另一个类的超类。
+
+ Inheritance can trickle down through as many classes as you want.
+继承可以通过您想要的任意多的类向下渗透。
+
+ Inheritance will let you generalize related classes into a single superclass and still allow the subclasses to retain the same set of attributes and behaviors.
+继承将使您将相关类泛化为单个超类，同时仍然允许子类保留相同的属性和行为集。
+
+ This will help remove redundancy in your code, and make it easier to implement changes.
+这将有助于消除代码中的冗余，并使更改更容易实现。
+

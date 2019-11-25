@@ -1,0 +1,291 @@
+[MUSIC] >> In this lesson you'll learnabout a form of generalization.
+[音乐]>>本节课你将学习一种概括形式。
+
+ But first, let's discuss some importantprogramming language and design notions.
+但首先，让我们讨论一些重要的编程语言和设计概念。
+
+ A class denotes a type for its objects.
+类表示其对象的类型。
+
+ The type signifies what these objectscan do through public methods.
+类型表示这些对象可以通过公共方法做什么。
+
+ For example, instances of a dogclass are dog typed objects, and these objects do dog things.
+例如，dogclass的实例是dog类型的对象，这些对象执行dog任务。
+
+ In modeling a problem, we may want to express subtypingrelationships between two types.
+在建模一个问题时，我们可能需要表达两种类型之间的子类型关系。
+
+ For example, we can have dog typeas a subtype of animal type.
+例如，我们可以将dog type作为animal type的子类型。
+
+ This means a dog object is not onlydog typed, it is also animal typed.
+这意味着dog对象不仅是dog类型的，它也是animal类型的。
+
+ So a dog object behaves not only like adog, it should also behave like an animal.
+所以一个dog对象不仅表现得像adog，它还应该表现得像一个动物。
+
+ In effect, a dog is an animal.
+实际上，狗是一种动物。
+
+ In JAVA, class inheritance withthe extends keyword is often used for subtyping.
+在JAVA中，经常使用extends关键字进行类继承。
+
+ If a dog subclass extendsan animal superclass, a dog object behaves not only like a dog,it will also behave by default like an animal through the inheritedmethods and attributes of an animal.
+如果一个dog子类扩展了一个animal超类，那么dog对象不仅表现得像一个dog对象，它还会通过动物的继承方法和属性默认表现得像一个动物对象。
+
+ In effect, a dog is an animal.
+实际上，狗是一种动物。
+
+ Here, the dog class inherits theimplementation details of animal class.
+这里，dog类继承了animal类的实现细节。
+
+ A JAVA interface also denotes a type.
+JAVA接口也表示类型。
+
+ Unlike a class, however, an interfaceonly declares method signatures, and no constructors, attributes,or method bodies.
+但是，与类不同，interfaceonly声明方法签名，而没有构造函数、属性或方法主体。
+
+ It specifies the expected behaviorsin the method signatures, but does not provide anyimplementation details.
+它指定了方法签名的预期行为，但没有提供任何实现细节。
+
+ In JAVA, an interface is also used forsubtyping.
+在JAVA中，接口也用于子类型。
+
+ If a dog class implements an I animalinterface, then a dog object behaves not only like a dog, but it is also expectedto behave like an animal by providing all the method bodies for the methodsignatures listed in the interface.
+如果一个dog类实现了一个I animalinterface，那么一个dog对象不仅表现得像一只狗，而且通过为接口中列出的方法签名提供所有的方法体，它也被期望表现得像一只动物。
+
+ Just like with inheritance,the dog is an animal.
+就像遗传一样，狗也是一种动物。
+
+ However, the difference is that the dogclass needs to provide the implementation details for what it means to be an animal.
+然而，不同之处在于，dogclass需要提供作为动物的实现细节。
+
+ So, an interface is like a contract tobe fulfilled by implementing classes.
+因此，接口类似于通过实现类来实现的契约。
+
+ In both inheritance and interfaces, you achieve consistency between the dogtype and the animal type so that a dog object is usable anywhere in your programwhen you are dealing with an animal type.
+在继承和接口中，可以实现dogtype和animal类型之间的一致性，以便在处理animal类型时，dog对象可以在程序的任何地方使用。
+
+ Unlike inheritance, interfaces are nota generalization of a set of classes.
+与继承不同，接口不是一组类的泛化。
+
+ It is important to understandthat interfaces are not classes.
+理解接口不是类是很重要的。
+
+ They are used to describe behaviors.
+它们被用来描述行为。
+
+ All that an interface containsare method signatures.
+接口包含的所有内容都是方法签名。
+
+ In JAVA, we use the key word interfaceto indicate that we are creating one.
+在JAVA中，我们使用关键字interface来表示我们正在创建一个。
+
+ Standard JAVA namingconvention places the letter I before an actual name toindicate an interface.
+标准JAVA命名约定将字母I放在实际名称之前，以表示接口。
+
+ This interface describes three differentbehaviors of an animal, which are moving, speaking, and eating.
+这个界面描述了动物的三种不同行为，即移动、说话和进食。
+
+ Notice how we never implement or describehow these behaviors are performed.
+请注意，我们从未实现或描述这些行为是如何执行的。
+
+ We only show that an animalhas these behaviors.
+我们只证明动物有这些行为。
+
+ Another thing you might have noticed isthat the interface does not encapsulate any of the attributes of an animal.
+您可能已经注意到的另一件事是，接口没有封装动物的任何属性。
+
+ This is because attributesare not behaviors.
+这是因为属性不是行为。
+
+ Now that we have an interface,how do we use it?
+现在我们有了一个接口，我们如何使用它呢?
+
+ We need to declare that weare going to fulfill the contract as described in the interface.
+我们需要声明我们将按照接口中描述的履行合同。
+
+ The keyword in JAVA forthis action is implements.
+JAVA中的关键字是implementation。
+
+ Our dog class has declaredthat it will implement or describe the behaviorsthat are in the interface.
+我们的dog类声明它将实现或描述接口中的行为。
+
+ When you do this, you must have all themethod signatures explicitly declared and implemented in the class.
+这样做时，必须在类中显式声明和实现所有themethod签名。
+
+ This means that we must the move,speak, and eat methods in this class.
+这意味着我们必须在这个类中移动、说话和吃方法。
+
+ Interfaces are drawn in a similarway that classes are drawn in UMLs.
+接口的绘制方式与类在uml中的绘制方式类似。
+
+ Interfaces are explicitly noted in UMLclass diagrams using guillemets, or French quotes,to surround the words interface.
+接口在UMLclass图中使用guillemet或法语引号显式地标记，以包围单词接口。
+
+ The interaction between an interface and a class that is implementing the interfaceis indicated using a dotted arrow.
+接口和实现接口的类之间的交互用虚线箭头表示。
+
+ The class touches the tailend of the arrow and the interface touchesthe head of the arrow.
+类触摸箭头的末端，接口触摸箭头的头部。
+
+ We combine these notations togetherwith a class to show that a class implements an interface.
+我们将这些表示法与一个类结合在一起，以表明一个类实现了一个接口。
+
+ This indicates that the classimplements the interface.
+这表明classimplements接口。
+
+ The standard way to draw interfaceson your UML class diagrams is to have the arrow pointing upward.
+在UML类图上绘制接口的标准方法是让箭头向上指向。
+
+ This means that the interfaceis always toward the top, and the classes that implement themare always toward the bottom.
+这意味着接口总是朝向顶部，而实现它们的类总是朝向底部。
+
+ If we translate the JAVA code to UML,the diagram for our animal interfaceexample looks like this.
+如果我们将JAVA代码转换为UML，那么动物界面示例的关系图看起来就像这样。
+
+ This UML class diagram tells us that theDog class will determine how the behavior that is described in the interface IAnimal will be implemented byrepeating the method signature.
+这个UML类图告诉我们，dog类将决定如何通过重复方法签名来实现IAnimal接口中描述的行为。
+
+ There are several advantages forinterfaces.
+接口有几个优点。
+
+ Knowing and understanding what theseadvantages are will help you to determine if you should use interfaces or use inheritance when youare designing your systems.
+了解和理解这些优点将帮助您确定在设计系统时应该使用接口还是使用继承。
+
+ Like abstract classes, which are classesthat cannot be instantiated, interfaces are a means in whichyou can implement polymorphism.
+就像抽象类是不能实例化的类一样，接口是实现多态性的一种方法。
+
+ In object oriented languages, polymorphism is when two classes havethe same description of a behavior, but the implementations ofthe behavior may be different.
+在面向对象语言中，多态性是指两个类具有相同的行为描述，但行为的实现可能不同。
+
+ This can be seen when we compare a cat anda dog.
+当我们把猫和狗进行比较时，就可以看出这一点。
+
+ How would you describe howeach of these animals speak?
+你如何描述这些动物是如何说话的?
+
+ Well, to simply put it,a cat meows and a dog barks.
+简单地说，猫叫狗叫。
+
+ The description of the behavior isthe same, both animals can speak.
+对这种行为的描述是一样的，两种动物都会说话。
+
+ But the actual behaviorimplementation itself is different.
+但是实际的行为执行本身是不同的。
+
+ This is known as polymorphism.
+这就是多态性。
+
+ It is simple to achieve inJAVA using an interface.
+使用接口在java中实现起来很简单。
+
+ We create our interfacethe same way as we did before.
+我们创建接口的方式和以前一样。
+
+ The Cat and Dog class both implementthe IAnimal interface, but they each have their ownversions of the speak behavior.
+Cat和Dog类都实现了IAnimal接口，但它们都有自己的speak行为版本。
+
+ When we ask Doug the Dog to speak,he knows how to bark, but will not know how to meowlike Mittens the Cat.
+当我们让狗狗道格说话时，它知道怎么叫，但不会像戴手套一样喵喵叫。
+
+ Just like with class inheritance, interfaces can inheritfrom other interfaces.
+就像类继承一样，接口可以从其他接口继承。
+
+ And just like with class inheritance, interface inheritanceshould not be abused.
+就像类继承一样，接口继承不能被滥用。
+
+ This means that you shouldnot be extending interfaces if you are simply trying tocreate a larger interface.
+这意味着如果您只是想创建一个更大的接口，那么您不应该扩展接口。
+
+ Interface A should onlyinherit from interface B if the behaviors in interface A can fullybe used as a substitution for interface B.
+如果接口A中的行为可以完全替代接口B，则接口A只能继承接口B。
+
+ A little confused?
+有点困惑?
+
+ This example should clear things up.
+这个例子应该可以解释清楚。
+
+ Lets simplify the movement of a vehicleby restricting it s movement so that it can only travel alongeither the x-axis or y-axis.
+让我们通过限制车辆的运动来简化车辆的运动，使它只能在x轴或y轴上单独行驶。
+
+ This interface can be used to describe thebehaviors of vehicles on land or on water.
+该接口可用于描述车辆在陆地或水上的行为。
+
+ But what if we need to implementthe movement of a plane or a submarine that can alsomove in the zed-axis?
+但是，如果我们需要实现一架飞机或一艘潜艇的运动，它也可以在z轴上移动呢?
+
+ We do not want to add an extra behaviorto the interface, because on-land and on-water vehicles do notmove along the zed-axis.
+我们不想在界面上增加额外的行为，因为陆上和水上的交通工具不会沿着z轴移动。
+
+ So what do we do?
+那么我们该怎么做呢?
+
+ We can create a second interface thatwill inherit from our first one.
+我们可以创建第二个接口，它将继承第一个接口。
+
+ Now, we can usethe IVehicleMovement3D interface for all vehicles that have three-dimensionalmovement without having to add the Zed-axis movement to the interfaceused by the on-land and on-water vehicles.
+现在，我们可以将IVehicleMovement3D接口用于所有具有三维运动的车辆，而不必在陆地和水上车辆使用的接口上添加zd轴运动。
+
+ To understand the nextadvantage of interfaces, we need to step back to inheritance.
+要理解接口的下一个优点，我们需要回到继承。
+
+ There is one other form ofinheritance that we haven't looked at called multiple inheritance.
+还有一种我们没有研究过的遗传形式，叫做多重遗传。
+
+ This is when a subclass has two ormore super classes.
+这是指一个子类有两个或两个以上的超类。
+
+ While this is possible to do withother object oriented languages, like C++,JAVA doesn't support Multiple Inheritance.
+虽然这可以用其他面向对象的语言实现，比如c++，但是JAVA不支持多重继承。
+
+ This is because inheriting from two or more superclasses cancause Data Ambiguity.
+这是因为从两个或多个超类继承会消除数据歧义。
+
+ When your subclass inherits from two or more superclasses that haveattributes with the same name or behaviors with the same method signature,how do you distinguish between them?
+当您的子类继承两个或多个具有相同名称的属性或具有相同方法签名的行为的超类时，如何区分它们?
+
+ Since JAVA cannot tell which one you wouldbe referencing, it does not allow for multiple inheritance sothat data ambiguity is not an issue.
+由于JAVA不能告诉您要引用的是哪一个，所以它不允许多重继承，因此数据模糊性不是问题。
+
+ Interfaces do not run into this issue.
+接口不会遇到这个问题。
+
+ In JAVA, a class can implementas many interfaces as we want.
+在JAVA中，一个类可以实现任意多的接口。
+
+ This is because ofthe nature of interfaces.
+这是由于接口的性质。
+
+ Since they are only contracts anddo not enforce a specific way to complete these contracts, overlappingmethod signatures are not a problem.
+因为它们只是契约，并不强制以特定的方式来完成这些契约，所以overlappingmethod签名不是问题。
+
+ A single implementation for multiple interfaces with overlappingcontracts is acceptable.
+使用overlappingcontract实现多个接口是可以接受的。
+
+ There is no ambiguity here because thePerson class only has one definition of a speak method, and it is the sameimplementation for both interfaces.
+这里没有歧义，因为person类只有一个speak方法的定义，而且它是两个接口的相同实现。
+
+ This is JAVA's approach to avoidthe issue that is introduced with multiple inheritance.
+这是JAVA避免多重继承所引入的问题的方法。
+
+ Interfaces are powerful tool to allowyou describe a set of behaviors.
+接口是允许您描述一组行为的强大工具。
+
+ Classes can implement one or more interface at a time whichallows them to have multiple types.
+类可以一次实现一个或多个接口，从而使它们具有多个类型。
+
+ Interfaces enable you to describebehaviors without the need to implement them, which allows youto reuse these abstractions.
+接口使您能够描述行为而不需要实现它们，这允许您重用这些抽象。
+
+ Just like with other constructs in objectoriented modeling and programming, interfaces will help you to createprograms with reusable and flexible code.
+与面向对象建模和编程中的其他构造一样，接口将帮助您使用可重用和灵活的代码创建程序。
+
+ Although they are a useful technique,remember that you should not be generalizing all behaviorcontracts into interfaces.
+尽管它们是一种有用的技术，但是请记住，您不应该将所有的行为契约泛化为接口。
+
+ They are meant to fulfill a specific need,which is to provide a way for related classes to work consistently.
+它们是为了满足特定的需求，即为相关类提供一致工作的方法。
+

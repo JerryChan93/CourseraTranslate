@@ -1,0 +1,246 @@
+Note cards are often used when planning a speech.
+在计划演讲时，通常会使用卡片。
+
+ You can represent each of your talking points on a card.
+你可以在一张卡片上代表你的每个谈话要点。
+
+ The speech only makes sense if you ordered the cards in a way that you move logically from one talking point to the next.
+演讲只有在你按照从一个谈话点到下一个谈话点的逻辑顺序排列卡片时才有意义。
+
+ It would be nice if we had something similar to map out the structure of the software logically when forming its design.
+如果我们在形成软件的设计时能有类似的逻辑地规划出软件的结构就好了。
+
+ The good news is we do.
+好消息是我们做到了。
+
+ You identify components, connections and responsibilities from some requirements when forming the conceptual design.
+在形成概念设计时，从一些需求中识别组件、连接和职责。
+
+ This is where you give your initial thoughts on how you might satisfy the requirements.
+这是您对如何满足需求给出最初想法的地方。
+
+ In the technical design, you learned how these components and connections are further refined to give them technical details.
+在技术设计中，您了解了如何进一步细化这些组件和连接以提供技术细节。
+
+ This makes them easier to implement.
+这使它们更容易实现。
+
+ Although identifying components, their responsibilities and connections, is a good first step in software design, we haven't yet demonstrated a way of representing them.
+虽然确定组件、它们的职责和连接是软件设计的第一步，但是我们还没有演示表示它们的方法。
+
+ Being able to play with our design, like reordering note cards and speech planning would be valuable.
+能够使用我们的设计，如重新排序笔记卡和演讲计划将是有价值的。
+
+ In this lesson, you will learn about an important technique for representing this information at a high level when forming the conceptual design.
+在本节课中，您将学习在形成概念设计时在高层次上表示此信息的重要技术。
+
+ This technique uses CRC cards where CRC stands for Class, Responsibility, Collaborator.
+这种技术使用CRC卡，其中CRC代表类、责任和协作者。
+
+ Similar to how note cards help you organize your talking points, CRC cards help you to organize your components into classes, identify the responsibilities and determine how they will collaborate with each other.
+与笔记卡帮助您组织谈话要点类似，CRC卡帮助您将组件组织到类中，确定职责并确定它们如何相互协作。
+
+ To learn about CRC cards in a software design, let's have a mini software system we can play with.
+为了在软件设计中了解CRC卡，让我们有一个可以玩的迷你软件系统。
+
+ Consider a bank machine, for instance.
+以一台银行机器为例。
+
+ You insert your bank card into the bank machine, the bank machine will then ask you to enter a PIN authenticating you for access.
+你将银行卡插入银行机器，然后银行机器会要求你输入身份验证密码。
+
+ After that, you can choose to deposit, withdraw or check your balances.
+之后，你可以选择存款、取款或检查你的余额。
+
+ This scenario suggests the basic requirements for the system.
+这个场景给出了系统的基本需求。
+
+ Admittedly, it is an incomplete set of requirements but it's a good start.
+诚然，这是一组不完整的需求，但这是一个良好的开端。
+
+ Remember that requirements are often incomplete and are resolved with further interactions with your client and end users.
+请记住，需求通常是不完整的，需要通过与客户端和最终用户的进一步交互来解决。
+
+ The next step is to design the bank machine.
+下一步是设计银行机器。
+
+ But as we form the conceptual design beyond just identifying components, their responsibilities and connections, we are going to represent them with our new technique, the CRC card.
+但当我们形成概念设计时，不仅仅是标识组件、它们的职责和连接，我们还将用我们的新技术CRC卡来表示它们。
+
+ Much like how note cards are used to organize your talking points, CRC cards are used to record, organize and refine the components in your design.
+就像笔记卡用于组织谈话要点一样，CRC卡用于记录、组织和改进设计中的组件。
+
+ Again, CRC stands for Class, Responsibility and Collaborator.
+同样，CRC代表类、责任和协作者。
+
+ A CRC card has three sections.
+CRC卡有三个部分。
+
+ The top of the card has the class name.
+卡片的顶部有类名。
+
+ On the left are the responsibilities of the class, and on the right, you list collaborators.
+左边是类的职责，右边是协作者列表。
+
+ Collaborators are other classes that the class interacts with to fulfill its responsibilities.
+协作者是与类交互以完成其职责的其他类。
+
+ So, how can we use this while forming the conceptual design?
+那么，我们如何在形成概念设计时使用它呢?
+
+ To keep track of each candidate component and its responsibilities using a CRC card, you place a component's name in the class name section and the responsibilities in the responsibilities section.
+要使用CRC卡跟踪每个候选组件及其职责，您可以将组件的名称放在类名部分，将职责放在职责部分。
+
+ That's pretty straightforward so far.
+这很简单。
+
+ So, what about the connections?
+那么，它们之间的联系是什么呢?
+
+ In the collaborators section, you list other components that your current component connects to or interacts with to fulfill its responsibilities.
+在协作者部分中，您将列出当前组件连接或与之交互的其他组件，以履行其职责。
+
+ A CRC card can be as simple as a physical index card marked into three sections.
+CRC卡可以像物理索引卡一样简单，分为三个部分。
+
+ They are cheap, editable and widely available.
+它们很便宜，可编辑，并且广泛可用。
+
+ CRC cards are small on purpose, so you can't write much on them.
+CRC卡很小，所以你不能在上面写太多。
+
+ This forces you to keep breaking down each component into smaller components and eventually, classes that are small enough to be individually described on index cards.
+这迫使您不断地将每个组件分解成更小的组件，并最终分解成足够小到可以在索引卡上单独描述的类。
+
+ Now that you've learned about CRC cards, let's use them to design our bank machine system.
+既然你已经了解了CRC卡，让我们用他们来设计我们的银行机器系统。
+
+ Let us begin with a basic user component.
+让我们从一个基本的用户组件开始。
+
+ In this example, our primary user would be a bank customer that would go on our first CRC card.
+在本例中，我们的主要用户将是使用我们的第一张CRC卡的银行客户。
+
+ We place bank customer in the class name section.
+我们将银行客户放在类名部分。
+
+ The bank customer's responsibilities are insert a bank card or choose an operation, such as deposit, withdraw or check account balance.
+银行客户的责任是插入银行卡或选择一种操作，如存款、取款或检查帐户余额。
+
+ Let's list these in the responsibility section of the CRC card.
+让我们在CRC卡的责任部分列出这些。
+
+ I'd go with insert bank card and choose operation, but write a description that makes sense for you.
+我会选择插入银行卡并选择操作，但要写一个对你有意义的描述。
+
+ All of these bank customer responsibilities involve a bank machine.
+所有这些银行客户职责都涉及一台银行机器。
+
+ The customer can insert bank card in the machine and choose an operation.
+客户可以在机器中插入银行卡并选择操作。
+
+ Since the bank machine is required for our bank customer component to fulfill its task, we placed bank machine under the collaborators section of the bank customer card.
+由于我们的银行客户组件需要银行机器来完成其任务，所以我们将银行机器放置在银行客户卡的协作者部分。
+
+ Next, let's do the other component, the bank machine on another CRC card.
+接下来，让我们处理另一个组件，另一张CRC卡上的银行机器。
+
+ We write bank machine in the class name section.
+我们在类名部分编写银行机器。
+
+ The machine's responsibilities include authenticate bank customer, display task options, deposit, withdraw and check balances.
+该机器的职责包括验证银行客户、显示任务选项、存款、取款和检查余额。
+
+ And since this card interacts with the bank customer component, add bank customer to the collaborators section of the bank machine card.
+由于此卡与银行客户组件交互，因此将银行客户添加到银行机器卡的协作者部分。
+
+ As we have said, a key advantage of using CRC cards is that it allows you to physically reorganize your design.
+正如我们所说，使用CRC卡的一个关键优势是它允许您物理地重新组织您的设计。
+
+ You can move related cards together or situate cards to suggest relationships.
+你可以将相关的卡片移到一起，或者将卡片放置在不同的位置来暗示关系。
+
+ With our CRC cards, we can organize things by placing collaborating components together.
+有了CRC卡，我们可以通过将协作组件放在一起来组织事物。
+
+ For example, put the bank customer CRC card on the left and the bank machine CRC card on the right.
+例如，将银行客户的CRC卡放在左边，银行机器的CRC卡放在右边。
+
+ Where CRC cards organized, you can simulate a prototype design of the system so far.
+在组织CRC卡的地方，您可以模拟到目前为止系统的原型设计。
+
+ Now, let's consider the scenario of the bank machine authenticating our bank customer.
+现在，让我们考虑对银行客户进行身份验证的场景。
+
+ You can imagine enacting our bank customer's insert card responsibility.
+你可以想象我们的银行客户的插入卡责任。
+
+ This in turn, collaborates with the bank machine and triggers its responsibility to authenticate the bank customer.
+这反过来又与银行机器协作，并触发其对银行客户进行身份验证的职责。
+
+ Once authenticated, the bank machine enacts its responsibility to display the task options.
+一旦通过身份验证，银行机器就负责显示任务选项。
+
+ Here is where CRC cards shine.
+这就是CRC卡的亮点。
+
+ They are cheap, editable and disposable, so you are encouraged to experiment and play with alternative designs.
+它们便宜、可编辑、可丢弃，因此鼓励您试验和尝试不同的设计。
+
+ In the simulation we just did, you might ask, how does a bank machine authenticate the bank customer?
+在我们刚刚进行的模拟中，您可能会问，银行机器如何对银行客户进行身份验证?
+
+ This question suggests adding another component, the bank, where the bank machine communicates to authenticate the bank customer.
+这个问题建议添加另一个组件，即银行，在这里，银行机器通过通信对银行客户进行身份验证。
+
+ Now, you should understand how working with CRC cards can help to identify needed components in the design.
+现在，您应该了解如何使用CRC卡来帮助识别设计中需要的组件。
+
+ You can find more candidate components by using CRC cards to prototype and simulate various scenarios.
+通过使用CRC卡来原型化和模拟各种场景，您可以找到更多的候选组件。
+
+ For instance, since the bank machine will talk over a network to the bank, you can add a network CRC card between them.
+例如，由于银行机器将通过网络与银行通信，因此您可以在它们之间添加一个网络CRC卡。
+
+ You want the network communication to be secure, so you make the network collaborate with a new component called encryption.
+您希望网络通信是安全的，因此需要让网络与称为加密的新组件协作。
+
+ This component supports secure communication with the bank.
+此组件支持与银行的安全通信。
+
+ As well, you probably notice the bank machine itself contains several different components, which seem small enough to be individual classes for programming.
+同样，您可能会注意到银行机器本身包含几个不同的组件，这些组件看起来足够小，可以作为单独的编程类。
+
+ For example, there's a card reader, keypad, display, cheque slot and cash dispenser.
+例如，有读卡器、键盘、显示器、支票槽和提款机。
+
+ Each of these classes but their responsibilities and collaborators can be described on their own cards.
+这些类中的每一个，但是它们的职责和协作者可以在它们自己的卡片上描述。
+
+ In a design meeting with the software development team, you can have all the cards on the table and discuss a simulation of how these classes work with other classes to achieve their responsibilities.
+在与软件开发团队的设计会议上，您可以公开讨论所有的问题，并讨论模拟这些类如何与其他类一起工作，以实现它们的职责。
+
+ As before, these simulations may reveal shortcomings in the design and you can experiment with alternatives by introducing appropriate cards.
+与以前一样，这些模拟可能揭示了设计中的缺陷，您可以通过引入适当的卡片来试验替代方案。
+
+ In this lesson, you've learned how to use CRC cards in designing software.
+在本节课中，您学习了如何在设计软件中使用CRC卡。
+
+ You've also learned how CRC cards can be used for prototyping and simulation.
+您还了解了如何将CRC卡用于原型设计和仿真。
+
+ This allows you to reveal shortcomings in the requirements or design.
+这允许您揭示需求或设计中的缺陷。
+
+ Again, CRC cards are just a technique for representing candidate components, their responsibilities and connections.
+同样，CRC卡只是一种表示候选组件、它们的职责和连接的技术。
+
+ Using note cards won't guarantee a great speech and you still need to be experienced in speech writing to be able to arrange your talking points properly.
+使用卡片并不能保证你的演讲一定是精彩的，你还需要在演讲写作方面有一定的经验，这样才能合理安排你的演讲要点。
+
+ Similarly, you still need to be knowledgeable of various design techniques in order to define your CRC cards and form your design properly.
+同样，为了定义CRC卡并正确地形成设计，您仍然需要了解各种设计技术。
+
+ Throughout the rest of this specialization, we will discuss various techniques so you can design more effectively.
+在此专门化的其余部分，我们将讨论各种技术，以便您能够更有效地进行设计。
+

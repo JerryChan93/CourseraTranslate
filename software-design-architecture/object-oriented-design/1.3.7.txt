@@ -1,0 +1,285 @@
+[MUSIC] Now it's time foryou to learn about UML state diagrams.
+现在是你学习UML状态图的时候了。
+
+ A state diagram is a technique that youcan use to describe how your system behaves and responds.
+状态图是一种技术，您可以使用它来描述系统的行为和响应。
+
+ When an event occurs,you note how a system acts or behaves.
+当事件发生时，您将注意系统的行为。
+
+ Let's think of a person.
+让我们想想一个人。
+
+ To make things simple, let's say that thisperson can have three different emotional states, happy, sad and angry.
+简单来说，假设这个人有三种不同的情绪状态，快乐、悲伤和愤怒。
+
+ State diagrams show states as nodes,like the following.
+状态图将状态显示为节点，如下所示。
+
+ You will learn more about this later, but I'll draw a filled circle to indicatethe start state of this diagram.
+稍后您将对此有更多的了解，但是我将绘制一个填充圆来表示此图的起始状态。
+
+ Usually I wake up happyafter a good sleep.
+通常我睡个好觉后会快乐地醒来。
+
+ Let's say that this personstarts their day happy too.
+假设这个人也开始了快乐的一天。
+
+ During the day, maybe somethinghappens to anger this person.
+在白天，可能发生了什么事激怒了这个人。
+
+ Let's say that the person accidentallystubbed their toe on a table, this would change theirstate from happy to angry.
+假设这个人不小心踢到了桌子，这会让他们从高兴变成生气。
+
+ In state diagrams, arrows are used to represent events totransition from one state to another.
+在状态图中，箭头用来表示从一种状态转换到另一种状态的事件。
+
+ While this person is angry, they mightnotice that it's raining outside and this makes the person sad.
+当这个人生气的时候，他们可能会注意到外面在下雨，这让这个人很伤心。
+
+ So this would change theirstate from angry to sad.
+这将改变他们的状态，从愤怒到悲伤。
+
+ This is how a state diagram works.
+这就是状态图的工作原理。
+
+ The state diagram follows the statesof a system or object, and shows changes betweenthe states as events occur.
+状态图跟踪系统或对象的状态，并在事件发生时显示状态之间的变化。
+
+ Right now, this is a simplifiedversion of a state diagram for the mood behavior of this person.
+现在，这是这个人情绪行为状态图的简化版。
+
+ We will go through more UML statediagram conventions and examples later.
+稍后我们将讨论更多的UML状态图惯例和示例。
+
+ State diagrams can describe a singleobject and illustrate how that object behaves in response to a seriesof events in your system.
+状态图可以描述单个对象，并说明该对象如何响应系统中的一系列事件。
+
+ A state diagram illustrates objectbehavior by depicting the changing states of an object.
+状态图通过描述对象状态的变化来说明对象行为。
+
+ These states change andrespond to different events.
+这些状态会随着不同的事件而变化和响应。
+
+ A state is the way an object existsat a particular point in time.
+状态是对象在特定时间点上存在的方式。
+
+ The state of an object is determinedby the values of its attributes.
+对象的状态由其属性值决定。
+
+ For example, think of a car.
+例如，考虑一辆汽车。
+
+ A car with an automatic transmission canbe in different states, park, reverse, neutral, and drive.
+自动变速器的汽车可以处于不同的状态、停车、倒车、空挡和驾驶。
+
+ When a car is in reverse,it can only behave in a certain way, it can move backwards.
+当汽车倒车时，它只能以某种方式运动，它可以向后移动。
+
+ If want it to move ina forwards direction, you would have to changethe state of the car accordingly.
+如果你想让它向前移动，你必须相应地改变汽车的状态。
+
+ This is how you can think aboutthe states of the objects in your system.
+这是您思考系统中对象状态的方式。
+
+ When an object is in a certain state,it behaves in specific ways or has attributes set to specific values.
+当一个对象处于某种状态时，它会以特定的方式进行操作，或者将属性设置为特定的值。
+
+ Using UML state diagrams, you can expressthe different states of your objects and how the states will changewhen an event occurs.
+使用UML状态图，您可以表示对象的不同状态，以及当事件发生时状态如何变化。
+
+ To better understand how tocreate UML state diagrams, let's actually create one together.
+为了更好地理解如何创建UML状态图，让我们一起创建一个。
+
+ Let's use a vending machine asan example for our UML state diagram.
+让我们使用一个自动售货机作为UML状态图的一个例子。
+
+ First, I'll indicate the start ofthis diagram with a filled circle, like we did earlier inthe mood state diagram.
+首先，我将用一个填充的圆来表示这个图的起点，就像我们在前面的mood state图中所做的那样。
+
+ Every state diagram has a filled circleto indicate which is the starting state, the vending machine startsin a state named idle.
+每个状态图都有一个填充的圆来表示哪个是开始状态，自动售货机开始进入一个名为idle的状态。
+
+ This is when the vending machine iswaiting for coins to be inserted.
+这是当自动售货机等待硬币被插入。
+
+ I draw states as rounded rectangles.
+我把状态画成圆角矩形。
+
+ Let me explain states in more detail,each state has three important sections, a state name, state variables,and activities.
+让我更详细地解释一下状态，每个状态有三个重要的部分，一个状态名、状态变量和活动。
+
+ Each state should atleast have a state name.
+每个状态至少应该有一个状态名。
+
+ A state name is as it sounds,the name of the state, these names should be meaningful forthe states of your object.
+一个状态名就像它听起来的那样，状态的名字，这些名字应该对你的对象的状态有意义。
+
+ For example, a car in reversewould have a state named reverse.
+例如，处于reverse中的汽车将具有一个名为reverse的状态。
+
+ Or a vending machine in a waiting, oridle state, would have a state named idle.
+或者处于等待或空闲状态的自动售货机将具有一个名为idle的状态。
+
+ State variables are data relevantto the state of the object.
+状态变量是与对象状态相关的数据。
+
+ For example, using a course as an object, a relevant variable isthe number of students enrolled.
+例如，以课程为对象，相关的变量是注册学生的数量。
+
+ The course would be in state full, ifthis variable was at the course capacity.
+如果该变量在球场容量，则球场将处于满状态。
+
+ Activities are actions that are performedwhen in a certain state, and they're displayed at the bottom.
+活动是在特定状态下执行的动作，它们显示在底部。
+
+ There are three types of activities foreach state, entry, exit, and do.
+每种状态有三种类型的活动:进入、退出和执行。
+
+ Entry activities are actions thatoccur when the state is just entered from another state.
+进入活动是当状态刚从另一个状态进入时发生的动作。
+
+ Exit activities are actions thatoccur when the state is exited and moves on to another state.
+退出活动是在退出状态并转移到另一个状态时发生的操作。
+
+ And do activities are actionsthat occur once, or multiple times while the objectis in a certain state.
+do活动是在目标处于某种状态时发生一次或多次的动作。
+
+ To explain these activities, let's use a traditional alarm clockthat uses a bell as an alarm.
+为了解释这些活动，让我们使用一个传统的闹钟，它使用一个铃作为闹钟。
+
+ An entry activity forwhen a clock enters the ringing state is that the clock releasesa spring to ring a bell.
+时钟进入振铃状态的一项活动是，时钟释放一个弹簧来鸣钟。
+
+ When the clock leaves the ringing state, it will relock the springas an exit activity.
+当时钟离开振铃状态时，它将重新锁定弹簧作为退出活动。
+
+ When the clock is actuallyin its ringing state, the clock continuously rings the bell andthis is its do activity.
+当时钟处于振铃状态时，它会不断地响铃，这就是它的“做”活动。
+
+ Now back to our vending machine example.
+现在回到自动售货机的例子。
+
+ When the vending machineenters this idle state, it always displays the totalof coins inserted so far.
+当自动售货机进入空闲状态时，它总是显示到目前为止插入的硬币总数。
+
+ This means it is also tracking this total.
+这意味着它也在跟踪这个总数。
+
+ I will draw these inside the rectangle.
+我把它们画在矩形里面。
+
+ The state variable is total, andthe entry activity will be display total.
+状态变量为total，而条目活动将显示为total。
+
+ Inserting a coin is an event that couldchange the state of the vending machine.
+插入一枚硬币可能会改变自动售货机的状态。
+
+ Events that could change a statelabel transitions between the states.
+可能更改状态之间的statelabel转换的事件。
+
+ You draw these transitions witharrows from one state to another.
+用箭头画出从一种状态到另一种状态的过渡。
+
+ Each transition arrow will always have anevent, and may have a guard condition and an action.
+每个转换箭头总是有一个事件，可能有一个保护条件和一个动作。
+
+ The transition and action happens froma given state if the event occurs and the condition is true.
+如果事件发生且条件为真，则转换和操作将从给定的状态发生。
+
+ As a basic example, suppose youare finished writing an online test.
+作为一个基本的例子，假设您已经完成了一个在线测试。
+
+ For your test to go from state inprogress to submitted, the event will be, click the submit button.
+要使您的测试从进行状态转到提交状态，事件将是，单击submit按钮。
+
+ The condition will be,submission date is before due date, and the action will be, submit test.
+条件是，提交日期在到期日期之前，动作是，提交测试。
+
+ Again, back to our vending machine.
+再次回到我们的自动售货机。
+
+ Suppose, when in the idle state,someone inserts a coin and the total so far is less than the product price.
+假设，当处于空闲状态时，有人插入一枚硬币，到目前为止，总数小于产品价格。
+
+ Let's express this situation witha transition arrow that loops back to the idle state.
+让我们用一个循环回到空闲状态的过渡箭头来表示这种情况。
+
+ With the event insert coin,condition total less than price, and action display insert more coins.
+与事件插入硬币，条件总小于价格，和行动显示插入更多的硬币。
+
+ But suppose when in the idle state,someone inserts a coin and the total equals the product price.
+但是假设当处于空闲状态时，有人插入一枚硬币，其总数等于产品的价格。
+
+ Let's express this situation witha transition arrow to a new state, named enough coins.
+让我们用一个过渡到新状态的箭头来表示这种情况，命名为enough coins。
+
+ And label this transition with the event,insert coin, and condition, total equals price.
+用事件、投币和条件来标记这个转换，total等于price。
+
+ Let's have an entry action forenough coins being, display enough coins.
+让我们有一个进入行动的硬币是，显示足够的硬币。
+
+ When in the enough coins state,we have enough payment.
+当硬币足够时，我们有足够的支付。
+
+ So if someone presses the dispense button, the vending machine shouldrelease one of the product.
+因此，如果有人按下了分配按钮，自动售货机应该租一个产品。
+
+ We'll express this situation witha transition arrow from the enough coin state back to idle.
+我们将用一个从足够的硬币状态返回到空闲状态的过渡箭头来表示这种情况。
+
+ And label this transition with the event,press dispense, and action, total equals zero, dispense product.
+用事件标记这个转变，按下分配，动作，总数等于零，分配产品。
+
+ In either state,if someone press the cancel button, the vending machining shouldreturn all the coins inserted.
+在这两种状态下，如果有人按下取消按钮，自动售货机应该翻转所有插入的硬币。
+
+ So we'll express this with twotransitions from the two states.
+我们用这两种状态的两个跃迁来表示它。
+
+ Both back to the idle state, andlabel both transitions with an event, press cancel, and action,total equals zero, eject coins.
+两者都返回到空闲状态，并标记两个过渡与一个事件，按取消，和行动，总等于零，弹出硬币。
+
+ Here is the resulting state diagram.
+这是得到的状态图。
+
+ One element of state diagrams that'snot shown in the one we just created is termination.
+在我们刚刚创建的状态图中没有显示的一个元素是终止。
+
+ Termination represents an object beingdestroyed, or the process being completed, and is drawn as a circlewith a filled circle inside.
+终止表示一个对象被销毁，或者进程被完成，并被画成一个圆，其中有一个填充的圆。
+
+ For example, when using a bank machine,you can represent it returning your card at the end of the process andthus ending in termination.
+例如，当使用银行机器时，您可以表示它在流程结束时返回您的卡片，从而在终止时结束。
+
+ Not all diagrams have a terminationlike the vending machine, they may run continuously.
+不是所有的图都有一个像自动售货机一样的终端，它们可以连续运行。
+
+ State diagrams are useful fordescribing the behavior of a system or of a single object.
+状态图对于描述系统或单个对象的行为很有用。
+
+ For example, it can help you determine thedifferent events that might occur during an object's lifetime.
+例如，它可以帮助您确定在对象的生命周期中可能发生的不同事件。
+
+ Like different user inputs, and how thatobject should behave when these events occur, like checking conditions andperforming actions.
+比如不同的用户输入，以及当这些事件发生时该对象应该如何表现，比如检查条件和执行操作。
+
+ For the vending machine example,if I forgot to express canceling the order I could see this easier on a statediagram than looking at source code.
+对于自动售货机的例子，如果我忘记表达取消订单，我可以在状态图上看到这比查看源代码更容易。
+
+ State diagrams can also help youto find issues in your system.
+状态图还可以帮助您发现系统中的问题。
+
+ Like discovering a condition that you didnot plan for or help you to create tests.
+比如发现一个您没有计划或帮助您创建测试的条件。
+
+ Knowing the different states of a systemcan help to make sure that your tests are complete and correct.
+了解系统的不同状态有助于确保您的测试是完整和正确的。
+
+ State diagrams are a very powerful designtechnique that you can use to model your software's behavior.
+状态图是一种非常强大的设计技术，您可以使用它来为软件的行为建模。
+
+ Using them, along with the otherUML diagrams you've learned, will help you to createwell designed software.
+使用它们，以及您已经学习的其他uml图，将帮助您创建设计良好的软件。
+

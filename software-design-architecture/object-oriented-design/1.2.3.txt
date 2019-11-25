@@ -1,0 +1,201 @@
+[MUSIC] As you continue to explore the worldof object oriented programming, you must examine the major designprinciples of object oriented programs.
+当你继续探索面向对象编程的世界时，你必须研究面向对象程序的主要设计原则。
+
+ These principles help to define whatexactly object-oriented programs are and how you can create them.
+这些原则有助于定义究竟什么是面向对象的程序，以及如何创建它们。
+
+ When you design object-oriented programs, you create models of how objectsare represented in your system.
+在设计面向对象程序时，要创建对象在系统中表示的模型。
+
+ These models cannot bedesigned without forethought.
+这些模型的设计必须经过深思熟虑。
+
+ In order fora system to be object oriented, it should adhere tocertain design principles.
+为了使一个系统面向对象，它应该遵循一定的设计原则。
+
+ One of the design principles in objectoriented modeling I'm going to talk about is abstraction.
+我将要讨论的面向对象建模的设计原则之一是抽象。
+
+ Abstraction is one of the main waysthat humans deal with complexity.
+抽象是人类处理复杂性的主要方式之一。
+
+ Abstraction is the idea of simplifyinga concept in the problem domain to its essentials within some context.
+抽象是将问题域中的概念简化为在某种上下文中的本质。
+
+ Abstraction allows you to betterunderstand a concept by breaking it down into a simplified descriptionthat ignores unimportant details.
+通过将概念分解为忽略不重要细节的简化描述，抽象可以让您更好地理解概念。
+
+ For example, we might want tocreate an abstraction for a food.
+例如，我们可能希望为食物创建一个抽象。
+
+ In a health context,its nutritional value and not its cost would be part ofa simplified description of a food.
+在健康的背景下，它的营养价值，而不是它的成本，将是食品的简化描述的一部分。
+
+ Good abstraction emphasizesthe essentials needed for the concept and removes details that are not essential.
+好的抽象强调了概念所需要的本质，并删除了不必要的细节。
+
+ Also an abstraction for a concept shouldmake sense for the concept's purpose.
+此外，对概念的抽象应该对概念的目的有意义。
+
+ This idea applies the Ruleof Least Astonishment.
+这个想法适用于最不令人惊讶的规则。
+
+ That is, the abstraction capturesthe essential attributes and behavior for a concept with no surprises andno definitions that fall beyond its scope.
+也就是说，抽象捕获了概念的基本属性和行为，没有意外，也没有超出其范围的定义。
+
+ You don't want to surprise anyonetrying to understand your abstraction with irrelevant characteristics.
+您不想让任何试图用不相关的特征来理解您的抽象的人感到惊讶。
+
+ In object oriented modeling, abstraction pertains most directlyto the notion of a class.
+在面向对象建模中，抽象最直接地与类的概念相关。
+
+ When you use abstraction to decidethe essential characteristics for some concept,it makes the most sense to define all of those details in a classnamed after the concept.
+当您使用抽象来决定某个概念的基本特征时，在以该概念命名的类中定义所有这些细节是最有意义的。
+
+ A class is like a template forinstances of a concept.
+类类似于概念的模板实例。
+
+ An object instantiated from a classthen has the essential details to represent an instance of some concept.
+从类实例化的对象具有表示某个概念的实例的基本细节。
+
+ Later on, we will go into more detail of how toform your classes using abstraction.
+稍后，我们将更详细地讨论如何使用抽象来形成您的类。
+
+ Let's take the concept of a person.
+让我们以人的概念为例。
+
+ What are the essential characteristicsof a person that we care about?
+我们所关心的人的基本特征是什么?
+
+ Well, it's hard to say becauseperson is so vague and we haven't said whatthe purpose of our person is.
+嗯，这很难说，因为人是如此模糊，我们还没有说我们的人的目的是什么。
+
+ The abstractions you createare relative to some context, and there can be different abstractions forone concept.
+您创建的抽象是相对于某些上下文的，对于一个概念可以有不同的抽象。
+
+ For example,if you are creating a driving app, you would care about a personin the context of a driver.
+例如，如果您正在创建一个驾驶应用程序，那么您会关心驾驶员上下文中的一个人。
+
+ In another example,if you were creating a restaurant app, then you would care about a personin the context of a patron.
+在另一个例子中，如果您正在创建一个餐厅应用程序，那么您将会在一个顾客的上下文中关心一个人。
+
+ It is up to you to choose the abstractionthat is most appropriate for your purpose.
+由您来选择最适合您的目的的抽象。
+
+ Before we start creating an abstraction,we need a context for our person.
+在我们开始创建一个抽象之前，我们需要一个person的上下文。
+
+ Context or specific perspective iscritical when forming an abstraction.
+在形成抽象时，上下文或特定的透视图是关键的。
+
+ Let's look at an example where ourcontext is an academic setting, and we want to create an abstraction fora student.
+让我们来看一个例子，其中ourcontext是一个学术环境，我们想要为学生创建一个抽象。
+
+ What are some of the essentialcharacteristics of a student?
+学生的一些基本特征是什么?
+
+ We'll include the coursesthey're currently taking, their grades in each course andtheir student ID number.
+我们将包括他们目前正在学习的课程、每门课程的成绩和学号。
+
+ These are basic attributes for a student.
+这些是学生的基本属性。
+
+ The attributes do not disappear over timealthough their values may change since they are essentialcharacteristics of a student.
+属性不会随着时间的推移而消失，尽管它们的值可能会改变，因为它们是学生的基本特征。
+
+ For a course,the student's grade value may change but they always have a great attribute.
+对于一个课程来说，学生的成绩值可能会改变，但它们总是有一个很大的属性。
+
+ This means the actual values ofthese attributes may change, but the attributes themselves do not.
+这意味着这些属性的实际值可能会更改，但属性本身不会更改。
+
+ See if you can identify relevantattributes for a concept.
+看看你是否能识别一个概念的相关属性。
+
+ Give examples of attributes for a housecat from the perspective of a cat owner.
+从猫主人的角度举例说明家猫的属性。
+
+ A house cat will have basicattributes like a name, color, favorite nap location,and microchip number.
+家猫会有基本的属性，比如名字、颜色、喜欢的小睡地点和微芯片号。
+
+ Certain values of theseattributes could change.
+这些属性的某些值可能会改变。
+
+ For example, over the course of the daythe cat's favorite nap location could change from the living room to a bedroom.
+例如，在一天的过程中，猫最喜欢的小睡地点可能从客厅变成卧室。
+
+ In addition to attributes, an abstraction should describea concept's basic behaviors.
+除了属性之外，抽象还应该描述概念的基本行为。
+
+ For a student, those behaviors wouldbe studying, doing assignments, and attending lectures.
+对学生来说，这些行为就是学习、做作业和听课。
+
+ These are the responsibilities that thestudent abstraction does for its purpose.
+这些是学生抽象的职责。
+
+ See if you can identify relevantbehaviors for a concept.
+看看你能否为一个概念识别出相关的行为。
+
+ Give examples of behaviors for a housecat from the perspective of a cat owner.
+从猫主人的角度举例说明家猫的行为。
+
+ A house cat has a prettylow activity lifestyle and not much purpose other than to nap.
+家猫的生活方式很少活动，除了打盹没什么目的。
+
+ Perhaps you said, having naps, grooming,catching mice in the house, eating, and using the litter box.
+也许你会说，午睡，梳洗，抓老鼠，吃东西，用小盒子。
+
+ Within the context of an abstraction, anything other than a concept's essentialattributes and behaviors is irrelevant.
+在抽象的上下文中，除了概念的本质属性和行为之外，任何东西都是无关的。
+
+ When considering our student inthe context of an academic setting, we don't care whetherthe student has a pet or how they clean their kitchen orwhat their favorite video game is.
+当我们在一个学术环境中考虑我们的学生时，我们并不关心学生是否有宠物，或者他们如何打扫厨房，或者他们最喜欢的电子游戏是什么。
+
+ Those are all irrelevant details tothe abstraction in this context.
+这些都是与此上下文中的抽象无关的细节。
+
+ Whenever we make abstractions,we need to remember our context.
+当我们进行抽象时，我们需要记住上下文。
+
+ If the context changes,the right abstraction can as well.
+如果上下文改变了，正确的抽象也会改变。
+
+ Say our context changes and we need tomodel a student from a social perspective.
+假设我们的环境改变了，我们需要从社会的角度来教育学生。
+
+ How would our definition change?
+我们的定义会如何改变?
+
+ Perhaps the relevant attributes wouldbe the student groups they belong to, their hobbies for study breaks,and the sports teams their in.
+也许相关的属性应该是他们所属的学生群体，他们的课间休息爱好，以及他们所在的运动队。
+
+ Now it's your turn, let's take a momentto do another example abstraction.
+现在轮到您了，让我们花点时间来做另一个抽象示例。
+
+ What is an abstraction fora dog from the perspective of a dog owner?
+从狗主人的角度看，狗的抽象概念是什么?
+
+ Well your abstraction maybe slightly different.
+你的抽象概念可能有点不同。
+
+ You probably defined attributeslike the dog's breed, its size, whether it has long or shorthair, pointy or floppy ears and its color.
+你可能定义了诸如狗的品种，它的大小，它是否有长或短，尖尖或松软的耳朵和它的颜色。
+
+ Behaviors of a dog include sleeping,eating and doing tricks.
+狗的行为包括睡觉、吃饭和耍把戏。
+
+ Overall, abstraction is an importantprinciple you use when solving problems and designing your systems.
+总的来说，抽象是您在解决问题和设计系统时使用的一个重要原则。
+
+ Some of its benefits are simplifying yourclass design so they are more focused, succinct and understandableto someone else viewing them.
+它的一些好处是简化了类的设计，使它们更集中、更简洁、更容易被其他人理解。
+
+ As you have learned though, abstractionsare formed within a specific context for perspective and you have tocarefully decide what is relevant.
+正如您所了解的，抽象是在特定的上下文中形成的，您必须仔细确定哪些内容是相关的。
+
+ If the purpose of your system orthe problem changes, don't be afraid to update yourabstractions accordingly.
+如果系统的目的或问题发生了变化，不要害怕相应地更新抽象。
+
+ Abstractions are not a fixed creation, butare a direct result of the problem for which you created them.
+抽象不是一个固定的创建，而是创建它们的问题的直接结果。
+

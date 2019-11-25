@@ -1,0 +1,279 @@
+[MUSIC] Now it's time foryou to learn about Sequence Diagrams.
+[音乐]现在是你学习序列图的时候了。
+
+ Sequence Diagrams are used to showyour team how objects in your program interact with each otherto complete tasks.
+序列图用于向您的团队展示程序中的对象如何相互交互以完成任务。
+
+ Simply put, think of a sequence diagram like a map ofconversations between different people, where this map follows all the messagessent from person to person.
+简单地说，将序列图想象成不同人之间对话的映射，其中该映射遵循人与人之间的所有信息。
+
+ Let's say that a person wants to ordera burger at a local fast food restaurant, here is a simple sequencediagram of the scenario.
+假设一个人想在当地的快餐店点一个汉堡，这是一个简单的场景序列图。
+
+ That person will go to a restaurant andtalk to the cashier and order a burger.
+那个人会去餐厅和收银员聊天，然后点一个汉堡。
+
+ The cashier will then talk to the chefof the back to tell him my order.
+收银员会告诉后面的厨师我点了什么。
+
+ The shuffle cook the burger,give it to the cashier.
+洗碗工把汉堡煮好，交给收银员。
+
+ And the cashier willgive it to the person.
+收银员会把钱给这个人。
+
+ Now, let's go into more detail, because a sequence diagram is another typeof UML diagram, to fully understand it, you should have a good grasp ofobjects and basic UML class diagrams.
+现在，让我们进入更多的细节，因为序列图是UML图的另一种类型，为了完全理解它，您应该对对象和基本的UML类图有很好的理解。
+
+ Knowing how to break down a systeminto classes is essential in creating meaningful sequence diagrams.
+在创建有意义的序列图时，知道如何将一个系统分解成类是非常重要的。
+
+ A sequence diagram describes howobjects in your system interact to complete a specific task.
+序列图描述了系统中的对象如何交互以完成特定的任务。
+
+ Think back to the burger example.
+回想一下汉堡的例子。
+
+ All of those interactions betweenthe different people were needed.
+所有这些不同人之间的互动都是需要的。
+
+ Staff person could get a burger.
+员工可以得到一个汉堡。
+
+ This is similar to how objects willinteract to complete a given task.
+这类似于对象如何交互来完成给定的任务。
+
+ I would describe the differentcomponents of a sequence diagram first.
+我将首先描述序列图的不同组件。
+
+ Then later, I will elaborate moreon how to put it all together.
+然后，我将详细说明如何把它们放在一起。
+
+ When creating sequence diagrams, first you use a box to representrole play by an object.
+在创建序列图时，首先使用一个框来表示对象的角色扮演。
+
+ The role is typically labeled bythe name of the class for the object.
+角色通常由对象的类名标记。
+
+ Second, you use vertical dotted lines,known as lifelines, to represent an object as time passes by.
+其次，您使用垂直的虚线，即生命线，来表示随着时间流逝的对象。
+
+ Finally, you use arrows to show messagesthat are sent from one object to another.
+最后，使用箭头显示从一个对象发送到另一个对象的消息。
+
+ Now that you know the different elements, let's put everything togetherby creating a sequence diagram.
+现在您已经知道了不同的元素，让我们通过创建一个序列图将所有的元素放在一起。
+
+ Let's use changing the channel of yourtelevision using a remote control.
+让我们用遥控器来换频道吧。
+
+ First, I'm going start by drawing a box,that will surround the entire process.
+首先，我要从画一个方框开始，它将围绕整个过程。
+
+ This is to show that this isone sequence of activities.
+这表明这是一个活动序列。
+
+ A sequence diagram can containother sequence diagrams within it.
+序列图可以包含其他序列图。
+
+ For example,if you are creating a sequence diagram for an ATM, there might be a differentsequence for Withdrawal and Deposits.
+例如，如果您正在为ATM创建一个序列图，那么取款和存款可能有不同的序列。
+
+ And during a single processsomeone might want to do both.
+在一个单一的过程中，有些人可能想两者都做。
+
+ In your sequence diagram, you wouldhave one big sequence of activities with two smaller sequences inside them.
+在您的序列图中，您将有一个大的活动序列，其中包含两个较小的序列。
+
+ Moving on, in the top corner I'm goingto draw a label with a meaningful title.
+继续，在左上角，我要画一个有意义的标签。
+
+ Remember, your team will be lookingat this diagram as a reference for development, somake the titles meaningful.
+请记住，您的团队将以该图作为开发参考，因此标题要有意义。
+
+ We will name it Change TV Channel.
+我们将把它命名为改变电视频道。
+
+ Next, I'm going to draw out the objectsthat are important in this task.
+接下来，我要画出这个任务中重要的对象。
+
+ To keep things clean, you should drawobjects from left to right in the sequence that they interact with each other.
+为了保持整洁，您应该按照对象之间相互作用的顺序从左到右绘制对象。
+
+ In this example,the TV viewer starts the entire process.
+在本例中，电视查看器启动整个过程。
+
+ The use of the remote whichwill then interact with the TV.
+遥控器的使用，然后将与电视互动。
+
+ So when are diagram, I'm going to drivethe TV viewer then the remote and then the TV.
+所以当你有图表的时候，我要驱动电视查看器，然后遥控器，然后电视。
+
+ If there are people in your example, whowill be using or interacting with objects, this are typically drawon a stick figures.
+如果在您的示例中有将要使用或与对象交互的人，这通常是drawon a简笔画。
+
+ We call these people actors,in our example, the TV viewer's an actor.
+我们称这些人为演员，在我们的例子中，电视观众就是演员。
+
+ So I'm going to drawthem is a stick figure, I'm going to the otherobjects as labeled boxes.
+我要画一个简笔画，我要把其他物体画成带标签的盒子。
+
+ Each of these objects has a lifeline.
+每个对象都有一个生命线。
+
+ The lifelines you can draw as a dashedline projecting downwards from the object.
+你可以画一条从物体向下延伸的生命线。
+
+ Now, I'm going to start drawingthe messages that are sent from object to object.
+现在，我将开始绘制从对象发送到对象的消息。
+
+ In a sequence diagram, if one object sendsa message to another object or objects, we denote this by drawing a solid linearrow from the sender to the receiver.
+在序列图中，如果一个对象向另一个或多个对象发送消息，我们通过从发送方到接收方绘制一个实线来表示。
+
+ To return data and to control back to initiating objects,we would use a dotted line arrow.
+要返回数据并控制初始化对象，我们将使用虚线箭头。
+
+ What's the first thing thathappened in this example?
+在这个例子中发生的第一件事是什么?
+
+ Let's assume the TV is already on andthe TV viewer wants to change her channel.
+假设电视已经打开，电视观众想换台。
+
+ The first thing that happens is the TVviewer presses the numbers on the remote to tell it which channel to go to.
+首先发生的是TVviewer按下遥控器上的数字告诉它去哪个频道。
+
+ This activates both TV viewer andthe remote in our sequence diagram.
+这激活了电视观众和遥控器在我们的序列图。
+
+ When an object is activated, we denotethis on our sequence diagram using small rectangles on the objects lifeline.
+当一个对象被激活时，我们使用对象生命线上的小矩形在序列图上表示它。
+
+ You activate an object wheneveran object sends, receives or it's waiting for a message.
+在对象发送、接收或等待消息时激活对象。
+
+ The first message that is sent isfrom the TV viewer to the remote.
+发送的第一个消息是从电视查看器到远程。
+
+ That message says that the TVviewer pressed numbers.
+那条信息说电视观众按了数字。
+
+ So I'm going to add this to the diagramwith a solid line arrow and label it Press Numbers, number.
+我要把这个加到图上用实线箭头标记它按number, number。
+
+ The remote then sends a new messageto the television to change the channel to number.
+然后遥控器向电视发送一条新的信息，把频道改为数字。
+
+ We denote this on the diagram withanother solid line arrow labeled Change channel, number.
+我们在图上用另一个实线箭头表示，标记为Change channel, number。
+
+ This also activates the television object,so I will add a small rectangleto the television's lifeline.
+这也将激活电视对象，因此我将在电视生命线上添加一个小矩形。
+
+ You'll notice that since a televisionwasn't activated at the beginning of the example, we don't want the rectangleon its lifeline to start at the same place as the TV viewer or the remote.
+您将注意到，由于在本例的开头没有激活电视，所以我们不希望矩形的生命线与电视查看器或遥控器位于相同的位置。
+
+ I drew it a little bit lower onthe lifeline to indicate it was activated later in the process.
+我把它画在生命线的下面一点，以表示它在稍后的过程中被激活。
+
+ Next, the television changes the channel, which the TV viewer cansee on the TV screen.
+接下来，电视改变频道，电视观众可以在电视屏幕上看到。
+
+ This is a returning of control.
+这是控制的回归。
+
+ that means I'm going to denote thisresponse using a dotted line arrow.
+这意味着我要用虚线箭头来表示这个响应。
+
+ I'm going to draw this arrow fromthe television object to the TV viewer.
+我要把这个箭头从电视对象画到电视观众。
+
+ This action only affectsthe television and the TV viewer.
+这个动作只影响电视和电视观众。
+
+ The remote is not partof this interaction, so we do not extend the box on the remote'slifeline to include this action.
+远程不是这种交互的一部分，所以我们不扩展远程上的框来包含这个动作。
+
+ As you design software, your sequencediagrams can get much more complicated.
+当你设计软件时，你的序列图会变得更加复杂。
+
+ You can also show loops and alternativeprocesses in a sequence diagram.
+您还可以在序列图中显示循环和可选流程。
+
+ Let's see what these would looklike in a sequence diagram.
+让我们看看这些在序列图中会是什么样子。
+
+ Say the TV viewer is unsurewhat channel to go to and would like to surf the channelsuntil they find a channel they like.
+例如，电视观众不确定要去哪个频道，想要在频道上冲浪，直到他们找到自己喜欢的频道。
+
+ I can wrap the previous sequence I justdrew as part of an alternative process.
+我可以把我刚刚画的前一个序列包装成另一个过程的一部分。
+
+ So that it is a sequence of actionsthat will occur if a condition is true.
+因此，如果条件为真，就会发生一系列的动作。
+
+ So I put the sequence in a box andlabel it alt, for alternative, in the top right corner.
+所以我把这个序列放在一个方框里，并在右上角按alt键进行替换。
+
+ Now, I need to specify whenthis alternative will occur.
+现在，我需要指定何时出现此替代。
+
+ In this case, the sequence occurs if the TV viewerknew what channel they would like.
+在这种情况下，如果电视观众知道他们想要什么频道，序列就会发生。
+
+ We will label this alternativeTV Viewer knows what channel they want.
+我们将标签这个替代电视观众知道他们想要什么频道。
+
+ If the TV viewer does notknow what channel they want, other sequences can occur.
+如果电视观众不知道他们想要什么频道，其他的序列可能发生。
+
+ One sequence is that the TV viewer willbrowse to the channels until they find something to watch.
+其中一个序列是电视观众将浏览到频道，直到他们找到要看的东西。
+
+ So I'm going to drag this sequenceunderneath the previous sequence with the condition else, meaning this sequence occurs ifall other alternatives are false.
+所以我要把这个序列拖到前面的序列下面，条件是else，意思是这个序列在其他选项为假的情况下发生。
+
+ However, this sequence contains a loop.
+但是，这个序列包含一个循环。
+
+ I will denote that by adding and labelinga box loop on the top right corner.
+我将通过在右上角添加和标记box loop来表示它。
+
+ Right under the label, I puta conditional statement for the loop.
+在标签下面，我为循环添加了条件语句。
+
+ If that statement is true,it will go through the loop.
+如果该语句为真，它将遍历循环。
+
+ Loop sequence should continually occur ifthe TV viewer does not like the channel they are watching, so I will addthat condition to this loop box.
+循环序列应该不断发生，如果电视观众不喜欢他们正在看的频道，所以我将把这种情况添加到这个循环框。
+
+ The TV viewer is going to press the up or down arrow on the remote tobrowse through the channels.
+电视观众将按遥控器上的向上或向下箭头键来浏览频道。
+
+ This sends a message to the remote.
+这将向远程发送一条消息。
+
+ The remote will then send a messageto the TV with this action.
+然后，遥控器将用这个动作向电视发送一条消息。
+
+ Just like in the initial sequence,the TV changes the channel and displays that to the TV viewer.
+就像在初始序列中一样，电视改变频道并将其显示给电视观众。
+
+ The final sequencediagram looks like this.
+最终的序列图是这样的。
+
+ Sequence diagrams are a very powerfultoo you can use to model your software.
+序列图是一个非常强大的工具，你可以用它来为你的软件建模。
+
+ Sequence diagrams are commonly used as aplanning tool before the development team starts programming, or to show others how a system is designed.
+序列图通常用作开发团队开始编程之前的规划工具，或者向其他人展示系统是如何设计的。
+
+ And they can help you to determinethe functions you will need to right.
+它们可以帮助你确定需要纠正的函数。
+
+ It might even help you find problems inyour system that you didn't see before.
+它甚至可以帮助您发现系统中以前没有发现的问题。
+
+ Sequence diagram are another techniqueyou now know that will help you to create clean, well-designed programs.
+序列图是另一种技术，你现在知道，它将帮助你创建干净，良好设计的程序。
+

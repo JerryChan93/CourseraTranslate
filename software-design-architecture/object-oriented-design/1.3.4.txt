@@ -1,0 +1,159 @@
+[MUSIC] Now it's time to learnabout conceptual integrity.
+[音乐]现在是时候学习概念完整性了。
+
+ Conceptual integrity is aboutcreating consistent software.
+概念上的完整性是指创建一致的软件。
+
+ It's making decisions about how yoursystem will be designed and implemented, so that even if multiplepeople worked on the software, it would seem as if there was onlyone mind guiding all the work.
+它是关于你的系统将如何设计和实现的决策，这样即使有很多人在软件上工作，看起来似乎只有一个人在指导所有的工作。
+
+ Now, it's important to understand thatconceptual integrity does not mean that the developers in your team don't get tovoice their opinions about the software.
+现在，重要的是要理解概念上的完整性并不意味着您团队中的开发人员不能表达他们对软件的意见。
+
+ It's more about everyone agreeing to usecertain design principles and conventions.
+更多的是每个人都同意使用特定的设计原则和惯例。
+
+ There are multiple ways toachieve conceptual integrity.
+实现概念完整性有多种方法。
+
+ One important way is communication.
+一个重要的方式是沟通。
+
+ Adopting certain agile developmentpractices like daily stand-up meetings and sprint retrospectives, where team memberscan agree to use certain libraries or methods when addressing certain issues, can help to maintainthe consistency of the code.
+采用某些敏捷开发实践，如每日站立会议和sprint回顾，其中团队成员在处理某些问题时同意使用某些库或方法，可以帮助保持代码的一致性。
+
+ For example, team members can allfollow a particular naming convention.
+例如，团队成员可以遵循特定的命名约定。
+
+ In addition to communication, another way to ensure conceptualintegrity is code reviews.
+除了交流之外，确保概念完整性的另一种方法是代码审查。
+
+ Code reviews are systematicexaminations of written code.
+代码审查是对编写代码的系统检查。
+
+ It's similar to peer review in writing.
+这类似于书面的同行评审。
+
+ It's often used to findmistakes in the software, but also to keep different developersconsistent with each other.
+它经常被用来发现软件中的错误，但也可以让不同的开发人员保持一致。
+
+ Developers evaluate each other's'code line by line to uncover issues.
+开发人员逐行评估彼此的代码以发现问题。
+
+ Additionally, using certaindesign principles and programming constructs can also helpin maintaining conceptual integrity.
+此外，使用某些设计原则和编程结构也有助于保持概念的完整性。
+
+ Consider Java interfaces.
+考虑Java接口。
+
+ An interface defines a type, with behaviors that implementing classesof that type should all have in common.
+接口定义了一个类型，它的行为实现了该类型的类。
+
+ This creates consistency in your software, thereby also increasing the conceptualintegrity of your software.
+这将在您的软件中创建一致性，从而也增加了软件的概念完整性。
+
+ In this specialization,you will also learn about design patterns.
+在这个专题中，您还将学习设计模式。
+
+ They provide conventional structures foryour classes to solve a design issue and lead to consistency.
+它们为您的类提供常规的结构来解决设计问题并实现一致性。
+
+ Another approach to achieving conceptualintegrity is having a well defined design or architecture underlying your software.
+实现概念完整性的另一种方法是在软件的基础上有一个定义良好的设计或架构。
+
+ While software design istypically associated with guiding the internal design of softwarerunning as a single process, software architecture describes howsoftware, running as multiple processes, work together, andhow they relate to each other.
+虽然软件设计通常与指导软件作为单个流程运行的内部设计相关，但软件体系结构描述了作为多个流程运行的软件如何协同工作，以及它们之间如何相互关联。
+
+ Much like using certain design principles,having a strong software design or architecture to guide how your softwareis organized creates consistency.
+就像使用某些设计原则一样，拥有一个强大的软件设计或架构来指导您的软件是如何组织起来的，这将创建一致性。
+
+ Unifying concepts is also another approachto maintaining conceptual integrity.
+统一概念也是维护概念完整性的另一种方法。
+
+ It is taking seemingly differentthings and finding common ground so that each concepts can be seen andtreated in similar ways.
+它采取看似不同的事物，寻找共同点，这样每个概念都能以相似的方式被看待和对待。
+
+ For example, in the Unix operatingsystems, every resource can be seen and manipulated as if it were a file.
+例如，在Unix操作系统中，每个资源都可以像文件一样被查看和操作。
+
+ The same set of operations can beused on different types of resources.
+同一组操作可以用于不同类型的资源。
+
+ This simplifies things by making it so that any resource can betreated in the same way.
+这简化了事情，使任何资源都可以以同样的方式进行优化。
+
+ Unifying concepts to avoid special casescan provide consistency in your software.
+统一概念以避免特殊情况可以在您的软件中提供一致性。
+
+ Finally, having a small core groupthat accepts commits to the code base is another approach inachieving conceptual integrity.
+最后，让一个小的核心组接受对代码库的提交是实现概念完整性的另一种方法。
+
+ This is similar toexercising code reviews, but it restricts the review to onlycore members of your software team.
+这类似于执行代码评审，但是它将评审限制为只针对软件团队的核心成员。
+
+ These members will be responsible forensuring that any software changes follow the overall architectureand design of the software.
+这些成员将负责确保任何软件更改都遵循软件的总体架构和设计。
+
+ Restricting this decision toonly either a single person or a small group will solve any designissues and lead to consistency.
+将此决策限制为一个人或一个小团队可以解决任何设计问题并导致一致性。
+
+ Conceptual integrity is often quoted asbeing the most important consideration in system design.
+概念完整性经常被引用为系统设计中最重要的考虑因素。
+
+ Fred Brooks, a well known computerarchitect, states in his book, The Mythical Man-Month, it is betterto have a system omit certain anomalous features and improvements, butto reflect one set of design ideas, than to have one that contains many goodbut independent and uncoordinated ideas.
+Fred Brooks，一位著名的计算机架构师，在他的书《人月神话》中指出，与其拥有一个包含许多良好但独立且不协调的思想的系统，还不如拥有一个只反映一套设计思想的系统，而忽略某些不正常的特性和改进。
+
+ Simply put, conceptual integrity is aboutdesigning and implementing the software in a consistent manner,as if it were written by one person.
+简单地说，概念完整性是指以一致的方式设计和实现软件，就好像它是由一个人编写的一样。
+
+ Practicing conceptual integrity inyour software can help guide your team when they are writing software.
+在您的软件中实践概念完整性可以帮助您的团队在编写软件时进行指导。
+
+ If each team member seesthat the design and logic of the software is consistent andeasy to follow, it will help them know how and where to change the softwareto meet new requirements.
+如果每个团队成员都看到软件的设计和逻辑是一致的，并且很容易遵循，这将帮助他们知道如何以及在哪里更改软件以满足新的需求。
+
+ Let's use a metaphor to show youthe benefits of conceptual integrity.
+让我们用一个比喻来说明概念完整性的好处。
+
+ Let's say that I was hosting a party, and I assign multiple people to send invitesthrough Facebook, Snapchat and Twitter.
+假设我在举办一个派对，我让很多人通过Facebook、Snapchat和Twitter发送邀请。
+
+ If I ask you to check who will beattending the party, you would have to check different social media sites,which would cost more time and effort.
+如果我让你检查谁会参加聚会，你将不得不检查不同的社交媒体网站，这将花费更多的时间和精力。
+
+ If I was to use just one method, likeFacebook, this task would be much easier.
+如果我只使用一种方法，比如facebook，这个任务会容易得多。
+
+ This is similar to writing software.
+这类似于编写软件。
+
+ Keeping things consistent and logical would make it much easierto maintain and work with.
+保持事物的一致性和逻辑性会使它更容易维护和工作。
+
+ Think of your software as a building.
+将您的软件视为一个建筑物。
+
+ Conceptual integrity isthe consistency of the structure and design behind your building.
+概念上的完整性是建筑结构和设计的一致性。
+
+ To create a huge skyscraper, many workers would need to worktogether in a well-organized way.
+为了建造一座巨大的摩天大楼，许多工人需要以一种组织良好的方式一起工作。
+
+ They would need a definite blueprint and an architect to guidethe design of the building.
+他们需要一个明确的蓝图和一个建筑师来指导建筑物的设计。
+
+ Without this blueprint, workers may have no way of knowing how tobuild different sections of the building.
+没有这个蓝图，工人可能无法知道如何建造建筑的不同部分。
+
+ Different materials and structures maybe used by these confused workers.
+这些困惑的工人可能使用不同的材料和结构。
+
+ Allowing construction ofthe building to be informal and unguided would resultin an unorganised and inconsistent structure, leading topossibly poor structural integrity.
+允许建筑的建设是非正式的和不受指导的，将导致一个无组织和不一致的结构，导致结构完整性可能很差。
+
+ You now have a greater understanding ofthe importance of conceptual integrity.
+现在你对概念完整性的重要性有了更深刻的理解。
+
+ Conceptual integrity is a veryimportant principle, and one that will help you to createconsistent and well designed software.
+概念完整性是一个非常重要的原则，它将帮助您创建一致且设计良好的软件。
+

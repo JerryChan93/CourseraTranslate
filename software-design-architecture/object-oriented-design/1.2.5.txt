@@ -1,0 +1,180 @@
+As we continue examining the major design principles of object oriented modeling and programming, you're now going to learn about decomposition.
+随着我们继续研究面向对象建模和编程的主要设计原则，您现在将学习分解。
+
+ I'll explain how decomposition works on its own.
+我将解释分解是如何独立工作的。
+
+ But, it's important to keep in mind the design principles work well together.
+但是，重要的是要记住设计原则能够很好地协同工作。
+
+ Decomposition is taking a whole thing and dividing it up into different parts.
+分解就是把一个整体分解成不同的部分。
+
+ Or, on the flip side taking a bunch of separate parts with different functionalities, and combining them together to form a whole.
+或者，在另一方面，用一堆不同功能的独立部分，把它们组合在一起形成一个整体。
+
+ Decomposition allows you to further break down problems into pieces that are easier to understand and solve.
+分解允许您进一步将问题分解为更容易理解和解决的部分。
+
+ Let's consider a whole thing, like a car or a refrigerator.
+让我们考虑一个整体，比如一辆车或一台冰箱。
+
+ By breaking down such a thing into its different parts using decomposition, you can more easily keep their different responsibilities separate.
+通过使用分解将一个事物分解为它的不同部分，您可以更容易地将它们的不同职责分开。
+
+ A general rule for decomposition is to look at the different responsibilities of some whole thing, and evaluate how you can separate them into different parts, each with its own specific responsibility.
+分解的一般规则是查看某个整体的不同职责，并评估如何将它们分成不同的部分，每个部分都有其特定的职责。
+
+ This relates one whole to multiple different parts.
+这将一个整体与多个不同部分联系起来。
+
+ Let's get some practice breaking down a whole thing into its different constituent parts.
+我们来练习一下把一个整体分解成不同的组成部分。
+
+ Identify the different constituent parts of a car.
+识别汽车的不同组成部分。
+
+ Some possible parts of your car maybe a transmission, a motor, wheels, tires, doors, windows, seats, and fuel.
+你的汽车的一些可能的部件可能是变速器、发动机、轮子、轮胎、门、窗、座位和燃料。
+
+ For another example, a refrigerator also has several parts.
+另一个例子，冰箱也有几个部分。
+
+ There is the cabinet and doors, compressor and coils, freezer, ice-maker, shelves, drawers, and of course food if the refrigerator is stocked.
+有橱柜和门，压缩机和线圈，冰箱，制冰机，架子，抽屉，当然如果冰箱有食物的话。
+
+ Each of those parts has a very specific purpose to help achieve the responsibilities of the whole.
+每一部分都有一个非常具体的目的，以帮助实现整体的责任。
+
+ For refrigerator, the parts work together to achieve the overall purpose of keeping, and preserving food in cold storage.
+对于冰箱来说，各个部分协同工作以达到冷藏和保存食物的整体目的。
+
+ Sometimes the whole will delegate specific responsibilities to the parts.
+有时全体会把具体的责任委派给各部分。
+
+ So, the refrigerator delegates the freezing of food and the storing of that food to the freezer.
+所以，冰箱将食物的冷冻和储存委托给了冰箱。
+
+ Since decomposition allows you to create clearly defined parts, it is quite natural that these parts are separate.
+由于分解允许您创建明确定义的部分，所以这些部分是独立的是很自然的。
+
+ Let's see how parts interact within the whole.
+让我们看看部分是如何在整体中相互作用的。
+
+ A whole might have a fixed or dynamic number of a certain type of part.
+一个整体可能有一个固定的或动态的数量的某种类型的部分。
+
+ If there is a fixed number, then over the lifetime of the whole object it will have exactly that much of the part object.
+如果有一个固定的数字，那么在整个对象的生命周期中，它将拥有恰好相同数量的part对象。
+
+ For example, a refrigerator has a fixed number of freezers, just one.
+例如，一台冰箱有固定数量的冷冻机，只有一台。
+
+ This does not change over time, but there are sometimes parts with a dynamic number.
+这不会随时间变化，但有时某些部分具有动态数字。
+
+ Meaning, the whole object may gain new instances of those part objects over its lifetime.
+也就是说，整个对象可能会在其生命周期内获得那些部分对象的新实例。
+
+ For example, a refrigerator can have a dynamic number of shelves or food items over time.
+例如，冰箱可以有一个动态数量的货架或食品项目随着时间的推移。
+
+ Now, for some practice in determining whether you have a fixed or dynamic number of a part.
+现在，通过一些实践来判断一个零件的数量是固定的还是动态的。
+
+ Fixed parts don't change in number over time.
+固定部件的数量不会随时间变化。
+
+ So by a process of elimination, we can find out which car parts are dynamic.
+通过消元法，我们可以知道哪些汽车部件是动态的。
+
+ We know a typical car has one steering wheel, four tires, and one engine at any given time.
+我们知道一辆典型的汽车在任何时候都有一个方向盘、四个轮胎和一个引擎。
+
+ These numbers do not fluctuate.
+这些数字没有波动。
+
+ The number of passengers can change though, making it dynamic.
+但是乘客的数量可以改变，使之成为动态的。
+
+ A part itself can also serve as a whole containing further constituent parts.
+一个部分本身也可以作为一个包含更多组成部分的整体。
+
+ When you look at our refrigerator example, a drawer can contain fruit.
+看看我们的冰箱，一个抽屉可以装水果。
+
+ Let's come up with another example of one part containing other parts.
+让我们来看另一个包含其他部分的部分的例子。
+
+ Thinking of a car, can you describe an example of decomposition where one part contains another?
+以汽车为例，你能描述一个分解的例子吗?
+
+ You may have come up with several different examples.
+你可能会想到几个不同的例子。
+
+ The one that comes to mind for me is the instrument panel, which contains a fuel gauge, an odometer, and a speedometer among other parts.
+我想到的是仪表盘，它包括一个燃料表、一个里程计和一个速度计等部件。
+
+ Also, because of encapsulation, the instrument panel treats the instruments like black boxes, and doesn't care about how they are implemented.
+而且，由于封装的原因，仪表板将这些工具视为黑盒，而不关心它们是如何实现的。
+
+ One issue in decomposition involves the lifetimes of the whole object, and the part objects, and how they could relate.
+分解中的一个问题涉及到整个对象和部分对象的生存期，以及它们之间的关系。
+
+ Lifetimes might be closely related.
+寿命可能是密切相关的。
+
+ For example, the refrigerator and its freezer have the same lifetime.
+例如，冰箱和它的冷冻机有相同的寿命。
+
+ One cannot exist by itself without the other.
+一个独立存在，另一个就不存在。
+
+ If you dispose off the refrigerator, you would dispose off the freezer as well.
+如果你扔掉冰箱，你也会扔掉冰箱。
+
+ But lifetime can also not be so related.
+但一生也不可能如此相关。
+
+ The refrigerator and food items have different lifetimes.
+冰箱和食物有不同的使用寿命。
+
+ Either can exist independently.
+两者都可以独立存在。
+
+ Let's take a look at the lifetimes of parts in an example.
+让我们在一个示例中查看部件的寿命。
+
+ Consider the lifetime of a car, and name one part of a car that has a closely related lifetime, and one part that is not.
+考虑一辆汽车的生命周期，说出一辆汽车中与生命周期密切相关的部分和不相关的部分。
+
+ As possible responses, a closely related lifetime would be the frame, and not closely related would be the tires.
+尽可能的响应，一个密切相关的寿命将是框架，而不是密切相关的轮胎。
+
+ You can have whole things contain parts that are shared among them at the same time.
+你可以让整个事物同时包含它们之间共享的部分。
+
+ How can this relationship arise?
+这种关系是如何产生的?
+
+ Consider a person who has a daughter in one family, but also a spouse in another family.
+考虑这样一个人，他在一个家庭中有一个女儿，但在另一个家庭中又有一个配偶。
+
+ The two families are regarded as separate wholes, but they simultaneously share the same part.
+这两个家庭被认为是两个独立的整体，但它们同时又有相同的部分。
+
+ However, sometimes sharing is not possible or intended.
+然而，有时共享是不可能的，也不是故意的。
+
+ For example, a food item in a refrigerator cannot at the same time also be inside an oven.
+例如，冰箱里的食物不能同时放在烤箱里。
+
+ Overall, decomposition helps you to break down a problem into smaller pieces.
+总的来说，分解帮助您将问题分解为更小的部分。
+
+ A complicated whole thing can be composed out of constituent, separate, simpler parts.
+一个复杂的整体可以由组成部分、独立的、简单的部分组成。
+
+ Important issues to understand are how the parts relate to the whole, such as fixed or dynamic number, their lifetimes, and whether there is sharing.
+需要理解的重要问题是部分如何与整体相关联，例如固定或动态数字、它们的寿命以及是否存在共享。
+

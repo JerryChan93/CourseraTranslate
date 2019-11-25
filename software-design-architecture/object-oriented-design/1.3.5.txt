@@ -1,0 +1,183 @@
+[MUSIC] Object-oriented modeling, tries totake concepts in a problem space and model them in a piece of software.
+面向对象的建模，试图把一个问题空间中的概念建模到一个软件中。
+
+ Given how complicated a problem can be, weneed to refine our models through design principles, abstraction, encapsulation,decomposition and generalization.
+考虑到问题的复杂性，我们需要通过设计原则、抽象、封装、分解和泛化来细化我们的模型。
+
+ Each of these principles requires youto make a decision on how they apply to your system.
+这些原则中的每一个都需要您决定如何将它们应用到您的系统中。
+
+ What attributes and behaviors do you needto model in a class through abstraction?
+您需要通过抽象在类中建模哪些属性和行为?
+
+ How are these attributes andbehaviors grouped together and accessed through encapsulation?
+如何将这些属性和行为组合在一起并通过封装进行访问?
+
+ Can my classes be simplified intosmaller parts using decomposition?
+我的类可以通过分解简化成更小的部分吗?
+
+ Are there common things across myobjects that can be generalized?
+我的对象中是否存在可以一般化的共同事物?
+
+ These principles are meant to guidethe choices that you make when designing an object-oriented system.
+这些原则旨在指导您在设计面向对象的系统时所做的选择。
+
+ Some design decisions will beeasier to make than others.
+有些设计决策比其他的更容易做出。
+
+ For example, a car can have attributessuch as color, make, and model.
+例如，一辆汽车可以有诸如颜色、型号和型号等属性。
+
+ It has behaviors,like acceleration and steering.
+它有加速和转向等行为。
+
+ The car can be decomposed into its parts,like engine, transmission, and battery.
+汽车可以分解成发动机、变速器和电池等部件。
+
+ But how does everythingrelate to each other?
+但是每件事是如何相互联系的呢?
+
+ Can we generalize any parts of the car?
+我们能概括一下汽车的任何部件吗?
+
+ Generalization and inheritance are someof the more difficult topics to master in object-oriented programming and modeling.
+在面向对象编程和建模中，泛化和继承是较难掌握的一些主题。
+
+ Well inheritance is a powerful design toolthat can help you create clean, reusable, and maintainable software systems.
+继承是一个强大的设计工具，可以帮助您创建干净、可重用和可维护的软件系统。
+
+ Misusing inheritancecan lead to poor code.
+滥用继承会导致糟糕的代码。
+
+ That happens when designprinciples are used improperly, creating more problems thanthey are meant to solve.
+当设计原则被不恰当地使用时，就会出现这样的情况，产生的问题比设计原则应该解决的问题还要多。
+
+ So how do we know if we'reabusing inheritance?
+那么我们如何知道我们是否在滥用继承呢?
+
+ Well, there are a few points to beaware of when implying inheritance.
+在暗示继承时，有几点需要注意。
+
+ First, you need to ask yourself,am I using inheritance to simply share attributes or behavior without furtheradding anything special in my subclasses?
+首先，您需要问自己，我是否使用继承来简单地共享属性或行为，而不进一步在子类中添加任何特殊的东西?
+
+ If the answer is yes,then you're misusing inheritance.
+如果答案是肯定的，那么你就是在滥用继承。
+
+ This is an indication of misuse,because there is no point for the subclasses to exists sincethe superclass already is enough.
+这是一个误用的迹象，因为子类没有存在的意义，因为超类已经足够了。
+
+ Let's say, you were designing foryour favorite pizza restaurant.
+比方说，你正在为你最喜欢的披萨餐厅做设计。
+
+ You need to model all the differentvarieties of pizza that the restaurant has on the menu.
+你需要模仿餐厅菜单上所有不同种类的披萨。
+
+ Given the different combination oftoppings and names you can have for pizzas, you might be tempted todesign a system using inheritance.
+考虑到披萨的配料和名称的不同组合，您可能会想要使用继承来设计一个系统。
+
+ The pizza class has been generalized toknow what toppings it will have, its size, style of crust, andhow long it will take to cook.
+披萨类已经被概括为知道它将会有什么配料，它的大小，外壳的风格，以及需要多长时间来烹饪。
+
+ This seems reasonable, butlet's look at why this is a misuse of inheritance by examining the code fora subclass of pizza.
+这似乎是合理的，但是让我们通过检查pizza子类的代码来看看为什么这是对继承的误用。
+
+ Despite the fact that a pepperoni pizzais a more specific kind of pizza, it is not really differentfrom a superclass.
+尽管意大利辣香肠披萨是一种更特殊的披萨，但它与超级披萨并没有什么不同。
+
+ You can see that the pepperoni constructoruses the pizza's constructor and adds toppings using the pizza's method.
+可以看到，pepperoni构造函数使用了比萨的构造函数，并使用比萨的方法添加了浇头。
+
+ There's no reason to useinheritance in this case, because you can simply use only the pizzaclass to build the pizza with pepperoni as a topping The second indication of improper use of generalization is, if youbreak the Liskov Substitution Principle.
+在这种情况下没有理由使用继承，因为您可以简单地使用pizzaclass来构建以pepperoni作为浇头的比萨饼。
+
+ The principle states that a subclass canreplace a superclass, if and only if, the subclass does not changethe functionality of the superclass.
+该原则规定，当且仅当子类不改变超类的功能时，子类可以替换超类。
+
+ How would this principle beviolated through inheritance?
+这个原则是如何通过继承实现的?
+
+ Let's take a look at this example.
+让我们看一下这个例子。
+
+ This is our generalized Animal class,it knows how to eat, walk, and run.
+这是我们概括的动物种类，它知道如何进食、行走和奔跑。
+
+ Are you able to see how we canintroduce a subclass that would break the Liskov Substitution Principle?
+你能看到我们如何引入一个子类来打破Liskov替换原则吗?
+
+ What if we had this type of animal?
+如果我们有这种动物呢?
+
+ A whale doesn't know how to run and walk.
+鲸鱼不知道如何奔跑和行走。
+
+ Running andwalking are behaviors of land animals.
+跑和走是陆地动物的行为。
+
+ The Liskov Substitution Principleis violated here, because the whale class overridesthe animals classes running and walking functions andreplaces them with swimming behaviors.
+这里违背了Liskov替代原则，因为鲸鱼类覆盖了动物类的跑步和步行功能，并将它们重新设置为游泳行为。
+
+ The whale no longer behaves in the waywe would expect it superclass to behave.
+鲸鱼的行为方式不再是我们期望它的超类的行为方式。
+
+ An example of bad inheritance can beseen in the Java Collections Library.
+在Java集合库中可以看到一个糟糕的继承示例。
+
+ Have you ever usedthe stack class in Java?
+你在Java中使用过堆栈类吗?
+
+ A stack is understood as first in andlast out data structure.
+堆栈被理解为先入后出的数据结构。
+
+ It has a small number of well definedbehaviors like peak, pop and push.
+它有少量定义明确的行为，比如peak、pop和push。
+
+ This is not the case inthe Java stack class, because the stack classinherits from the vector class.
+在Java堆栈类中不是这样，因为堆栈类继承自vector类。
+
+ This means that the stack class is able toreturn an element at a specified index, retrieve the index of an element and eveninsert an element into a specific index.
+这意味着堆栈类能够在指定的索引处返回元素、检索元素的索引，甚至将元素插入到特定的索引中。
+
+ These are not behaviorsexpected from a stack, but because of poor use of inheritance,they are allowed in Java.
+这些并不是堆栈中所期望的行为，但是由于对继承的糟糕使用，它们在Java中是允许的。
+
+ If inheritance does not suit your need, consider whether decompositionis more appropriate.
+如果继承不适合您的需要，请考虑分解是否更合适。
+
+ A smartphone is a good example ofwhere decomposition works better than inheritance.
+智能手机就是一个分解比继承更好的例子。
+
+ A smartphone has characteristicsof a phone and a camera.
+智能手机具有电话和照相机的特点。
+
+ Here is one design.
+这是一个设计。
+
+ It does not make sense forus to Inherit from the phone and then add camera methods tothe subclass smartphone.
+我们从phone继承，然后将拍照方法添加到子类智能手机是没有意义的。
+
+ We should be using decomposition toextract out the camera responsibilities, and put them in their own class.
+我们应该使用分解来提取摄像机的职责，并将它们放在自己的类中。
+
+ The smartphone now indirectly providesthe responsibilities of the camera in the phone.
+智能手机现在间接地提供了手机摄像头的功能。
+
+ To separate part classes, the smartphone doesn't need toknow how these classes work.
+为了分离部分类，智能手机不需要知道这些类是如何工作的。
+
+ Inheritance could be a difficultdesign principle to apply, but it is still a very powerful technique.
+继承可能是一个很难应用的设计原则，但它仍然是一种非常强大的技术。
+
+ Inheritance lets you define some classesthat are tailor made for your system, while defining common attributes andbehaviors in the superclass.
+继承允许您定义为您的系统定制的一些类，同时在超类中定义公共属性和行为。
+
+ Remember, that a common goal isto build reusable, flexible, and maintainable systems.
+请记住，共同的目标是构建可重用、灵活和可维护的系统。
+
+ Inheritance is simply one techniqueto help you reach that goal.
+继承只是帮助你达到这个目标的一种技巧。
+
+ It is important to understand thata technique is beneficial when used properly, butcan cause headaches if not.
+重要的是要明白，正确使用这项技术是有益的，但如果不正确使用，可能会导致头痛。
+

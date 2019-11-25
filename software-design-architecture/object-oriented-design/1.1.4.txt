@@ -1,0 +1,342 @@
+[MUSIC] You can think of developing softwareas a process that takes a problem and produces a solution involving software.
+你可以把开发软件想象成一个过程，它解决一个问题，然后产生一个涉及软件的解决方案。
+
+ Normally, it's an iterative process, with each iteration taking a set ofrequirements through to a working and tested implementation and eventuallybuilding up a complete solution.
+通常，这是一个迭代的过程，每次迭代都将一组需求带到一个工作的和测试过的实现，并最终构建一个完整的解决方案。
+
+ Many developers are eager to gostraight into coding despite not fully understanding whatto program in the first place.
+许多开发人员渴望直接进入编码领域，尽管他们一开始并没有完全理解要编写什么程序。
+
+ Evidence suggest that divingstraight into implementation work is a leading cause of project failure.
+有证据表明，直接投入实施工作是导致项目失败的主要原因。
+
+ In a survey from The Standish Group,the most common causes of project failures are related toissues in requirements and design.
+在Standish Group的调查中，项目失败最常见的原因与需求和设计相关。
+
+ For example, about 13% of respondents noted incompleterequirements impaired their projects.
+例如，约13%的受访者指出，不完全的需求损害了他们的项目。
+
+ Unless you want your projects to fail,take your time to form requirements and create a design.
+除非你想要你的项目失败，否则花点时间来形成需求并创建一个设计。
+
+ You might not get them perfect, but their importance to effectively makinggood software should not be overlooked.
+您可能无法使它们尽善尽美，但是它们对于有效地开发好软件的重要性不应该被忽视。
+
+ Throughout this module, you will see theimportance of requirements and design for a successful software solution.
+通过本模块，您将看到需求和设计对于成功软件解决方案的重要性。
+
+ We will cover how eliciting requirementsinvolves actively probing a client's vision, by asking questions about issuesthat the client may not have considered.
+我们将通过问一些客户可能没有考虑过的问题，来讲述引出需求是如何涉及到积极探索客户的愿景的。
+
+ Besides identifying specific needs,you learn to ask about potential trade offs the client willneed to make in the solution.
+除了确定特定的需求外，您还要了解客户在解决方案中可能需要做出的权衡。
+
+ With a clear idea of what youare trying to accomplish, you can pivot to Conceptual Design mock ups andeventually, Technical Design diagrams.
+对你想要完成的目标有了一个清晰的概念，你可以转向概念设计模型，最终转向技术设计图。
+
+ By the end of this lesson, you will understand that designwork involves outlining a solution.
+本课结束时，你将会明白设计工作包括概述解决方案。
+
+ And this work may includeevaluating different alternatives.
+这项工作可能包括评估不同的选择。
+
+ You may be eager to tackle implementationwork and get something working, but the requirements anddesign activities are critical.
+您可能渴望处理实现工作并使某些东西工作起来，但是需求和设计活动是至关重要的。
+
+ Once you begin coding a solution anddepend on certain assumptions, it can become difficult tochange those assumptions.
+一旦开始编写解决方案并依赖于某些假设，就很难更改这些假设。
+
+ For the design phase,you will have to think like an architect, which means thinking about the structureand behavior of your software.
+在设计阶段，您必须像架构师一样思考，这意味着要考虑软件的结构和行为。
+
+ Consider the following scenario.
+考虑以下场景。
+
+ You're hired to design a house.
+你被雇来设计房子。
+
+ Before you start laying the foundation, you must first understandwhat the homeowner wants.
+在你开始打地基之前，你必须首先了解房主想要什么。
+
+ This starting point is knownas eliciting requirements.
+这个起点是已知的引出需求。
+
+ The homeowner wants a single story house.
+房主想要一栋单层的房子。
+
+ It needs to have a gym, a bathroom,three bedrooms and a living room.
+它需要有一个健身房，一个浴室，三个卧室和一个客厅。
+
+ Eliciting requirements involves notonly listening to what the client is telling you, but asking questions toclarify what the client has not told you.
+引出需求不仅包括倾听客户告诉你什么，还包括通过提问来澄清客户没有告诉你什么。
+
+ For instance, did it strike you asodd that this house has no kitchen?
+比如，这房子没有厨房，你觉得奇怪吗?
+
+ That would be a naturalfollow up question.
+这是一个很自然的问题。
+
+ Do you anticipate needing a kitchen?
+你想要一个厨房吗?
+
+ Should the rooms all be same size?
+所有的房间都应该一样大吗?
+
+ If not, which should be bigger or smaller?
+如果不是，哪个应该更大或更小?
+
+ How big should the house be overall?
+房子应该有多大?
+
+ Are there external design constraints?
+是否有外部设计限制?
+
+ For example, building restrictionsput in place by the community?
+例如，由社区来建立限制?
+
+ Should the house face a particulardirection to take advantage of passive solar energy or scenic views?
+房子应该朝向一个特定的方向来利用被动式太阳能还是朝向风景?
+
+ Which rooms should be furthest apart?
+哪些房间应该隔得最远?
+
+ Which rooms should be close together?
+哪些房间应该挨得很近?
+
+ The art of eliciting requirements is foundin asking revealing follow up questions.
+引出需求的艺术在于提出揭示性的后续问题。
+
+ Once these questions are answered, younow have an initial set of requirements allowing you to startthinking of possible designs.
+一旦回答了这些问题，您现在就有了一组初始的需求，允许您开始考虑可能的设计。
+
+ The design activity involves takingrequirements and outlining a solution.
+设计活动包括提出需求和概述解决方案。
+
+ This activity involves producinga conceptual design and then a technical design, which resultsin two corresponding kinds of artifacts, conceptual mockups and technical diagrams.
+这个活动包括一个概念设计，然后是一个技术设计，产生两种相应的工件，概念模型和技术图表。
+
+ Conceptual mockups provideyour initial thoughts for how the requirements will be satisfied.
+概念模型为您提供了如何满足需求的初步想法。
+
+ At this point, you focus on the housedesign by identifying major components and connections anddefer the technical details.
+在这一点上，你通过识别主要的组件和连接来关注房子的设计，并推迟技术细节。
+
+ For example, the componentsfrom your house project are, the lot on which the house will besituated, the house itself, the kitchen, the gym, the bathroom,the bedrooms and the living room.
+例如，你的房子项目的组成部分是，房子所在的地块，房子本身，厨房，健身房，浴室，卧室和客厅。
+
+ Connections in the housecan relate the components.
+房子里的连接处连接着各个部件。
+
+ For example if the living room isopenly accessible from the kitchen, the living room hasa connection to the kitchen.
+例如，如果客厅可以从厨房直接进入，那么客厅就与厨房相连。
+
+ Each component has a task it needsto perform, known as responsibility.
+每个组件都有一个需要执行的任务，称为职责。
+
+ For instance, the gym's responsibility isto provide the homeowner with space and power for fitness activities andequipment.
+例如，健身房的责任是为房主提供健身活动和设备的空间和动力。
+
+ Similarly, the kitchen's mainresponsibility is to provide space for storing kitchenware, appliances,food supplies, and power and water for meal preparation.
+同样，厨房的主要职责是提供空间来存放厨具、器具、食品供应以及做饭的电源和水。
+
+ As a main component, the house has theoverall responsibility of providing enough power, water, and support forall the required components within it.
+作为一个主要的组成部分，房子有提供足够的电力、水和支持所有需要的组件的整体责任。
+
+ Note, how we don't mention specificsabout wiring and plumbing.
+注意，我们没有提到电线和管道的细节。
+
+ These are technical details that cannotbe fully addressed until the conceptual mockups are completely understood.
+在完全理解概念模型之前，这些技术细节是无法完全解决的。
+
+ For instance, determining the size ofthe electrical distribution panel for the house will require adding upthe power requirements necessary to energize each of the rooms.
+例如，确定房子的配电板的大小将需要增加每个房间所需的电力。
+
+ I recommend finishing the conceptualdesign before moving on to forming the technical design.
+我建议先完成概念设计，然后再进行技术设计。
+
+ The clearer your conceptual design is,the better your technical designs will be.
+概念设计越清晰，技术设计就越好。
+
+ Continuing with the architectural example, you've wowed the homeowner with yourconceptual design and, together, now have a shared vision forthe dream home that will now be built.
+继续以建筑为例，你已经用你的概念设计赢得了房主的赞赏，现在，你对将要建造的梦想之家有了共同的愿景。
+
+ After the conceptual mockups are done, it is time to define the technicaldetails of the solution.
+完成概念模型之后，就到了定义解决方案的技术细节的时候了。
+
+ From the conceptual design, you know allthe major components and connections and their associated responsibilities.
+从概念设计开始，您就知道了所有的主要组件和连接以及它们的相关职责。
+
+ Describing how these responsibilitiesare met is the goal of technical design.
+描述如何满足这些职责是技术设计的目标。
+
+ In a technical design, you start specifying the technicaldetails of each component.
+在技术设计中，您开始指定每个组件的技术细节。
+
+ This is done by splittingcomponents into smaller and smaller components that are specificenough to be designed in detail.
+这是通过将组件拆分成越来越小的组件来实现的，这些组件足够具体，可以进行详细设计。
+
+ For example, the gym component willrequire further components like a floor.
+例如，健身房组件需要更多的组件，比如地板。
+
+ The floor will be responsible forsupporting a lot of weight.
+地板要承受很大的重量。
+
+ Are homeowner is trainingto be an Olympic lifter.
+他们正在训练成为奥林匹克举重运动员。
+
+ By breaking down components more andmore into further components, each with specific responsibilities, you get down toa level where you can do a detailed design of a particular component, such as,describing how to reinforce the floor.
+通过将越来越多的组件分解为更多的组件，每个组件都有特定的职责，您可以深入到可以对特定组件进行详细设计的层次，例如，描述如何加固地板。
+
+ Technical diagrams express how toaddress specific issues like this.
+技术图描述了如何处理诸如此类的特定问题。
+
+ Compromises might arise whencreating an acceptable solution.
+在创建可接受的解决方案时，可能会出现妥协。
+
+ What if reinforcing the floor ofthe gym requires putting in columns or beams in the basement below the gym?
+如果加固体育馆的地板需要在体育馆下面的地下室安装柱子或横梁，该怎么办?
+
+ What if the homeowner also wanteda wide open space in the basement with good head room?
+如果房主也想在地下室里找一个宽敞的空间，有一个好的头房怎么办?
+
+ Sometimes conflicts like this can happen.
+有时像这样的冲突会发生。
+
+ You and the homeowner will need toworkout a compromise in the solution.
+你和房主需要在解决方案上达成妥协。
+
+ Constant communication and feedback iskey, so that the solution is acceptable.
+不断的沟通和反馈是关键，这样的解决方案是可以接受的。
+
+ If components and connections andtheir responsibilities in your conceptual design prove impossible toachieve in the technical design.
+如果在概念设计中组件和连接及其职责在技术设计中不可能实现。
+
+ Or fail to meet the requirements, you will need to go back to yourconceptual design and rework it.
+或者没有达到要求，你需要回到你的概念设计并重新设计。
+
+ Once you come to a feasible design,you want to continuously check with your client that the conceptualmockups capture what they want.
+一旦你有了一个可行的设计，你就需要不断地与你的客户确认概念模型是否能够满足他们的需求。
+
+ In the architectural example,such checks are important.
+在体系结构示例中，这样的检查非常重要。
+
+ Because you'd rather adjust the design onpaper than demolish an actual wall later.
+因为你宁愿在纸上调整设计，也不愿在以后拆除一面墙。
+
+ The technical diagramsthen become the basis for constructing the intended solution.
+然后，技术图表成为构建预期解决方案的基础。
+
+ Let's apply what we have seen asa building architect to software design.
+让我们将我们所看到的建筑架构师应用到软件设计中。
+
+ Suppose you have a design task for a university course search websitewith the following requirement.
+假设你有一个大学课程搜索网站的设计任务，要求如下。
+
+ As a learner, I want to search forrelevant courses through a search page.
+作为一个学习者，我想通过搜索页面搜索相关课程。
+
+ Now, let's do a conceptual design.
+现在，让我们做一个概念设计。
+
+ In making a conceptualdesign of a building, we try to recognize appropriatecomponents, connections and responsibilities andavoid technical details.
+在建筑的概念设计中，我们尽量认识到恰当的组成部分、联系和责任，避免技术细节。
+
+ An architect starts with a sketch ofthe building with the components, connections and responsibilities in mind.
+建筑师在构思建筑草图时，首先要考虑到建筑的组成部分、联系和职责。
+
+ When it comes to conceptual design andsoftware involving user interfaces, conceptual mockups can bea hand drawn sketch or a drawing made using computer tools.
+当涉及到涉及用户界面的概念设计和软件时，概念模型可以是手绘草图或使用计算机工具绘制的图。
+
+ When we look at our requirement,as a learner, I want to search for relevant courses through a search page.
+当我们看到我们的要求，作为一个学习者，我想通过搜索页面搜索相关的课程。
+
+ We recognize search page andcourse as the components, and the search page has the responsibilityof searching for relevant courses.
+我们将搜索页面和课程作为组件，搜索页面有搜索相关课程的职责。
+
+ By sketching a mockupof our user interface, we notice many missing components.
+通过勾画用户界面的模型，我们注意到许多缺少的组件。
+
+ You're probably wondering abouthow a search keyword is entered in the search page.
+您可能想知道如何在搜索页面中输入搜索关键字。
+
+ How is the search started?
+搜索是如何开始的?
+
+ How is the list of searchresults displayed?
+如何显示搜索结果列表?
+
+ These flaws in the initial mockup requirefurther clarification with your client, or more conceptual design work.
+这些缺陷在最初的样机需要进一步澄清与您的客户，或更多的概念设计工作。
+
+ Eventually, we generate a morecomprehensive conceptual design or user interface mockup.
+最后，我们生成一个更全面的概念设计或用户界面模型。
+
+ The search page contains an inputfield and search button, and transitions to the result page.
+搜索页面包含一个inputfield和search按钮，并转换到结果页面。
+
+ Course is a way of displaying the result.
+Course是显示结果的一种方式。
+
+ From this mock up,we recognize many connections.
+从这个模型，我们认识到许多联系。
+
+ For example, for the search page tofulfill its responsibility to search, it needs, Input Field,Search button, and Results Page.
+例如，搜索页面要完成搜索任务，需要输入字段、搜索按钮和结果页面。
+
+ This also translates to Search Page havingconnections to Input Field, Search button, and Results Page.
+这也意味着搜索页面需要连接到输入字段、搜索按钮和结果页面。
+
+ From a conceptual design, we moveto making a technical design where, just like building design, you try toadd a detail how those components, connections andresponsibilities can be implemented.
+从概念设计开始，我们要做一个技术设计，就像建筑设计一样，你要试着添加一个如何实现这些组件、连接和职责的细节。
+
+ For example, we refine each component until it isspecific enough to be designed in detail.
+例如，我们细化每个组件，直到它足够具体到可以详细设计为止。
+
+ For example, how does the search pagefulfill its responsibility of searching a list of courses for relevant ones,given that a user has entered a keyword?
+例如，在用户输入关键字的情况下，搜索页面如何完成为相关课程搜索课程列表的职责?
+
+ Does the page need to talkto an external system?
+页面需要与外部系统对话吗?
+
+ Suppose the university alreadyhas a Course Database component which your courseSearch Page can connect to.
+假设大学已经有一个课程数据库组件，您的课程搜索页面可以连接到该组件。
+
+ Since Search Page requires Course Databasein order to fulfill its responsibility of search, a connection exists betweenSearch Page and Course Database.
+由于搜索页面需要课程数据库来完成它的搜索任务，所以在搜索页面和课程数据库之间存在着连接。
+
+ Here, we can't really usea conceptual user interface mockup, since we are now designinginternal software components.
+在这里，我们不能真正使用概念用户界面模型，因为我们现在正在设计内部软件组件。
+
+ Later on in the specialization,you will learn about different technical diagrams that describe the structure andbehavior of these components.
+在稍后的专门化中，您将了解描述这些组件的结构和行为的不同技术图。
+
+ Components, when they are refined enough,turn into collections of functions, classes or other components.
+当组件足够精练时，它们会变成函数、类或其他组件的集合。
+
+ These pieces then represent a muchsimpler problem that the developers can individually implement.
+这些部分代表了一个更简单的问题，开发人员可以单独实现。
+
+ You can easily imagine that largersystems require more design time.
+您可以很容易地想象，更大的系统需要更多的设计时间。
+
+ With large systems, there are alsomore components, connections and responsibilities to keep track of.
+对于大型系统，还需要跟踪更多的组件、连接和职责。
+
+ And since these components themselves willbe big, they will be refined to many more components beforethe design can be detailed.
+由于这些组件本身很大，所以在详细设计之前，它们将被细化为更多的组件。
+
+ You now have learned to take some timeto think about the problem and outline the conceptual and technical design beforeactually implementing the solution.
+现在，您已经学习了在实际实现解决方案之前花一些时间来考虑问题并概述概念和技术设计。
+
+ Design artifacts, like conceptual mockups, help to clarifydesign decisions with clients and users.
+设计工件，如概念模型，有助于澄清客户和用户的设计决策。
+
+ Technical diagrams help tocoordinate development work.
+技术图表有助于协调开发工作。
+
+ However, recognizing the importanceof design is just the beginning.
+然而，认识到设计的重要性仅仅是个开始。
+
+ Throughout the rest of thisspecialization, we will explore various design techniques so you can getthe most out of your design process.
+在剩下的专门化部分中，我们将探索各种设计技术，以便您能够最大限度地利用设计过程。
+

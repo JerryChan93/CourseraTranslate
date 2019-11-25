@@ -1,0 +1,210 @@
+[MUSIC] Having a well designed system meansthat it needs to be well organized.
+一个设计良好的系统意味着它需要组织良好。
+
+ We've seen how this can be achievedwith a variety of design principles.
+我们已经看到了如何通过各种设计原则来实现这一点。
+
+ One thing we are yet to explore ishow to address information access.
+我们还需要探索的一件事是如何处理信息访问。
+
+ You do not need everything in yoursystem to know about everything else.
+你不需要系统中的一切来了解其他的一切。
+
+ The manual should only have access to theinformation that it needs to do its job.
+该手册应该只能访问其工作所需的信息。
+
+ So how do we limit the information ourvarious modules of our system can have access to?
+那么，我们如何限制系统中各个模块可以访问的信息呢?
+
+ We do this by applying information hiding.
+我们通过应用信息隐藏来做到这一点。
+
+ Information hiding allows models of oursystem to give others the minimum amount of information needed to use themcorrectly and hide everything else.
+信息隐藏允许我们的系统模型为其他人提供正确使用它们和隐藏其他一切所需的最小信息量。
+
+ Information hiding allows a developerto work on a module separately with other developers needing to knowthe implementation details of this module.
+信息隐藏允许开发者单独地处理一个模块，而其他开发者需要知道这个模块的实现细节。
+
+ They can only use this modulethrough its interface.
+他们只能通过接口使用这个模块。
+
+ In general things that might change, likeimplementation details, should be hidden.
+一般来说，可能发生变化的东西，比如实现细节，应该隐藏起来。
+
+ And things that should not change,like assumptions, are revealed through interfaces.
+不应该改变的东西，比如假设，是通过接口显示的。
+
+ Let's say, we were both working onthe same system but on different modules.
+假设，我们都在同一个系统上工作，但是在不同的模块上。
+
+ If my module requires information fromyour module, information hiding allows you to provide me with just the informationI need for my module to work.
+如果我的模块需要来自您的模块的信息，信息隐藏允许您为我提供我的模块工作所需的信息。
+
+ You do not have to give me accessto everything in your module, and you don't need to knowhow my module works.
+您不需要让我访问您的模块中的所有内容，也不需要知道我的模块是如何工作的。
+
+ Information hiding is oftenassociated with encapsulation.
+信息隐藏通常与封装相关。
+
+ We use encapsulation tobundle attributes and behaviors into their appropriate class,and expose an interface to provide access.
+我们使用封装来将属性和行为捆绑到适当的类中，并公开一个接口来提供访问。
+
+ Encapsulation effectively hidesthe implementation of behaviors since the only access is throughan interface of specific methods.
+封装有效地隐藏了行为的实现，因为唯一的访问是通过特定方法的接口。
+
+ Other classes can only rely onthe information in these method signatures not the underlying implementations.
+其他类只能依赖这些方法签名中的信息，而不是底层实现。
+
+ Information hiding through encapsulationallows us to change the implementation without changing the expected outcome.
+通过封装的信息隐藏允许我们在不改变预期结果的情况下改变实现。
+
+ We can still fulfill the expectations for a behavior withoutexposing how we get there.
+我们仍然可以在不暴露我们如何实现目标的情况下实现对行为的期望。
+
+ Take a look at this example, the stringlibrary has a method called concat.
+看一下这个例子，stringlibrary有一个名为concat的方法。
+
+ But how is it implemented?
+但是它是如何实现的呢?
+
+ Are there extra datastructures being used?
+是否使用了额外的数据结构?
+
+ Or other method calls being madethat we do not have access to?
+或者我们无法访问的其他方法调用?
+
+ As a user of the library you are givenaccess to the concat nation functionality through an interface,a particular method signature.
+作为库的用户，您可以通过接口(特定的方法签名)访问concat nation功能。
+
+ But you are not shown howthe functionality is implemented.
+但是您不会看到该功能是如何实现的。
+
+ That is becausethe implementation may change and you should not depend onhow it actually works.
+这是因为实现可能会改变，而您不应该依赖于它的实际工作方式。
+
+ The interface establishes the onlyassumptions you can rely on.
+该接口建立了您可以依赖的唯一假设。
+
+ Attributes can also be hidden in orderto prevent critical information of a classroom being changed directly.
+还可以隐藏属性，以防止直接更改教室的关键信息。
+
+ For example if an attribute is criticalto all the behaviors of a class, then we do not want any externalclasses changing it directly.
+例如，如果一个属性对一个类的所有行为都是关键的，那么我们不希望任何外部类直接改变它。
+
+ You can apply information hiding toyour own classes in your system.
+您可以将信息隐藏应用到系统中的您自己的类中。
+
+ It will allow you to hideinformation that you need but do not want to show to others.
+它将允许您隐藏您需要但不想显示给别人的信息。
+
+ Encapsulation is the practical designprinciple used to apply the concept of information hiding.
+封装是应用信息隐藏概念的实用设计原则。
+
+ You can hide information throughthe use of access modifiers.
+您可以通过使用访问修饰符来隐藏信息。
+
+ You probably have experience using them.
+您可能有使用它们的经验。
+
+ Access modifiers change which classes areable to access attributes and behaviors.
+访问修饰符改变哪些类能够访问属性和行为。
+
+ They also determine which attribute and behaviors a superclass willshare with its subclasses.
+它们还决定超类将与子类共享哪些属性和行为。
+
+ There are four levels of access in Java,public, protected, default, and private.
+Java中有四种级别的访问:public、protected、default和private。
+
+ Attributes with a public accessmodifier are accessible by any class in your system.
+具有公共访问修饰符的属性可由系统中的任何类访问。
+
+ This means that other classes canretrieve and modify the attribute.
+这意味着其他类可以检索和修改属性。
+
+ Public methods are also accessibleby any class in your system.
+系统中的任何类都可以访问公共方法。
+
+ But this access does notallow other classes to change the implementation of the behavior forthe method.
+但是这种访问并不会改变其他类对方法行为的实现。
+
+ A publicly accessible methods simplyallows other classes to call the method and receive any output from it.
+一个公共可访问的方法simplyallow其他类调用该方法并从它接收任何输出。
+
+ In this example the Personclass has a public attribute which anyone can access andhave modified to be johnDoe.
+在这个例子中，Personclass有一个公共属性，任何人都可以访问它并将其修改为johnDoe。
+
+ The Person class also has a publiclyaccessible method named sleep.
+Person类还有一个名为sleep的公共可访问方法。
+
+ Notice that we can invoke the behavior butwe cannot change how it is implemented because it is hidden fromus through encapsulation.
+注意，我们可以调用这个行为，但是我们不能改变它的实现方式，因为它是通过封装来隐藏的。
+
+ Protected behaviors and attributes are notaccessible to every class in the system.
+系统中的每个类都不能访问受保护的行为和属性。
+
+ They are only available tothe encapsulating class itself, all subclasses, andclasses within the same package.
+它们只能用于封装类本身、所有子类和同一包中的类。
+
+ Packages are the means by which Javaorganizes related classes into a single namespace.
+包是java将相关类组织成单个名称空间的方法。
+
+ Let's take a look at anotherexample to see what this means.
+让我们看看另一个例子，看看这意味着什么。
+
+ We have put the Person classin a package called Populace which contains all classes relatedto the people of a country.
+我们将Person classin放入一个称为平民的包中，其中包含与一个国家的人民相关的所有阶级。
+
+ Notice that the Person'sname attribute is protected.
+注意，Person的name属性受到了保护。
+
+ The University class is in a new packagecalled EducationalInstatitution.
+这所大学的班级有了一个新的教学计划，叫做“教育教学计划”。
+
+ This package imports everythingin the Populace package which will give us access tothe publicly accessible Person class.
+这个包导入了平民包中的所有内容，这将使我们能够访问公共访问的Person类。
+
+ If you look at the main method, you'llnotice emphasized on size line of code.
+如果您查看main方法，您会注意到它强调代码的大小行。
+
+ This is to bring your attention thatthis line of code does not work.
+这是为了引起你的注意，这一行代码不工作。
+
+ We cannot access the name attribute fromthe Person class because it is protected and it is in a different package.
+我们不能从Person类访问name属性，因为它是受保护的，并且它在不同的包中。
+
+ This access modifier alsoapplies to methods in classes.
+这个访问修饰符也适用于类中的方法。
+
+ The default access modifier willonly allow access to attributes and methods to subclasses andto the encapsulating class.
+默认的访问修饰符将只允许访问属性和方法的子类和封装类。
+
+ This access modifier is alsocalled the no modifier access because you do not needto explicitly declare it.
+这个访问修饰符也称为no修饰符访问，因为您不需要显式地声明它。
+
+ See how we haven't declared anyaccess modifier for a name attribute?
+看到我们没有为name属性声明任何访问修饰符了吗?
+
+ This will set the accessto default access, and apply the default access level.
+这将设置默认访问权限，并应用默认访问级别。
+
+ The last access modifieris called private.
+最后一个访问修改器称为private。
+
+ Private attributes and methods are notaccessible by any class other than by the encapsulating class itself.
+除了封装类本身外，任何类都不能访问私有属性和方法。
+
+ This means these attributescannot be accessed directly and these methods cannot beinvoked by any other classes.
+这意味着这些属性不能被直接访问，这些方法不能被任何其他类调用。
+
+ Information hiding is a powerful idea.
+信息隐藏是一个强大的想法。
+
+ You control what informationyou want to share and what behaviors you want to let others see.
+你控制着你想要分享的信息和你想让别人看到的行为。
+
+ You reveal assumptions throughinterfaces that others can rely on and hide changeable things likeimplementation details.
+您通过接口揭示其他人可以依赖的假设，并隐藏诸如实现细节等可更改的内容。
+
+ Information hiding allows youto build flexible, reusable, and maintainable systems.
+信息隐藏允许您构建灵活、可重用和可维护的系统。
+
